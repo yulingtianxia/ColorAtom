@@ -1,0 +1,840 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099318F90A6D00BCC91D /* AtomNode.m */; };
+		A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099618F9178D00BCC91D /* YXYDebugNode.m */; };
+		A4E9E4E418F7D18D000ADEAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E318F7D18D000ADEAE /* Foundation.framework */; };
+		A4E9E4E618F7D18E000ADEAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E518F7D18E000ADEAE /* CoreGraphics.framework */; };
+		A4E9E4E818F7D18E000ADEAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E718F7D18E000ADEAE /* UIKit.framework */; };
+		A4E9E4EA18F7D18E000ADEAE /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E918F7D18E000ADEAE /* SpriteKit.framework */; };
+		A4E9E4F018F7D18E000ADEAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4E9E4EE18F7D18E000ADEAE /* InfoPlist.strings */; };
+		A4E9E4F218F7D18E000ADEAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E9E4F118F7D18E000ADEAE /* main.m */; };
+		A4E9E4F618F7D18E000ADEAE /* YXYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E9E4F518F7D18E000ADEAE /* YXYAppDelegate.m */; };
+		A4E9E4F918F7D18E000ADEAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E9E4F718F7D18E000ADEAE /* Main.storyboard */; };
+		A4E9E4FC18F7D18E000ADEAE /* YXYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E9E4FB18F7D18E000ADEAE /* YXYViewController.m */; };
+		A4E9E4FF18F7D18E000ADEAE /* PlayFieldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E9E4FE18F7D18E000ADEAE /* PlayFieldScene.m */; };
+		A4E9E50118F7D18E000ADEAE /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E9E50018F7D18E000ADEAE /* Spaceship.png */; };
+		A4E9E50318F7D18E000ADEAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E9E50218F7D18E000ADEAE /* Images.xcassets */; };
+		A4E9E50A18F7D18E000ADEAE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E50918F7D18E000ADEAE /* XCTest.framework */; };
+		A4E9E50B18F7D18E000ADEAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E318F7D18D000ADEAE /* Foundation.framework */; };
+		A4E9E50C18F7D18E000ADEAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E718F7D18E000ADEAE /* UIKit.framework */; };
+		A4E9E51418F7D18E000ADEAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4E9E51218F7D18E000ADEAE /* InfoPlist.strings */; };
+		A4E9E51618F7D18E000ADEAE /* ColorAtomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E9E51518F7D18E000ADEAE /* ColorAtomTests.m */; };
+		A4EB2D601902369700B28405 /* BackGround.sks in Resources */ = {isa = PBXBuildFile; fileRef = A4EB2D5E1902369700B28405 /* BackGround.sks */; };
+		A4EB2D611902369700B28405 /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = A4EB2D5F1902369700B28405 /* bokeh.png */; };
+		A4EB2D641902377300B28405 /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB2D631902377300B28405 /* Background.m */; };
+		A4EB2D6919023C8700B28405 /* PlayerBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = A4EB2D6719023C8700B28405 /* PlayerBackground.sks */; };
+		A4EB2D6A19023C8700B28405 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A4EB2D6819023C8700B28405 /* spark.png */; };
+		A4EB2D6C190241ED00B28405 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = A4EB2D6B190241ED00B28405 /* Fire.sks */; };
+		A4EB2D6E19024CA000B28405 /* Spark.sks in Resources */ = {isa = PBXBuildFile; fileRef = A4EB2D6D19024CA000B28405 /* Spark.sks */; };
+		A4EB2D7119024DEA00B28405 /* Spark.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB2D7019024DEA00B28405 /* Spark.m */; };
+		A4EB2D74190272EC00B28405 /* DisplayScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB2D73190272EC00B28405 /* DisplayScreen.m */; };
+		A4ED50481900FAD500A37085 /* AtomPlusNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED50471900FAD500A37085 /* AtomPlusNode.m */; };
+		A4ED504B1900FFF200A37085 /* AtomMinusNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED504A1900FFF200A37085 /* AtomMinusNodeContactVisitor.m */; };
+		A4ED504E190103A600A37085 /* AtomMinusNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED504D190103A600A37085 /* AtomMinusNode.m */; };
+		A4ED50511901548500A37085 /* PlayerArea.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED50501901548500A37085 /* PlayerArea.m */; };
+		A4ED505419015E9200A37085 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED505319015E9200A37085 /* GameOverScene.m */; };
+		A4ED505819016B0A00A37085 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = A4ED505619016B0A00A37085 /* background-music-aac.caf */; };
+		A4ED505919016B0A00A37085 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = A4ED505719016B0A00A37085 /* pew-pew-lei.caf */; };
+		A4EE478818FA627C003A0B74 /* ContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE478718FA627C003A0B74 /* ContactVisitor.m */; };
+		A4EE478B18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE478A18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m */; };
+		A4EE478E18FA6A0C003A0B74 /* VisitablePhysicsBody.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE478D18FA6A0C003A0B74 /* VisitablePhysicsBody.m */; };
+		A4EE479118FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE479018FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m */; };
+		A4F6DB2C19050029007CD04A /* WeiboAccounts.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DAFD19050029007CD04A /* WeiboAccounts.m */; };
+		A4F6DB2D19050029007CD04A /* WeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DAFF19050029007CD04A /* WeiboRequest.m */; };
+		A4F6DB2E19050029007CD04A /* WeiboRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0119050029007CD04A /* WeiboRequestOperation.m */; };
+		A4F6DB2F19050029007CD04A /* WeiboSignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0319050029007CD04A /* WeiboSignIn.m */; };
+		A4F6DB3019050029007CD04A /* GeoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0619050029007CD04A /* GeoInfo.m */; };
+		A4F6DB3119050029007CD04A /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0819050029007CD04A /* Status.m */; };
+		A4F6DB3219050029007CD04A /* StatusImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0A19050029007CD04A /* StatusImage.m */; };
+		A4F6DB3319050029007CD04A /* StatusVisible.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0C19050029007CD04A /* StatusVisible.m */; };
+		A4F6DB3419050029007CD04A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0E19050029007CD04A /* User.m */; };
+		A4F6DB3519050029007CD04A /* WeiboAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB1019050029007CD04A /* WeiboAccount.m */; };
+		A4F6DB3619050029007CD04A /* WeiboAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB1219050029007CD04A /* WeiboAuthentication.m */; };
+		A4F6DB3719050029007CD04A /* WeiboDialogClose.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F6DB1419050029007CD04A /* WeiboDialogClose.png */; };
+		A4F6DB3819050029007CD04A /* WeiboDialogClose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F6DB1519050029007CD04A /* WeiboDialogClose@2x.png */; };
+		A4F6DB3919050029007CD04A /* ImageResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB1819050029007CD04A /* ImageResourceLoader.m */; };
+		A4F6DB3A19050029007CD04A /* NSDictionary+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB1A19050029007CD04A /* NSDictionary+Json.m */; };
+		A4F6DB3B19050029007CD04A /* PathHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB1C19050029007CD04A /* PathHelper.m */; };
+		A4F6DB3C19050029007CD04A /* Resources.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB1E19050029007CD04A /* Resources.m */; };
+		A4F6DB3D19050029007CD04A /* URLRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2019050029007CD04A /* URLRequestHelper.m */; };
+		A4F6DB3E19050029007CD04A /* WeiboDialogClosePNG.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2219050029007CD04A /* WeiboDialogClosePNG.m */; };
+		A4F6DB3F19050029007CD04A /* WeiboDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2519050029007CD04A /* WeiboDialog.m */; };
+		A4F6DB4019050029007CD04A /* WeiboLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2719050029007CD04A /* WeiboLoginDialog.m */; };
+		A4F6DB4119050029007CD04A /* Weibo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2919050029007CD04A /* Weibo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4E9E50D18F7D18E000ADEAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4E9E4D818F7D18D000ADEAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4E9E4DF18F7D18D000ADEAE;
+			remoteInfo = ColorAtom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A46E098F18F908F300BCC91D /* NodeCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCategories.h; sourceTree = "<group>"; };
+		A46E099018F9096A00BCC91D /* RandomHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomHelper.h; sourceTree = "<group>"; };
+		A46E099218F90A6D00BCC91D /* AtomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomNode.h; sourceTree = "<group>"; };
+		A46E099318F90A6D00BCC91D /* AtomNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomNode.m; sourceTree = "<group>"; };
+		A46E099518F9178D00BCC91D /* YXYDebugNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXYDebugNode.h; sourceTree = "<group>"; };
+		A46E099618F9178D00BCC91D /* YXYDebugNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXYDebugNode.m; sourceTree = "<group>"; };
+		A4E9E4E018F7D18D000ADEAE /* ColorAtom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorAtom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E9E4E318F7D18D000ADEAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A4E9E4E518F7D18E000ADEAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A4E9E4E718F7D18E000ADEAE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A4E9E4E918F7D18E000ADEAE /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		A4E9E4ED18F7D18E000ADEAE /* ColorAtom-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorAtom-Info.plist"; sourceTree = "<group>"; };
+		A4E9E4EF18F7D18E000ADEAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A4E9E4F118F7D18E000ADEAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A4E9E4F318F7D18E000ADEAE /* ColorAtom-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColorAtom-Prefix.pch"; sourceTree = "<group>"; };
+		A4E9E4F418F7D18E000ADEAE /* YXYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXYAppDelegate.h; sourceTree = "<group>"; };
+		A4E9E4F518F7D18E000ADEAE /* YXYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXYAppDelegate.m; sourceTree = "<group>"; };
+		A4E9E4F818F7D18E000ADEAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A4E9E4FA18F7D18E000ADEAE /* YXYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXYViewController.h; sourceTree = "<group>"; };
+		A4E9E4FB18F7D18E000ADEAE /* YXYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXYViewController.m; sourceTree = "<group>"; };
+		A4E9E4FD18F7D18E000ADEAE /* PlayFieldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayFieldScene.h; sourceTree = "<group>"; };
+		A4E9E4FE18F7D18E000ADEAE /* PlayFieldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayFieldScene.m; sourceTree = "<group>"; };
+		A4E9E50018F7D18E000ADEAE /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		A4E9E50218F7D18E000ADEAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A4E9E50818F7D18E000ADEAE /* ColorAtomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorAtomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E9E50918F7D18E000ADEAE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A4E9E51118F7D18E000ADEAE /* ColorAtomTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorAtomTests-Info.plist"; sourceTree = "<group>"; };
+		A4E9E51318F7D18E000ADEAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A4E9E51518F7D18E000ADEAE /* ColorAtomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorAtomTests.m; sourceTree = "<group>"; };
+		A4E9E52018F7E854000ADEAE /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		A4EB2D5E1902369700B28405 /* BackGround.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BackGround.sks; sourceTree = "<group>"; };
+		A4EB2D5F1902369700B28405 /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
+		A4EB2D621902377300B28405 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		A4EB2D631902377300B28405 /* Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Background.m; sourceTree = "<group>"; };
+		A4EB2D6719023C8700B28405 /* PlayerBackground.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerBackground.sks; sourceTree = "<group>"; };
+		A4EB2D6819023C8700B28405 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		A4EB2D6B190241ED00B28405 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
+		A4EB2D6D19024CA000B28405 /* Spark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Spark.sks; sourceTree = "<group>"; };
+		A4EB2D6F19024DEA00B28405 /* Spark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spark.h; sourceTree = "<group>"; };
+		A4EB2D7019024DEA00B28405 /* Spark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spark.m; sourceTree = "<group>"; };
+		A4EB2D72190272EC00B28405 /* DisplayScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayScreen.h; sourceTree = "<group>"; };
+		A4EB2D73190272EC00B28405 /* DisplayScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayScreen.m; sourceTree = "<group>"; };
+		A4ED50461900FAD500A37085 /* AtomPlusNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomPlusNode.h; sourceTree = "<group>"; };
+		A4ED50471900FAD500A37085 /* AtomPlusNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomPlusNode.m; sourceTree = "<group>"; };
+		A4ED50491900FFF200A37085 /* AtomMinusNodeContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomMinusNodeContactVisitor.h; sourceTree = "<group>"; };
+		A4ED504A1900FFF200A37085 /* AtomMinusNodeContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomMinusNodeContactVisitor.m; sourceTree = "<group>"; };
+		A4ED504C190103A600A37085 /* AtomMinusNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomMinusNode.h; sourceTree = "<group>"; };
+		A4ED504D190103A600A37085 /* AtomMinusNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomMinusNode.m; sourceTree = "<group>"; };
+		A4ED504F1901548500A37085 /* PlayerArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerArea.h; sourceTree = "<group>"; };
+		A4ED50501901548500A37085 /* PlayerArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerArea.m; sourceTree = "<group>"; };
+		A4ED505219015E9200A37085 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		A4ED505319015E9200A37085 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
+		A4ED505619016B0A00A37085 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		A4ED505719016B0A00A37085 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		A4EE478618FA627C003A0B74 /* ContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactVisitor.h; sourceTree = "<group>"; };
+		A4EE478718FA627C003A0B74 /* ContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactVisitor.m; sourceTree = "<group>"; };
+		A4EE478918FA6600003A0B74 /* AtomPlusNodeContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomPlusNodeContactVisitor.h; sourceTree = "<group>"; };
+		A4EE478A18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomPlusNodeContactVisitor.m; sourceTree = "<group>"; };
+		A4EE478C18FA6A0C003A0B74 /* VisitablePhysicsBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitablePhysicsBody.h; sourceTree = "<group>"; };
+		A4EE478D18FA6A0C003A0B74 /* VisitablePhysicsBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitablePhysicsBody.m; sourceTree = "<group>"; };
+		A4EE478F18FA70B6003A0B74 /* PlayFieldSceneContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFieldSceneContactVisitor.h; sourceTree = "<group>"; };
+		A4EE479018FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFieldSceneContactVisitor.m; sourceTree = "<group>"; };
+		A4F6DAFC19050029007CD04A /* WeiboAccounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAccounts.h; sourceTree = "<group>"; };
+		A4F6DAFD19050029007CD04A /* WeiboAccounts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAccounts.m; sourceTree = "<group>"; };
+		A4F6DAFE19050029007CD04A /* WeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboRequest.h; sourceTree = "<group>"; };
+		A4F6DAFF19050029007CD04A /* WeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboRequest.m; sourceTree = "<group>"; };
+		A4F6DB0019050029007CD04A /* WeiboRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboRequestOperation.h; sourceTree = "<group>"; };
+		A4F6DB0119050029007CD04A /* WeiboRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboRequestOperation.m; sourceTree = "<group>"; };
+		A4F6DB0219050029007CD04A /* WeiboSignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSignIn.h; sourceTree = "<group>"; };
+		A4F6DB0319050029007CD04A /* WeiboSignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboSignIn.m; sourceTree = "<group>"; };
+		A4F6DB0519050029007CD04A /* GeoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoInfo.h; sourceTree = "<group>"; };
+		A4F6DB0619050029007CD04A /* GeoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoInfo.m; sourceTree = "<group>"; };
+		A4F6DB0719050029007CD04A /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		A4F6DB0819050029007CD04A /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		A4F6DB0919050029007CD04A /* StatusImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusImage.h; sourceTree = "<group>"; };
+		A4F6DB0A19050029007CD04A /* StatusImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusImage.m; sourceTree = "<group>"; };
+		A4F6DB0B19050029007CD04A /* StatusVisible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusVisible.h; sourceTree = "<group>"; };
+		A4F6DB0C19050029007CD04A /* StatusVisible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusVisible.m; sourceTree = "<group>"; };
+		A4F6DB0D19050029007CD04A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		A4F6DB0E19050029007CD04A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		A4F6DB0F19050029007CD04A /* WeiboAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAccount.h; sourceTree = "<group>"; };
+		A4F6DB1019050029007CD04A /* WeiboAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAccount.m; sourceTree = "<group>"; };
+		A4F6DB1119050029007CD04A /* WeiboAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAuthentication.h; sourceTree = "<group>"; };
+		A4F6DB1219050029007CD04A /* WeiboAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAuthentication.m; sourceTree = "<group>"; };
+		A4F6DB1419050029007CD04A /* WeiboDialogClose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeiboDialogClose.png; sourceTree = "<group>"; };
+		A4F6DB1519050029007CD04A /* WeiboDialogClose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeiboDialogClose@2x.png"; sourceTree = "<group>"; };
+		A4F6DB1719050029007CD04A /* ImageResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageResourceLoader.h; sourceTree = "<group>"; };
+		A4F6DB1819050029007CD04A /* ImageResourceLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageResourceLoader.m; sourceTree = "<group>"; };
+		A4F6DB1919050029007CD04A /* NSDictionary+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Json.h"; sourceTree = "<group>"; };
+		A4F6DB1A19050029007CD04A /* NSDictionary+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Json.m"; sourceTree = "<group>"; };
+		A4F6DB1B19050029007CD04A /* PathHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathHelper.h; sourceTree = "<group>"; };
+		A4F6DB1C19050029007CD04A /* PathHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathHelper.m; sourceTree = "<group>"; };
+		A4F6DB1D19050029007CD04A /* Resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resources.h; sourceTree = "<group>"; };
+		A4F6DB1E19050029007CD04A /* Resources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Resources.m; sourceTree = "<group>"; };
+		A4F6DB1F19050029007CD04A /* URLRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLRequestHelper.h; sourceTree = "<group>"; };
+		A4F6DB2019050029007CD04A /* URLRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLRequestHelper.m; sourceTree = "<group>"; };
+		A4F6DB2119050029007CD04A /* WeiboDialogClosePNG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboDialogClosePNG.h; sourceTree = "<group>"; };
+		A4F6DB2219050029007CD04A /* WeiboDialogClosePNG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboDialogClosePNG.m; sourceTree = "<group>"; };
+		A4F6DB2419050029007CD04A /* WeiboDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboDialog.h; sourceTree = "<group>"; };
+		A4F6DB2519050029007CD04A /* WeiboDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboDialog.m; sourceTree = "<group>"; };
+		A4F6DB2619050029007CD04A /* WeiboLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboLoginDialog.h; sourceTree = "<group>"; };
+		A4F6DB2719050029007CD04A /* WeiboLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboLoginDialog.m; sourceTree = "<group>"; };
+		A4F6DB2819050029007CD04A /* Weibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weibo.h; sourceTree = "<group>"; };
+		A4F6DB2919050029007CD04A /* Weibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weibo.m; sourceTree = "<group>"; };
+		A4F6DB2A19050029007CD04A /* WeiboConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboConfig.h; sourceTree = "<group>"; };
+		A4F6DB2B19050029007CD04A /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4E9E4DD18F7D18D000ADEAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E9E4E618F7D18E000ADEAE /* CoreGraphics.framework in Frameworks */,
+				A4E9E4E818F7D18E000ADEAE /* UIKit.framework in Frameworks */,
+				A4E9E4EA18F7D18E000ADEAE /* SpriteKit.framework in Frameworks */,
+				A4E9E4E418F7D18D000ADEAE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E9E50518F7D18E000ADEAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E9E50A18F7D18E000ADEAE /* XCTest.framework in Frameworks */,
+				A4E9E50C18F7D18E000ADEAE /* UIKit.framework in Frameworks */,
+				A4E9E50B18F7D18E000ADEAE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A46E099118F909C700BCC91D /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				A46E099218F90A6D00BCC91D /* AtomNode.h */,
+				A46E099318F90A6D00BCC91D /* AtomNode.m */,
+				A4ED50461900FAD500A37085 /* AtomPlusNode.h */,
+				A4ED50471900FAD500A37085 /* AtomPlusNode.m */,
+				A4ED504C190103A600A37085 /* AtomMinusNode.h */,
+				A4ED504D190103A600A37085 /* AtomMinusNode.m */,
+				A46E099518F9178D00BCC91D /* YXYDebugNode.h */,
+				A46E099618F9178D00BCC91D /* YXYDebugNode.m */,
+				A4ED504F1901548500A37085 /* PlayerArea.h */,
+				A4ED50501901548500A37085 /* PlayerArea.m */,
+				A4EB2D621902377300B28405 /* Background.h */,
+				A4EB2D631902377300B28405 /* Background.m */,
+				A4EB2D6F19024DEA00B28405 /* Spark.h */,
+				A4EB2D7019024DEA00B28405 /* Spark.m */,
+				A4EB2D72190272EC00B28405 /* DisplayScreen.h */,
+				A4EB2D73190272EC00B28405 /* DisplayScreen.m */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		A4E9E4D718F7D18D000ADEAE = {
+			isa = PBXGroup;
+			children = (
+				A4E9E4EB18F7D18E000ADEAE /* ColorAtom */,
+				A4E9E50F18F7D18E000ADEAE /* ColorAtomTests */,
+				A4E9E4E218F7D18D000ADEAE /* Frameworks */,
+				A4E9E4E118F7D18D000ADEAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4E9E4E118F7D18D000ADEAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4E9E4E018F7D18D000ADEAE /* ColorAtom.app */,
+				A4E9E50818F7D18E000ADEAE /* ColorAtomTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4E9E4E218F7D18D000ADEAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4E9E4E318F7D18D000ADEAE /* Foundation.framework */,
+				A4E9E4E518F7D18E000ADEAE /* CoreGraphics.framework */,
+				A4E9E4E718F7D18E000ADEAE /* UIKit.framework */,
+				A4E9E4E918F7D18E000ADEAE /* SpriteKit.framework */,
+				A4E9E50918F7D18E000ADEAE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4E9E4EB18F7D18E000ADEAE /* ColorAtom */ = {
+			isa = PBXGroup;
+			children = (
+				A4F6DAFA19050029007CD04A /* WeiboSDK */,
+				A4EB2D4F1902279600B28405 /* Emitter */,
+				A4EE478518FA6217003A0B74 /* Visitors */,
+				A46E099118F909C700BCC91D /* Nodes */,
+				A4E9E52118F7E85C000ADEAE /* Scene */,
+				A4E9E51F18F7E82F000ADEAE /* Util */,
+				A4ED505519016AF200A37085 /* Sounds */,
+				A4E9E4F418F7D18E000ADEAE /* YXYAppDelegate.h */,
+				A4E9E4F518F7D18E000ADEAE /* YXYAppDelegate.m */,
+				A4E9E4F718F7D18E000ADEAE /* Main.storyboard */,
+				A4E9E4FA18F7D18E000ADEAE /* YXYViewController.h */,
+				A4E9E4FB18F7D18E000ADEAE /* YXYViewController.m */,
+				A4E9E50018F7D18E000ADEAE /* Spaceship.png */,
+				A4E9E50218F7D18E000ADEAE /* Images.xcassets */,
+				A4E9E4EC18F7D18E000ADEAE /* Supporting Files */,
+			);
+			path = ColorAtom;
+			sourceTree = "<group>";
+		};
+		A4E9E4EC18F7D18E000ADEAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A4E9E4ED18F7D18E000ADEAE /* ColorAtom-Info.plist */,
+				A4E9E4EE18F7D18E000ADEAE /* InfoPlist.strings */,
+				A4E9E4F118F7D18E000ADEAE /* main.m */,
+				A4E9E4F318F7D18E000ADEAE /* ColorAtom-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4E9E50F18F7D18E000ADEAE /* ColorAtomTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4E9E51518F7D18E000ADEAE /* ColorAtomTests.m */,
+				A4E9E51018F7D18E000ADEAE /* Supporting Files */,
+			);
+			path = ColorAtomTests;
+			sourceTree = "<group>";
+		};
+		A4E9E51018F7D18E000ADEAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A4E9E51118F7D18E000ADEAE /* ColorAtomTests-Info.plist */,
+				A4E9E51218F7D18E000ADEAE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4E9E51F18F7E82F000ADEAE /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A4E9E52018F7E854000ADEAE /* Define.h */,
+				A46E098F18F908F300BCC91D /* NodeCategories.h */,
+				A46E099018F9096A00BCC91D /* RandomHelper.h */,
+				A4EE478C18FA6A0C003A0B74 /* VisitablePhysicsBody.h */,
+				A4EE478D18FA6A0C003A0B74 /* VisitablePhysicsBody.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		A4E9E52118F7E85C000ADEAE /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A4ED505219015E9200A37085 /* GameOverScene.h */,
+				A4ED505319015E9200A37085 /* GameOverScene.m */,
+				A4E9E4FD18F7D18E000ADEAE /* PlayFieldScene.h */,
+				A4E9E4FE18F7D18E000ADEAE /* PlayFieldScene.m */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		A4EB2D4F1902279600B28405 /* Emitter */ = {
+			isa = PBXGroup;
+			children = (
+				A4EB2D5E1902369700B28405 /* BackGround.sks */,
+				A4EB2D5F1902369700B28405 /* bokeh.png */,
+				A4EB2D6719023C8700B28405 /* PlayerBackground.sks */,
+				A4EB2D6819023C8700B28405 /* spark.png */,
+				A4EB2D6B190241ED00B28405 /* Fire.sks */,
+				A4EB2D6D19024CA000B28405 /* Spark.sks */,
+			);
+			name = Emitter;
+			sourceTree = "<group>";
+		};
+		A4ED505519016AF200A37085 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A4ED505619016B0A00A37085 /* background-music-aac.caf */,
+				A4ED505719016B0A00A37085 /* pew-pew-lei.caf */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		A4EE478518FA6217003A0B74 /* Visitors */ = {
+			isa = PBXGroup;
+			children = (
+				A4EE478618FA627C003A0B74 /* ContactVisitor.h */,
+				A4EE478718FA627C003A0B74 /* ContactVisitor.m */,
+				A4EE478918FA6600003A0B74 /* AtomPlusNodeContactVisitor.h */,
+				A4EE478A18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m */,
+				A4ED50491900FFF200A37085 /* AtomMinusNodeContactVisitor.h */,
+				A4ED504A1900FFF200A37085 /* AtomMinusNodeContactVisitor.m */,
+				A4EE478F18FA70B6003A0B74 /* PlayFieldSceneContactVisitor.h */,
+				A4EE479018FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m */,
+			);
+			name = Visitors;
+			sourceTree = "<group>";
+		};
+		A4F6DAFA19050029007CD04A /* WeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A4F6DAFB19050029007CD04A /* Engine */,
+				A4F6DB0419050029007CD04A /* Models */,
+				A4F6DB1319050029007CD04A /* Resources */,
+				A4F6DB1619050029007CD04A /* Utilities */,
+				A4F6DB2319050029007CD04A /* Views */,
+				A4F6DB2819050029007CD04A /* Weibo.h */,
+				A4F6DB2919050029007CD04A /* Weibo.m */,
+				A4F6DB2A19050029007CD04A /* WeiboConfig.h */,
+				A4F6DB2B19050029007CD04A /* WeiboSDK.h */,
+			);
+			path = WeiboSDK;
+			sourceTree = "<group>";
+		};
+		A4F6DAFB19050029007CD04A /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				A4F6DAFC19050029007CD04A /* WeiboAccounts.h */,
+				A4F6DAFD19050029007CD04A /* WeiboAccounts.m */,
+				A4F6DAFE19050029007CD04A /* WeiboRequest.h */,
+				A4F6DAFF19050029007CD04A /* WeiboRequest.m */,
+				A4F6DB0019050029007CD04A /* WeiboRequestOperation.h */,
+				A4F6DB0119050029007CD04A /* WeiboRequestOperation.m */,
+				A4F6DB0219050029007CD04A /* WeiboSignIn.h */,
+				A4F6DB0319050029007CD04A /* WeiboSignIn.m */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		A4F6DB0419050029007CD04A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4F6DB0519050029007CD04A /* GeoInfo.h */,
+				A4F6DB0619050029007CD04A /* GeoInfo.m */,
+				A4F6DB0719050029007CD04A /* Status.h */,
+				A4F6DB0819050029007CD04A /* Status.m */,
+				A4F6DB0919050029007CD04A /* StatusImage.h */,
+				A4F6DB0A19050029007CD04A /* StatusImage.m */,
+				A4F6DB0B19050029007CD04A /* StatusVisible.h */,
+				A4F6DB0C19050029007CD04A /* StatusVisible.m */,
+				A4F6DB0D19050029007CD04A /* User.h */,
+				A4F6DB0E19050029007CD04A /* User.m */,
+				A4F6DB0F19050029007CD04A /* WeiboAccount.h */,
+				A4F6DB1019050029007CD04A /* WeiboAccount.m */,
+				A4F6DB1119050029007CD04A /* WeiboAuthentication.h */,
+				A4F6DB1219050029007CD04A /* WeiboAuthentication.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A4F6DB1319050029007CD04A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A4F6DB1419050029007CD04A /* WeiboDialogClose.png */,
+				A4F6DB1519050029007CD04A /* WeiboDialogClose@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A4F6DB1619050029007CD04A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A4F6DB1719050029007CD04A /* ImageResourceLoader.h */,
+				A4F6DB1819050029007CD04A /* ImageResourceLoader.m */,
+				A4F6DB1919050029007CD04A /* NSDictionary+Json.h */,
+				A4F6DB1A19050029007CD04A /* NSDictionary+Json.m */,
+				A4F6DB1B19050029007CD04A /* PathHelper.h */,
+				A4F6DB1C19050029007CD04A /* PathHelper.m */,
+				A4F6DB1D19050029007CD04A /* Resources.h */,
+				A4F6DB1E19050029007CD04A /* Resources.m */,
+				A4F6DB1F19050029007CD04A /* URLRequestHelper.h */,
+				A4F6DB2019050029007CD04A /* URLRequestHelper.m */,
+				A4F6DB2119050029007CD04A /* WeiboDialogClosePNG.h */,
+				A4F6DB2219050029007CD04A /* WeiboDialogClosePNG.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A4F6DB2319050029007CD04A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4F6DB2419050029007CD04A /* WeiboDialog.h */,
+				A4F6DB2519050029007CD04A /* WeiboDialog.m */,
+				A4F6DB2619050029007CD04A /* WeiboLoginDialog.h */,
+				A4F6DB2719050029007CD04A /* WeiboLoginDialog.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4E9E4DF18F7D18D000ADEAE /* ColorAtom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4E9E51918F7D18E000ADEAE /* Build configuration list for PBXNativeTarget "ColorAtom" */;
+			buildPhases = (
+				A4E9E4DC18F7D18D000ADEAE /* Sources */,
+				A4E9E4DD18F7D18D000ADEAE /* Frameworks */,
+				A4E9E4DE18F7D18D000ADEAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorAtom;
+			productName = ColorAtom;
+			productReference = A4E9E4E018F7D18D000ADEAE /* ColorAtom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4E9E50718F7D18E000ADEAE /* ColorAtomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4E9E51C18F7D18E000ADEAE /* Build configuration list for PBXNativeTarget "ColorAtomTests" */;
+			buildPhases = (
+				A4E9E50418F7D18E000ADEAE /* Sources */,
+				A4E9E50518F7D18E000ADEAE /* Frameworks */,
+				A4E9E50618F7D18E000ADEAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4E9E50E18F7D18E000ADEAE /* PBXTargetDependency */,
+			);
+			name = ColorAtomTests;
+			productName = ColorAtomTests;
+			productReference = A4E9E50818F7D18E000ADEAE /* ColorAtomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4E9E4D818F7D18D000ADEAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YXY;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "杨萧玉";
+				TargetAttributes = {
+					A4E9E50718F7D18E000ADEAE = {
+						TestTargetID = A4E9E4DF18F7D18D000ADEAE;
+					};
+				};
+			};
+			buildConfigurationList = A4E9E4DB18F7D18D000ADEAE /* Build configuration list for PBXProject "ColorAtom" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4E9E4D718F7D18D000ADEAE;
+			productRefGroup = A4E9E4E118F7D18D000ADEAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4E9E4DF18F7D18D000ADEAE /* ColorAtom */,
+				A4E9E50718F7D18E000ADEAE /* ColorAtomTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4E9E4DE18F7D18D000ADEAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4EB2D6C190241ED00B28405 /* Fire.sks in Resources */,
+				A4ED505819016B0A00A37085 /* background-music-aac.caf in Resources */,
+				A4E9E4F018F7D18E000ADEAE /* InfoPlist.strings in Resources */,
+				A4E9E50318F7D18E000ADEAE /* Images.xcassets in Resources */,
+				A4E9E50118F7D18E000ADEAE /* Spaceship.png in Resources */,
+				A4EB2D6E19024CA000B28405 /* Spark.sks in Resources */,
+				A4E9E4F918F7D18E000ADEAE /* Main.storyboard in Resources */,
+				A4EB2D6A19023C8700B28405 /* spark.png in Resources */,
+				A4EB2D611902369700B28405 /* bokeh.png in Resources */,
+				A4EB2D6919023C8700B28405 /* PlayerBackground.sks in Resources */,
+				A4F6DB3819050029007CD04A /* WeiboDialogClose@2x.png in Resources */,
+				A4EB2D601902369700B28405 /* BackGround.sks in Resources */,
+				A4ED505919016B0A00A37085 /* pew-pew-lei.caf in Resources */,
+				A4F6DB3719050029007CD04A /* WeiboDialogClose.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E9E50618F7D18E000ADEAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E9E51418F7D18E000ADEAE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4E9E4DC18F7D18D000ADEAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E9E4FC18F7D18E000ADEAE /* YXYViewController.m in Sources */,
+				A4F6DB3C19050029007CD04A /* Resources.m in Sources */,
+				A4F6DB3A19050029007CD04A /* NSDictionary+Json.m in Sources */,
+				A4E9E4FF18F7D18E000ADEAE /* PlayFieldScene.m in Sources */,
+				A4F6DB3419050029007CD04A /* User.m in Sources */,
+				A4F6DB2C19050029007CD04A /* WeiboAccounts.m in Sources */,
+				A4E9E4F218F7D18E000ADEAE /* main.m in Sources */,
+				A4ED50481900FAD500A37085 /* AtomPlusNode.m in Sources */,
+				A4E9E4F618F7D18E000ADEAE /* YXYAppDelegate.m in Sources */,
+				A4F6DB3319050029007CD04A /* StatusVisible.m in Sources */,
+				A4ED505419015E9200A37085 /* GameOverScene.m in Sources */,
+				A4F6DB3619050029007CD04A /* WeiboAuthentication.m in Sources */,
+				A4F6DB3119050029007CD04A /* Status.m in Sources */,
+				A4EE478E18FA6A0C003A0B74 /* VisitablePhysicsBody.m in Sources */,
+				A4F6DB2D19050029007CD04A /* WeiboRequest.m in Sources */,
+				A4EB2D641902377300B28405 /* Background.m in Sources */,
+				A4EB2D7119024DEA00B28405 /* Spark.m in Sources */,
+				A4EE478818FA627C003A0B74 /* ContactVisitor.m in Sources */,
+				A4EB2D74190272EC00B28405 /* DisplayScreen.m in Sources */,
+				A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */,
+				A4F6DB3919050029007CD04A /* ImageResourceLoader.m in Sources */,
+				A4F6DB3B19050029007CD04A /* PathHelper.m in Sources */,
+				A4F6DB3E19050029007CD04A /* WeiboDialogClosePNG.m in Sources */,
+				A4EE478B18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m in Sources */,
+				A4F6DB3D19050029007CD04A /* URLRequestHelper.m in Sources */,
+				A4ED504B1900FFF200A37085 /* AtomMinusNodeContactVisitor.m in Sources */,
+				A4F6DB3F19050029007CD04A /* WeiboDialog.m in Sources */,
+				A4F6DB2F19050029007CD04A /* WeiboSignIn.m in Sources */,
+				A4F6DB3519050029007CD04A /* WeiboAccount.m in Sources */,
+				A4F6DB2E19050029007CD04A /* WeiboRequestOperation.m in Sources */,
+				A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */,
+				A4ED504E190103A600A37085 /* AtomMinusNode.m in Sources */,
+				A4F6DB3219050029007CD04A /* StatusImage.m in Sources */,
+				A4EE479118FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m in Sources */,
+				A4F6DB4019050029007CD04A /* WeiboLoginDialog.m in Sources */,
+				A4F6DB3019050029007CD04A /* GeoInfo.m in Sources */,
+				A4F6DB4119050029007CD04A /* Weibo.m in Sources */,
+				A4ED50511901548500A37085 /* PlayerArea.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E9E50418F7D18E000ADEAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E9E51618F7D18E000ADEAE /* ColorAtomTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4E9E50E18F7D18E000ADEAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4E9E4DF18F7D18D000ADEAE /* ColorAtom */;
+			targetProxy = A4E9E50D18F7D18E000ADEAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A4E9E4EE18F7D18E000ADEAE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4E9E4EF18F7D18E000ADEAE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A4E9E4F718F7D18E000ADEAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4E9E4F818F7D18E000ADEAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A4E9E51218F7D18E000ADEAE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4E9E51318F7D18E000ADEAE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4E9E51718F7D18E000ADEAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A4E9E51818F7D18E000ADEAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4E9E51A18F7D18E000ADEAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColorAtom/ColorAtom-Prefix.pch";
+				INFOPLIST_FILE = "ColorAtom/ColorAtom-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A4E9E51B18F7D18E000ADEAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColorAtom/ColorAtom-Prefix.pch";
+				INFOPLIST_FILE = "ColorAtom/ColorAtom-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A4E9E51D18F7D18E000ADEAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ColorAtom.app/ColorAtom";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColorAtom/ColorAtom-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ColorAtomTests/ColorAtomTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A4E9E51E18F7D18E000ADEAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ColorAtom.app/ColorAtom";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColorAtom/ColorAtom-Prefix.pch";
+				INFOPLIST_FILE = "ColorAtomTests/ColorAtomTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4E9E4DB18F7D18D000ADEAE /* Build configuration list for PBXProject "ColorAtom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E9E51718F7D18E000ADEAE /* Debug */,
+				A4E9E51818F7D18E000ADEAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4E9E51918F7D18E000ADEAE /* Build configuration list for PBXNativeTarget "ColorAtom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E9E51A18F7D18E000ADEAE /* Debug */,
+				A4E9E51B18F7D18E000ADEAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4E9E51C18F7D18E000ADEAE /* Build configuration list for PBXNativeTarget "ColorAtomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E9E51D18F7D18E000ADEAE /* Debug */,
+				A4E9E51E18F7D18E000ADEAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4E9E4D818F7D18D000ADEAE /* Project object */;
+}
