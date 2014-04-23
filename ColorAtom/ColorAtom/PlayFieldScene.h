@@ -19,6 +19,7 @@
 #import "GameOverScene.h"
 #import "Background.h"
 #import "DisplayScreen.h"
+#import "AtomSharpNode.h"
 @interface PlayFieldScene : SKScene <SKPhysicsContactDelegate>
 
 @property YXYDebugNode* debugOverlay;
@@ -28,4 +29,7 @@
 @property Background *background;
 @property DisplayScreen *displayScreen;
 @property NSInteger rank;
+@property NSInteger sharpCount;
+@property NSInteger updateScore;
+@property SKSpriteNode *sharpButton;
 @end

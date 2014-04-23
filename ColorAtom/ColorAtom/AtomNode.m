@@ -9,23 +9,20 @@
 #import "AtomNode.h"
 
 @implementation AtomNode
-@synthesize fire;
+
 -(id)initWithName:(NSString *)name ImageName:(NSString *)imageName
 {
     if(self = [super initWithTexture:[SKTexture textureWithImageNamed:imageName] color:[SKColor colorWithRed:skRandf() green:skRandf() blue:skRandf() alpha:1] size:CGSizeMake(AtomRadius*2, AtomRadius*2)]){
         self.colorBlendFactor = 1.0;
         self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:AtomRadius];
         self.physicsBody.dynamic = YES;
-        self.physicsBody.contactTestBitMask = AtomPlusCategory|AtomMinusCategory|PlayFieldCategory;
+        self.physicsBody.contactTestBitMask = AtomPlusCategory|AtomMinusCategory|PlayFieldCategory|AtomSharpCategory;
         self.physicsBody.linearDamping = 0.7;
         self.physicsBody.angularDamping = 0.8;
+//        The userData property is initially nil. You have to create a dictionary and assign it first
         self.userData = [NSMutableDictionary dictionaryWithDictionary:@{ATOMCOLOR:self.color}];
         self.name = name;
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"Fire" ofType:@"sks"];
-        fire = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
-        fire.particleColor = self.color;
-        fire.position = CGPointMake(0, AtomRadius);
-        [self addChild:fire];
+        
     }
     return self;
 }
@@ -51,7 +48,7 @@
         
     
 }
--(void) changeColorWithDiffAtom:(AtomNode *) atom{
+-(void) changeColorWithDiffAtom:(SKSpriteNode *) atom{
     
     [self runAction:[SKAction sequence:@[[SKAction runBlock:^{
         self.physicsBody.velocity = CGVectorMake(0, 0);

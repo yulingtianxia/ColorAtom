@@ -12,6 +12,7 @@
 @property NSInteger atomCount;
 @property NSInteger score;
 @property NSInteger rank;
+@property NSInteger sharp;
 @property SKLabelNode *atomCountLabel;
 @property SKLabelNode *scoreLabel;
 @property SKLabelNode *rankLabel;

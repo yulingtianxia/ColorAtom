@@ -15,39 +15,39 @@
 
 -(void) visitAtomPlusNode:(SKPhysicsBody*) anotherAtomBody
 {
-    AtomNode *thisAtom = (AtomNode*)self.body.node;
-    AtomNode *anotherAtom = (AtomNode*)anotherAtomBody.node;
+    AtomPlusNode *thisAtom = (AtomPlusNode*)self.body.node;
+    AtomPlusNode *anotherAtom = (AtomPlusNode*)anotherAtomBody.node;
     //处理碰撞后的结果
 //    NSLog(@"%@->%@",thisAtom.name,anotherAtom.name);
 
-    thisAtom.fire.particleBirthRate = 0;
+//    thisAtom.fire.particleBirthRate = 0;
     [thisAtom changeColorWithSameAtom:anotherAtom];
-//    SKPhysicsJointFixed *fix = [SKPhysicsJointFixed jointWithBodyA:self.body bodyB:anotherAtomBody anchor:self.contact.contactPoint];
-    SKPhysicsJointLimit *limit = [SKPhysicsJointLimit jointWithBodyA:self.body bodyB:anotherAtomBody anchorA:[thisAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]  anchorB:[anotherAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]];
-    [self.body.node.scene.physicsWorld addJoint:limit];
+    SKPhysicsJointFixed *fix = [SKPhysicsJointFixed jointWithBodyA:self.body bodyB:anotherAtomBody anchor:self.contact.contactPoint];
+//    SKPhysicsJointLimit *limit = [SKPhysicsJointLimit jointWithBodyA:self.body bodyB:anotherAtomBody anchorA:[thisAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]  anchorB:[anotherAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]];
+    [self.body.node.scene.physicsWorld addJoint:fix];
 }
 
 -(void) visitAtomMinusNode:(SKPhysicsBody*) anotherAtomBody
 {
-    AtomNode *thisAtom = (AtomNode*)self.body.node;
-    AtomNode *anotherAtom = (AtomNode*)anotherAtomBody.node;
+    AtomPlusNode *thisAtom = (AtomPlusNode*)self.body.node;
+    AtomMinusNode *anotherAtom = (AtomMinusNode*)anotherAtomBody.node;
     //处理碰撞后的结果
     //    NSLog(@"%@->%@",thisAtom.name,anotherAtom.name);
     Spark *spark = [[Spark alloc] initWithPosition:self.contact.contactPoint];
     [spark runAction:[SKAction sequence:@[[SKAction waitForDuration:0.1],
                                           [SKAction removeFromParent]]]];
     [thisAtom.scene addChild:spark];
-    thisAtom.fire.particleBirthRate = 0;
+//    thisAtom.fire.particleBirthRate = 0;
     [thisAtom changeColorWithDiffAtom:anotherAtom];
     
 }
 
 -(void) visitPlayFieldScene:(SKPhysicsBody*) playfieldBody
 {
-    AtomNode *atom = (AtomNode*)self.body.node;
+    AtomPlusNode *atom = (AtomPlusNode*)self.body.node;
     PlayFieldScene *playfield = (PlayFieldScene*) playfieldBody.node;
 //    NSLog(@"%@->%@",atom.name,playfield.name);
-    atom.fire.particleBirthRate = 0;
+//    atom.fire.particleBirthRate = 0;
 }
 
 @end

@@ -13,11 +13,12 @@
 @implementation GameOverScene
 @synthesize background;
 @synthesize score;
-@synthesize shareText;
+@synthesize sharingText;
+@synthesize sharingImage;
 -(id)initWithSize:(CGSize)size Score:(NSInteger) newscore{
     if (self = [super initWithSize:size]) {
         score = newscore;
-        shareText = [NSString stringWithFormat:@"我在ColorAtom中得了%ld分，快来超越我吧！",score];
+        sharingText = [NSString stringWithFormat:@"我在ColorAtom中得了%ld分，快来超越我吧！ http://yulingtianxia.com/ColorAtom/",score];
         self.backgroundColor = [SKColor clearColor];
 //        背景效果
         background = [[Background alloc] init];
@@ -57,13 +58,13 @@
         highScoreNumLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(highScoreLabel.frame)-highScoreNumLabel.frame.size.height);
         [self addChild:highScoreNumLabel];
         playAgain.text = @"PLAY AGAIN";
-        playAgain.name = @"playagain";
+        playAgain.name = (NSString *)PlayAgainButton;
         playAgain.fontSize = 20;
         playAgain.fontColor = [SKColor whiteColor];
         playAgain.position = CGPointMake(self.size.width/2, self.size.height/4);
         [self addChild:playAgain];
         weiboShare.text = @"SHARE SCORE";
-        weiboShare.name = @"weiboshare";
+        weiboShare.name = (NSString *)WeiboShareButton;
         weiboShare.fontSize = 20;
         weiboShare.position = CGPointMake(self.size.width/2, self.size.height/8);
         [self addChild:weiboShare];
@@ -86,61 +87,55 @@
     UITouch * touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
     SKLabelNode *touchedNode = (SKLabelNode *)[self nodeAtPoint:location];
-    if ([touchedNode.name isEqualToString:@"playagain"]) {
+    if ([touchedNode.name isEqualToString:(NSString *)PlayAgainButton]) {
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
         SKScene * myScene = [[PlayFieldScene alloc] initWithSize:self.size];
         [self.view presentScene:myScene transition: reveal];
-    }else if ([touchedNode.name isEqualToString:@"weiboshare"]){
-        Weibo *weibo = [[Weibo alloc] initWithAppKey:WEIBO_APP_KEY withAppSecret:WEIBO_APP_SECRET];
-        [Weibo setWeibo:weibo];
-        // Override point for customization after application launch.
-        
-        if (weibo.isAuthenticated) {
-            [weibo newStatus:shareText pic:nil completed:^(Status *status, NSError *error) {
-                if (error) {
-                    NSLog(@"failed to post:%@", error);
-                    UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"悲剧" message:@"微博发送失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
-                    [av setAlertViewStyle:UIAlertViewStyleDefault];
-                    [av show];
-                }
-                else {
-                    NSLog(@"success: %lld.%@", status.statusId, status.text);
-                    UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"恭喜" message:@"微博发送成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
-                    [av setAlertViewStyle:UIAlertViewStyleDefault];
-                    [av show];
-                }
-            }];
-        }else{
-            [Weibo.weibo authorizeWithCompleted:^(WeiboAccount *account, NSError *error) {
-                if (!error) {
-                    NSLog(@"Sign in successful: %@", account.user.screenName);
-                    [weibo newStatus:shareText pic:nil completed:^(Status *status, NSError *error) {
-                        if (error) {
-                            NSLog(@"failed to post:%@", error);
-                            UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"悲剧" message:@"微博发送失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
-                            [av setAlertViewStyle:UIAlertViewStyleDefault];
-                            [av show];
-                        }
-                        else {
-                            NSLog(@"success: %lld.%@", status.statusId, status.text);
-                            UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"恭喜" message:@"微博发送成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
-                            [av setAlertViewStyle:UIAlertViewStyleDefault];
-                            [av show];
-                        }
-                    }];
-                }
-                else {
-                    NSLog(@"Failed to sign in: %@", error);
-                    UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"悲剧" message:@"微博登录失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
-                    [av setAlertViewStyle:UIAlertViewStyleDefault];
-                    [av show];
-                    
-                }
-            }];
+    }else if ([touchedNode.name isEqualToString:(NSString *)WeiboShareButton]){
+        sharingImage = [self imageFromNode:self];
+        NSArray *activityItems;
+        if (sharingImage != nil) {
+            activityItems = @[sharingText, sharingImage];
+        } else {
+            activityItems = @[sharingText];
         }
+        
+        UIActivityViewController *activityController =
+        [[UIActivityViewController alloc] initWithActivityItems:activityItems
+                                          applicationActivities:nil];
+        
+        [(UIViewController *)[self.view nextResponder] presentViewController:activityController
+                           animated:YES completion:nil];
     }
+    
+}
+//截屏
+
+- (UIImage*) imageWithView:(UIView *)view
+{
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
+    
+    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
+    
+    UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return img;
 }
 
+
+- (UIImage*) imageFromNode:(SKNode*)node
+{
+    SKTexture*      tex     = [self.scene.view textureFromNode:node];
+    SKView*         view    = [[SKView alloc]initWithFrame:CGRectMake(0, 0, tex.size.width, tex.size.height)];
+    SKScene*        scene   = [SKScene sceneWithSize:tex.size];
+    SKSpriteNode*   sprite  = [SKSpriteNode spriteNodeWithTexture:tex];
+    sprite.position = CGPointMake( CGRectGetMidX(view.frame), CGRectGetMidY(view.frame) );
+    [scene addChild:sprite];
+    [view presentScene:scene];
+    
+    return [self imageWithView:view];
+}
 -(NSInteger)setNewScore{
     NSNumber *newScore = [NSNumber numberWithInteger:score];
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];

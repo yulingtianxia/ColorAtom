@@ -9,14 +9,17 @@
 #import "AtomMinusNode.h"
 
 @implementation AtomMinusNode
+@synthesize fire;
 -(id)init
 {
     if (self = [super initWithName:(NSString*)AtomMinusName ImageName:@"Atomminus"]) {
         self.physicsBody.categoryBitMask = AtomMinusCategory;
         self.physicsBody.velocity = CGVectorMake(skRand(-200, 200), -skRand(400, 600));
-
-//        self.fire.position = CGPointMake(0, AtomRadius*2);
-//        self.fire.emissionAngle = 90;
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Fire" ofType:@"sks"];
+        fire = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        fire.particleColor = self.color;
+        fire.position = CGPointMake(0, AtomRadius);
+        [self addChild:fire];
     }
     return self;
 }

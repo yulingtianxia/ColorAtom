@@ -14,4 +14,6 @@
 -(void) visitAtomMinusNode:(SKPhysicsBody*) anotherAtomBody;
 /*Atom访问了边界，也就是球撞墙上了*/
 -(void) visitPlayFieldScene:(SKPhysicsBody*) playfieldBody;
+/*撞上了sharp*/
+-(void) visitAtomSharpNode:(SKPhysicsBody*) anotherAtomBody;
 @end

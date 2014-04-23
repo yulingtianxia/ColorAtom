@@ -17,7 +17,9 @@
 @synthesize background;
 @synthesize displayScreen;
 @synthesize rank;
-NSInteger updateScore = 500;
+@synthesize sharpCount;
+@synthesize updateScore;
+@synthesize sharpButton;
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
@@ -37,6 +39,12 @@ NSInteger updateScore = 500;
         background = [[Background alloc] init];
         background.position = CGPointMake(self.size.width/2, self.size.height/2+AtomRadius);
         [self addChild:background];
+//        添加＃按钮
+        sharpButton = [[SKSpriteNode alloc] initWithTexture:[SKTexture textureWithImageNamed:@"Atomsharp"] color:[UIColor whiteColor] size:CGSizeMake(40, 40)];
+        sharpButton.position = CGPointMake(self.scene.size.width/2, AtomRadius);
+        sharpButton.name = (NSString *)SharpButtonName;
+        sharpButton.zPosition = 100;
+        [self addChild:sharpButton];
 //        游戏区域场景设置
         self.name = (NSString*)PlayFieldName;
         CGMutablePathRef path = CGPathCreateMutable();
@@ -50,12 +58,15 @@ NSInteger updateScore = 500;
         self.backgroundColor = [SKColor clearColor];
         self.physicsWorld.gravity = CGVectorMake(0, 0);
         self.physicsWorld.contactDelegate = self;
+        updateScore = 500;
         rank = 1;
+        sharpCount = 1;
 //          产生负离子
         [self createAtomMinus];
     }
     return self;
 }
+
 -(void)didMoveToView:(SKView *)view
 {
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanFrom:)];
@@ -64,6 +75,7 @@ NSInteger updateScore = 500;
     [[self view] addGestureRecognizer:longPress];
     
 }
+
 -(void)didSimulatePhysics
 {
     [self enumerateChildNodesWithName:(NSString*)AtomMinusName usingBlock:^(SKNode *node, BOOL *stop) {
@@ -79,22 +91,55 @@ NSInteger updateScore = 500;
             [node removeFromParent];
         }
     }];
+    [self enumerateChildNodesWithName:(NSString *)AtomMinusName usingBlock:^(SKNode *node, BOOL *stop) {
+        if (node.position.y>self.size.height+AtomRadius) {
+            [node removeFromParent];
+        }
+    }];
+    [self enumerateChildNodesWithName:(NSString *)AtomSharpName usingBlock:^(SKNode *node, BOOL *stop) {
+        if (node.position.y>self.size.height+AtomRadius*2) {
+            [node removeFromParent];
+        }
+    }];
     //add debug node
     [self addChild:debugOverlay];
 
 }
+
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     
     if (displayScreen.score>=updateScore) {
         rank++;
+        sharpCount++;
         updateScore+=500*rank;
+        displayScreen.rank = rank;
+        displayScreen.sharp = sharpCount;
+        sharpButton.alpha = 1;
     }
-    displayScreen.rank = rank;
+    
 //    debugOverlay.label.text = [NSString stringWithFormat:@"%ld",(long)rank];
     //添加debug信息
     [debugOverlay removeFromParent];
 //    [debugOverlay removeAllChildren];
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch * touch = [touches anyObject];
+    CGPoint location = [touch locationInNode:self];
+    SKSpriteNode *touchedNode = (SKSpriteNode *)[self nodeAtPoint:location];
+    if ([touchedNode.name isEqualToString:(NSString *)SharpButtonName]&&sharpCount>0) {
+        AtomSharpNode *atomSharp = [[AtomSharpNode alloc] init];
+        atomSharp.position = CGPointMake(self.size.width/2, playArea.frame.size.height);
+        [self addChild:atomSharp];
+        sharpCount--;
+        displayScreen.sharp = sharpCount;
+        if (sharpCount>0) {
+            touchedNode.alpha = 1;
+        }else{
+            touchedNode.alpha = 0.5;
+        }
+    }
 }
 #pragma mark MyMethod
 

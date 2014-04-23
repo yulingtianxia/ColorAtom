@@ -12,6 +12,7 @@
 #import "AtomPlusNodeContactVisitor.h"
 #import "AtomMinusNodeContactVisitor.h"
 #import "PlayFieldSceneContactVisitor.h"
+#import "AtomSharpNodeContactVisitor.h"
 @implementation ContactVisitor
 
 + (id)contactVisitorWithBody:(SKPhysicsBody *)body forContact:(SKPhysicsContact *)contact
@@ -25,6 +26,9 @@
     }
     if ((body.categoryBitMask&PlayFieldCategory)!=0) {
         return [[PlayFieldSceneContactVisitor alloc] initWithBody:body forContact:contact];
+    }
+    if ((body.categoryBitMask&AtomSharpCategory)!=0) {
+        return [[AtomSharpNodeContactVisitor alloc] initWithBody:body forContact:contact];
     }
     else{
         return nil;

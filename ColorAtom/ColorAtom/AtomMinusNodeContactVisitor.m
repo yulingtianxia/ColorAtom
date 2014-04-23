@@ -12,8 +12,8 @@
 @implementation AtomMinusNodeContactVisitor
 -(void) visitAtomPlusNode:(SKPhysicsBody*) anotherAtomBody
 {
-    AtomNode *thisAtom = (AtomNode*)self.body.node;
-    AtomNode *anotherAtom = (AtomNode*)anotherAtomBody.node;
+    AtomMinusNode *thisAtom = (AtomMinusNode*)self.body.node;
+    AtomPlusNode *anotherAtom = (AtomPlusNode*)anotherAtomBody.node;
     //处理碰撞后的结果
     //    NSLog(@"%@->%@",thisAtom.name,anotherAtom.name);
     [((DisplayScreen *)[thisAtom.scene childNodeWithName:(NSString *)DisplayScreenName]) AtomMinusKilled];
@@ -24,21 +24,30 @@
 
 -(void) visitAtomMinusNode:(SKPhysicsBody*) anotherAtomBody
 {
-    AtomNode *thisAtom = (AtomNode*)self.body.node;
-    AtomNode *anotherAtom = (AtomNode*)anotherAtomBody.node;
+    AtomMinusNode *thisAtom = (AtomMinusNode*)self.body.node;
+    AtomMinusNode *anotherAtom = (AtomMinusNode*)anotherAtomBody.node;
     //处理碰撞后的结果
     //    NSLog(@"%@->%@",thisAtom.name,anotherAtom.name);
 
     thisAtom.fire.particleBirthRate = 0;
     [thisAtom changeColorWithSameAtom:anotherAtom];
-//    SKPhysicsJointFixed *fix = [SKPhysicsJointFixed jointWithBodyA:self.body bodyB:anotherAtomBody anchor:self.contact.contactPoint];
-    SKPhysicsJointLimit *limit = [SKPhysicsJointLimit jointWithBodyA:self.body bodyB:anotherAtomBody anchorA:[thisAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]  anchorB:[anotherAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]];
-    [self.body.node.scene.physicsWorld addJoint:limit];
+    SKPhysicsJointFixed *fix = [SKPhysicsJointFixed jointWithBodyA:self.body bodyB:anotherAtomBody anchor:self.contact.contactPoint];
+//    SKPhysicsJointLimit *limit = [SKPhysicsJointLimit jointWithBodyA:self.body bodyB:anotherAtomBody anchorA:[thisAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]  anchorB:[anotherAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]];
+    [self.body.node.scene.physicsWorld addJoint:fix];
 }
 
+-(void) visitAtomSharpNode:(SKPhysicsBody*) anotherAtomBody{
+    AtomMinusNode *thisAtom = (AtomMinusNode*)self.body.node;
+    AtomSharpNode *anotherAtom = (AtomSharpNode*)anotherAtomBody.node;
+    //处理碰撞后的结果
+    //    NSLog(@"%@->%@",thisAtom.name,anotherAtom.name);
+    [((DisplayScreen *)[thisAtom.scene childNodeWithName:(NSString *)DisplayScreenName]) AtomMinusKilled];
+    thisAtom.fire.particleBirthRate = 0;
+    [thisAtom changeColorWithDiffAtom:anotherAtom];
+}
 -(void) visitPlayFieldScene:(SKPhysicsBody*) playfieldBody
 {
-    AtomNode *atom = (AtomNode*)self.body.node;
+    AtomMinusNode *atom = (AtomMinusNode*)self.body.node;
     PlayFieldScene *playfield = (PlayFieldScene*) playfieldBody.node;
 //    NSLog(@"%@->%@",atom.name,playfield.name);
     atom.fire.particleBirthRate = 0;

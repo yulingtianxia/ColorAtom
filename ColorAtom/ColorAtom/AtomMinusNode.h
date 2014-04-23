@@ -9,5 +9,5 @@
 #import "AtomNode.h"
 
 @interface AtomMinusNode : AtomNode
-
+@property SKEmitterNode *fire;
 @end

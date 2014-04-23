@@ -8,9 +8,12 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "Background.h"
+@import Social;
 @interface GameOverScene : SKScene
 @property Background *background;
 @property NSInteger score;
-@property NSString *shareText;
+@property (nonatomic) NSString *sharingText;
+@property (nonatomic) UIImage *sharingImage;
+
 -(id)initWithSize:(CGSize)size Score:(NSInteger) score;
 @end

@@ -11,10 +11,10 @@
 @implementation AtomPlusNode
 -(id)init
 {
-    if (self = [super initWithName:AtomPlusName ImageName:@"Atomplus"]) {
+    if (self = [super initWithName:(NSString *)AtomPlusName ImageName:@"Atomplus"]) {
         self.physicsBody.categoryBitMask  = AtomPlusCategory;
         self.physicsBody.velocity = CGVectorMake(AtomPlusVx, AtomPlusVy);
-        self.fire.position = CGPointMake(0, 0);
+//        self.fire.position = CGPointMake(0, 0);
 //        self.fire.emissionAngle = 180;
     }
     return self;

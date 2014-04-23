@@ -9,10 +9,12 @@
 #import "DisplayScreen.h"
 #import "Define.h"
 #import "GameOverScene.h"
+#import "PlayFieldScene.h"
 @implementation DisplayScreen
 @synthesize atomCount;
 @synthesize score;
 @synthesize rank;
+@synthesize sharp;
 @synthesize atomCountLabel;
 @synthesize scoreLabel;
 @synthesize rankLabel;
@@ -22,6 +24,8 @@
         self.name = (NSString *)DisplayScreenName;
         atomCount = 10;
         score = 0;
+        sharp = 1;
+        rank = 1;
         atomCountLabel = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Bold"];
         atomCountLabel.fontSize = 20;
         scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Bold"];
@@ -29,7 +33,7 @@
         rankLabel = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Bold"];
         rankLabel.fontSize = 20;
         atomCountLabel.text = [NSString stringWithFormat:@"%ld",(long)atomCount];
-        scoreLabel.text = [NSString stringWithFormat:@"Score:%ld",(long)score];
+        scoreLabel.text = [NSString stringWithFormat:@"Score:%ld/%ld",(long)score,(long)(((PlayFieldScene *)self.scene).updateScore)];
         rankLabel.text = [NSString stringWithFormat:@"Rank:%ld",(long)rank];
         [self addChild:atomCountLabel];
         [self addChild:scoreLabel];
@@ -56,7 +60,7 @@
     atomCount+=3;
     score+=10;
     atomCountLabel.text = [NSString stringWithFormat:@"%ld",(long)atomCount];
-    scoreLabel.text = [NSString stringWithFormat:@"Score:%ld",(long)score];
+    scoreLabel.text = [NSString stringWithFormat:@"Score:%ld/%ld",(long)score,(long)(((PlayFieldScene *)self.scene).updateScore)];
     rankLabel.text = [NSString stringWithFormat:@"Rank:%ld",(long)rank];
     [self gameCheck];
     [self setPosition];
@@ -66,7 +70,7 @@
     atomCount-=num;
     score+=5*num;
     atomCountLabel.text = [NSString stringWithFormat:@"%ld",(long)atomCount];
-    scoreLabel.text = [NSString stringWithFormat:@"Score:%ld",(long)score];
+    scoreLabel.text = [NSString stringWithFormat:@"Score:%ld/%ld",(long)score,(long)(((PlayFieldScene *)self.scene).updateScore)];
     rankLabel.text = [NSString stringWithFormat:@"Rank:%ld",(long)rank];
     [self gameCheck];
     [self setPosition];
