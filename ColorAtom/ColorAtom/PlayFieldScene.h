@@ -7,19 +7,11 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "Define.h"
-#import "NodeCategories.h"
-#import "RandomHelper.h"
-#import "AtomNode.h"
-#import "AtomPlusNode.h"
-#import "AtomMinusNode.h"
-#import "VisitablePhysicsBody.h"
-#import "YXYDebugNode.h"
-#import "PlayerArea.h"
-#import "GameOverScene.h"
-#import "Background.h"
-#import "DisplayScreen.h"
-#import "AtomSharpNode.h"
+@class PlayerArea;
+@class Background;
+@class DisplayScreen;
+@class YXYDebugNode;
+
 @interface PlayFieldScene : SKScene <SKPhysicsContactDelegate>
 
 @property YXYDebugNode* debugOverlay;
@@ -32,4 +24,6 @@
 @property NSInteger sharpCount;
 @property NSInteger updateScore;
 @property SKSpriteNode *sharpButton;
+
+-(void)createAtomMinus;
 @end

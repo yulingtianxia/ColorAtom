@@ -7,6 +7,15 @@
 //
 
 #import "PlayFieldScene.h"
+#import "AtomPlusNode.h"
+#import "AtomMinusNode.h"
+#import "VisitablePhysicsBody.h"
+#import "YXYDebugNode.h"
+#import "PlayerArea.h"
+#import "GameOverScene.h"
+#import "Background.h"
+#import "DisplayScreen.h"
+#import "AtomSharpNode.h"
 
 @implementation PlayFieldScene
 

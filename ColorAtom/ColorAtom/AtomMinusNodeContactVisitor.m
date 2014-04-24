@@ -9,6 +9,10 @@
 #import "AtomMinusNodeContactVisitor.h"
 #import "AtomNode.h"
 #import "PlayFieldScene.h"
+#import "AtomMinusNode.h"
+#import "AtomPlusNode.h"
+#import "DisplayScreen.h"
+#import "AtomSharpNode.h"
 @implementation AtomMinusNodeContactVisitor
 -(void) visitAtomPlusNode:(SKPhysicsBody*) anotherAtomBody
 {

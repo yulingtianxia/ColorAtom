@@ -9,6 +9,9 @@
 #import "AtomPlusNodeContactVisitor.h"
 #import "AtomNode.h"
 #import "PlayFieldScene.h"
+#import "AtomMinusNode.h"
+#import "AtomPlusNode.h"
+
 @implementation AtomPlusNodeContactVisitor
 
 

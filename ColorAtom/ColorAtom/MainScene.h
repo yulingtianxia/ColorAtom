@@ -12,7 +12,7 @@
 #import "Background.h"
 #import "ContactVisitor.h"
 #import "VisitablePhysicsBody.h"
-#import "PlayFieldScene.h"
+#import "NightPlayScene.h"
 @interface MainScene : SKScene <SKPhysicsContactDelegate>
 @property SKEmitterNode *fire;
 @property Background *background;
@@ -21,5 +21,5 @@
 @property SKSpriteNode *audio;
 @property SKLabelNode *logo;
 @property SKLabelNode *normalPlay;
-
+@property SKLabelNode *nightPlay;
 @end

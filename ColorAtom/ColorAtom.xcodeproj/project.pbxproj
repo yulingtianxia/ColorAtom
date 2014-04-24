@@ -74,6 +74,7 @@
 		A4F6DB3F19050029007CD04A /* WeiboDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2519050029007CD04A /* WeiboDialog.m */; };
 		A4F6DB4019050029007CD04A /* WeiboLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2719050029007CD04A /* WeiboLoginDialog.m */; };
 		A4F6DB4119050029007CD04A /* Weibo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2919050029007CD04A /* Weibo.m */; };
+		A4FB97EB1909317700D0BDBE /* NightPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FB97EA1909317700D0BDBE /* NightPlayScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +203,8 @@
 		A4F6DB2919050029007CD04A /* Weibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weibo.m; sourceTree = "<group>"; };
 		A4F6DB2A19050029007CD04A /* WeiboConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboConfig.h; sourceTree = "<group>"; };
 		A4F6DB2B19050029007CD04A /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		A4FB97E91909317700D0BDBE /* NightPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NightPlayScene.h; sourceTree = "<group>"; };
+		A4FB97EA1909317700D0BDBE /* NightPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NightPlayScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +362,8 @@
 				A4E9E4FE18F7D18E000ADEAE /* PlayFieldScene.m */,
 				A4F699011908FD7100FE911A /* MainScene.h */,
 				A4F699021908FD7100FE911A /* MainScene.m */,
+				A4FB97E91909317700D0BDBE /* NightPlayScene.h */,
+				A4FB97EA1909317700D0BDBE /* NightPlayScene.m */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -647,6 +652,7 @@
 				A4F6DB3019050029007CD04A /* GeoInfo.m in Sources */,
 				A4F6DB4119050029007CD04A /* Weibo.m in Sources */,
 				A4ED50511901548500A37085 /* PlayerArea.m in Sources */,
+				A4FB97EB1909317700D0BDBE /* NightPlayScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

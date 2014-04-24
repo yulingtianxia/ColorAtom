@@ -16,6 +16,7 @@
 @synthesize audio;
 @synthesize logo;
 @synthesize normalPlay;
+@synthesize nightPlay;
 
 -(id)initWithSize:(CGSize)size {
     if (self=[super initWithSize:size]) {
@@ -41,9 +42,14 @@
         logo.position = CGPointMake(self.size.width/2, 3*self.size.height/4);
         normalPlay = [[SKLabelNode alloc] initWithFontNamed:@"Chalkboard SE"];
         normalPlay.fontSize = 30;
-        normalPlay.text = @"Play";
+        normalPlay.text = @"Nomal Mode";
         normalPlay.position = CGPointMake(self.size.width/2, self.size.height/2);
         normalPlay.name = (NSString *)NormalPlayButton;
+        nightPlay = [[SKLabelNode alloc] initWithFontNamed:@"Chalkboard SE"];
+        nightPlay.fontSize = 30;
+        nightPlay.text = @"Night Mode";
+        nightPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(normalPlay.frame)-2*normalPlay.frame.size.height);
+        nightPlay.name = (NSString *)NightPlayButton;
         [self runAction:[SKAction sequence:@[[SKAction runBlock:^{
             [self addChild:plus];
             [self addChild:minus];
@@ -64,6 +70,7 @@
                                              [SKAction waitForDuration:0.2],
                                              [SKAction runBlock:^{
             [self addChild:normalPlay];
+            [self addChild:nightPlay];
         }]]]];
     }
     return self;
@@ -76,6 +83,10 @@
     if ([touchedNode.name isEqualToString:(NSString *)NormalPlayButton]) {
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
         SKScene * myScene = [[PlayFieldScene alloc] initWithSize:self.size];
+        [self.view presentScene:myScene transition: reveal];
+    }else if ([touchedNode.name isEqualToString:(NSString *)NightPlayButton]) {
+        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+        SKScene * myScene = [[NightPlayScene alloc] initWithSize:self.size];
         [self.view presentScene:myScene transition: reveal];
     }
     
