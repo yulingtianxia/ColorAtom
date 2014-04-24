@@ -17,7 +17,7 @@
         self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:AtomRadius];
         self.physicsBody.dynamic = YES;
         self.physicsBody.contactTestBitMask = AtomPlusCategory|AtomMinusCategory|PlayFieldCategory|AtomSharpCategory;
-        self.physicsBody.linearDamping = 0.7;
+        self.physicsBody.linearDamping = 0.65;
         self.physicsBody.angularDamping = 0.8;
 //        The userData property is initially nil. You have to create a dictionary and assign it first
         self.userData = [NSMutableDictionary dictionaryWithDictionary:@{ATOMCOLOR:self.color}];

@@ -24,6 +24,8 @@ static NSString const *DisplayScreenName = @"displayscreen";
 static NSString const *SharpButtonName = @"sharpbutton";
 static NSString const *PlayAgainButton = @"playagain";
 static NSString const *WeiboShareButton = @"weiboshare";
+static NSString const *NormalPlayButton = @"normalplay";
+static NSString const *MainSceneButton = @"mainscene";
 
 static NSString const *ATOMCOLOR = @"atomcolor";
 

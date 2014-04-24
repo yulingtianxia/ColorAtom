@@ -50,6 +50,8 @@
 		A4EE478B18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE478A18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m */; };
 		A4EE478E18FA6A0C003A0B74 /* VisitablePhysicsBody.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE478D18FA6A0C003A0B74 /* VisitablePhysicsBody.m */; };
 		A4EE479118FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE479018FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m */; };
+		A4F699031908FD7100FE911A /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F699021908FD7100FE911A /* MainScene.m */; };
+		A4F699051908FDFD00FE911A /* BigColorFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = A4F699041908FDFD00FE911A /* BigColorFire.sks */; };
 		A4F6DB2C19050029007CD04A /* WeiboAccounts.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DAFD19050029007CD04A /* WeiboAccounts.m */; };
 		A4F6DB2D19050029007CD04A /* WeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DAFF19050029007CD04A /* WeiboRequest.m */; };
 		A4F6DB2E19050029007CD04A /* WeiboRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0119050029007CD04A /* WeiboRequestOperation.m */; };
@@ -153,6 +155,9 @@
 		A4EE478D18FA6A0C003A0B74 /* VisitablePhysicsBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitablePhysicsBody.m; sourceTree = "<group>"; };
 		A4EE478F18FA70B6003A0B74 /* PlayFieldSceneContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFieldSceneContactVisitor.h; sourceTree = "<group>"; };
 		A4EE479018FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFieldSceneContactVisitor.m; sourceTree = "<group>"; };
+		A4F699011908FD7100FE911A /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		A4F699021908FD7100FE911A /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
+		A4F699041908FDFD00FE911A /* BigColorFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BigColorFire.sks; sourceTree = "<group>"; };
 		A4F6DAFC19050029007CD04A /* WeiboAccounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAccounts.h; sourceTree = "<group>"; };
 		A4F6DAFD19050029007CD04A /* WeiboAccounts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAccounts.m; sourceTree = "<group>"; };
 		A4F6DAFE19050029007CD04A /* WeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboRequest.h; sourceTree = "<group>"; };
@@ -352,6 +357,8 @@
 				A4ED505319015E9200A37085 /* GameOverScene.m */,
 				A4E9E4FD18F7D18E000ADEAE /* PlayFieldScene.h */,
 				A4E9E4FE18F7D18E000ADEAE /* PlayFieldScene.m */,
+				A4F699011908FD7100FE911A /* MainScene.h */,
+				A4F699021908FD7100FE911A /* MainScene.m */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -366,6 +373,7 @@
 				A4EB2D6B190241ED00B28405 /* Fire.sks */,
 				A4EB2D6D19024CA000B28405 /* Spark.sks */,
 				A404E4E41907D98600528624 /* SharpMagic.sks */,
+				A4F699041908FDFD00FE911A /* BigColorFire.sks */,
 			);
 			name = Emitter;
 			sourceTree = "<group>";
@@ -570,6 +578,7 @@
 				A4E9E50318F7D18E000ADEAE /* Images.xcassets in Resources */,
 				A4E9E50118F7D18E000ADEAE /* Spaceship.png in Resources */,
 				A404E4E51907D98600528624 /* SharpMagic.sks in Resources */,
+				A4F699051908FDFD00FE911A /* BigColorFire.sks in Resources */,
 				A4EB2D6E19024CA000B28405 /* Spark.sks in Resources */,
 				A4E9E4F918F7D18E000ADEAE /* Main.storyboard in Resources */,
 				A4EB2D6A19023C8700B28405 /* spark.png in Resources */,
@@ -623,6 +632,7 @@
 				A4F6DB3B19050029007CD04A /* PathHelper.m in Sources */,
 				A4F6DB3E19050029007CD04A /* WeiboDialogClosePNG.m in Sources */,
 				A4EE478B18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m in Sources */,
+				A4F699031908FD7100FE911A /* MainScene.m in Sources */,
 				A4F6DB3D19050029007CD04A /* URLRequestHelper.m in Sources */,
 				A4ED504B1900FFF200A37085 /* AtomMinusNodeContactVisitor.m in Sources */,
 				A4F6DB3F19050029007CD04A /* WeiboDialog.m in Sources */,

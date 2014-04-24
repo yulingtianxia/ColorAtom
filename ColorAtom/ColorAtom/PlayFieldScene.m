@@ -116,6 +116,14 @@
         displayScreen.rank = rank;
         displayScreen.sharp = sharpCount;
         sharpButton.alpha = 1;
+        [sharpButton runAction:[SKAction repeatAction:[SKAction sequence:@[[SKAction runBlock:^{
+            [sharpButton setScale:1.3];
+        }],
+                                                                           [SKAction waitForDuration:0.1],
+                                                                           [SKAction runBlock:^{
+            [sharpButton setScale:1];
+        }],
+                                                                           [SKAction waitForDuration:0.1]]] count:3]];
     }
     
 //    debugOverlay.label.text = [NSString stringWithFormat:@"%ld",(long)rank];

@@ -32,6 +32,7 @@
         SKLabelNode *highScoreNumLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         SKLabelNode *playAgain = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         SKLabelNode *weiboShare = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        SKLabelNode *mainScene = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         gameover.text = @"GAME OVER";
         gameover.fontSize = 40;
         gameover.fontColor = [SKColor whiteColor];
@@ -61,13 +62,18 @@
         playAgain.name = (NSString *)PlayAgainButton;
         playAgain.fontSize = 20;
         playAgain.fontColor = [SKColor whiteColor];
-        playAgain.position = CGPointMake(self.size.width/2, self.size.height/4);
+        playAgain.position = CGPointMake(self.size.width/2, self.size.height/3);
         [self addChild:playAgain];
         weiboShare.text = @"SHARE SCORE";
         weiboShare.name = (NSString *)WeiboShareButton;
         weiboShare.fontSize = 20;
-        weiboShare.position = CGPointMake(self.size.width/2, self.size.height/8);
+        weiboShare.position = CGPointMake(self.size.width/2, CGRectGetMinY(playAgain.frame)-2*playAgain.frame.size.height);
         [self addChild:weiboShare];
+        mainScene.text = @"MENU";
+        mainScene.name = (NSString *)MainSceneButton;
+        mainScene.fontSize = 20;
+        mainScene.position = CGPointMake(self.size.width/2, CGRectGetMinY(weiboShare.frame)-2*weiboShare.frame.size.height);
+        [self addChild:mainScene];
     }
     return self;
 }
@@ -106,6 +112,10 @@
         
         [(UIViewController *)[self.view nextResponder] presentViewController:activityController
                            animated:YES completion:nil];
+    }else if ([touchedNode.name isEqualToString:(NSString *)MainSceneButton]){
+        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+        SKScene * myScene = [[MainScene alloc] initWithSize:self.size];
+        [self.view presentScene:myScene transition: reveal];
     }
     
 }

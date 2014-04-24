@@ -8,6 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "Background.h"
+#import "MainScene.h"
 @import Social;
 @interface GameOverScene : SKScene
 @property Background *background;

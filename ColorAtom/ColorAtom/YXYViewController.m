@@ -8,7 +8,7 @@
 
 #import "YXYViewController.h"
 #import "PlayFieldScene.h"
-
+#import "MainScene.h"
 
 @implementation YXYViewController
 @synthesize backgroundMusicPlayer;
@@ -22,7 +22,7 @@
 //    skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [PlayFieldScene sceneWithSize:skView.bounds.size];
+    SKScene * scene = [MainScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
