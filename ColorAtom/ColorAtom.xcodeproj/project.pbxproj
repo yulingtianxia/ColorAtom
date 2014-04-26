@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A404E4E51907D98600528624 /* SharpMagic.sks in Resources */ = {isa = PBXBuildFile; fileRef = A404E4E41907D98600528624 /* SharpMagic.sks */; };
+		A413F1EC190BA0A400400EB7 /* sharp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A413F1EB190BA0A400400EB7 /* sharp.mp3 */; };
 		A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099318F90A6D00BCC91D /* AtomNode.m */; };
 		A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099618F9178D00BCC91D /* YXYDebugNode.m */; };
 		A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDDD3190787F800772A22 /* AtomSharpNode.m */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		A404E4E41907D98600528624 /* SharpMagic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SharpMagic.sks; sourceTree = "<group>"; };
+		A413F1EB190BA0A400400EB7 /* sharp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sharp.mp3; sourceTree = "<group>"; };
 		A46E098F18F908F300BCC91D /* NodeCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCategories.h; sourceTree = "<group>"; };
 		A46E099018F9096A00BCC91D /* RandomHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomHelper.h; sourceTree = "<group>"; };
 		A46E099218F90A6D00BCC91D /* AtomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomNode.h; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 		A4ED505519016AF200A37085 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				A413F1EB190BA0A400400EB7 /* sharp.mp3 */,
 				A4ED505619016B0A00A37085 /* background-music-aac.caf */,
 				A4ED505719016B0A00A37085 /* pew-pew-lei.caf */,
 			);
@@ -429,6 +432,7 @@
 				A4EB2D6E19024CA000B28405 /* Spark.sks in Resources */,
 				A4E9E4F918F7D18E000ADEAE /* Main.storyboard in Resources */,
 				A4EB2D6A19023C8700B28405 /* spark.png in Resources */,
+				A413F1EC190BA0A400400EB7 /* sharp.mp3 in Resources */,
 				A4EB2D611902369700B28405 /* bokeh.png in Resources */,
 				A4EB2D6919023C8700B28405 /* PlayerBackground.sks in Resources */,
 				A4EB2D601902369700B28405 /* BackGround.sks in Resources */,

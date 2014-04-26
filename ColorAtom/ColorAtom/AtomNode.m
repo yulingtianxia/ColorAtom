@@ -16,6 +16,7 @@
         self.colorBlendFactor = 1.0;
         self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:AtomRadius];
         self.physicsBody.dynamic = YES;
+        self.physicsBody.usesPreciseCollisionDetection = YES;
         self.physicsBody.contactTestBitMask = AtomPlusCategory|AtomMinusCategory|PlayFieldCategory|AtomSharpCategory;
         self.physicsBody.linearDamping = 0.65;
         self.physicsBody.angularDamping = 0.8;

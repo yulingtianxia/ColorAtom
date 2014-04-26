@@ -28,6 +28,11 @@
         magic = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
         magic.position = self.position;
         [self addChild:magic];
+        NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+        if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"on"]){
+            [self runAction:[SKAction playSoundFileNamed:@"sharp.mp3" waitForCompletion:NO]];
+        }
+        
     }
     return  self;
 }
