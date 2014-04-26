@@ -169,8 +169,10 @@
         playArea.fillColor = Atom.color;
         playArea.strokeColor = Atom.color;
         [self addChild:Atom];
-        [self runAction:[SKAction playSoundFileNamed:@"pew-pew-lei.caf" waitForCompletion:NO]];
-        
+        NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+        if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"on"]) {
+            [self runAction:[SKAction playSoundFileNamed:@"pew-pew-lei.caf" waitForCompletion:NO]];
+        }
     }
     
 }

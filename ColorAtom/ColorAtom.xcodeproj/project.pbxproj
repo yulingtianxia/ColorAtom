@@ -52,28 +52,6 @@
 		A4EE479118FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE479018FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m */; };
 		A4F699031908FD7100FE911A /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F699021908FD7100FE911A /* MainScene.m */; };
 		A4F699051908FDFD00FE911A /* BigColorFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = A4F699041908FDFD00FE911A /* BigColorFire.sks */; };
-		A4F6DB2C19050029007CD04A /* WeiboAccounts.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DAFD19050029007CD04A /* WeiboAccounts.m */; };
-		A4F6DB2D19050029007CD04A /* WeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DAFF19050029007CD04A /* WeiboRequest.m */; };
-		A4F6DB2E19050029007CD04A /* WeiboRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0119050029007CD04A /* WeiboRequestOperation.m */; };
-		A4F6DB2F19050029007CD04A /* WeiboSignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0319050029007CD04A /* WeiboSignIn.m */; };
-		A4F6DB3019050029007CD04A /* GeoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0619050029007CD04A /* GeoInfo.m */; };
-		A4F6DB3119050029007CD04A /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0819050029007CD04A /* Status.m */; };
-		A4F6DB3219050029007CD04A /* StatusImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0A19050029007CD04A /* StatusImage.m */; };
-		A4F6DB3319050029007CD04A /* StatusVisible.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0C19050029007CD04A /* StatusVisible.m */; };
-		A4F6DB3419050029007CD04A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB0E19050029007CD04A /* User.m */; };
-		A4F6DB3519050029007CD04A /* WeiboAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB1019050029007CD04A /* WeiboAccount.m */; };
-		A4F6DB3619050029007CD04A /* WeiboAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB1219050029007CD04A /* WeiboAuthentication.m */; };
-		A4F6DB3719050029007CD04A /* WeiboDialogClose.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F6DB1419050029007CD04A /* WeiboDialogClose.png */; };
-		A4F6DB3819050029007CD04A /* WeiboDialogClose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F6DB1519050029007CD04A /* WeiboDialogClose@2x.png */; };
-		A4F6DB3919050029007CD04A /* ImageResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB1819050029007CD04A /* ImageResourceLoader.m */; };
-		A4F6DB3A19050029007CD04A /* NSDictionary+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB1A19050029007CD04A /* NSDictionary+Json.m */; };
-		A4F6DB3B19050029007CD04A /* PathHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB1C19050029007CD04A /* PathHelper.m */; };
-		A4F6DB3C19050029007CD04A /* Resources.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB1E19050029007CD04A /* Resources.m */; };
-		A4F6DB3D19050029007CD04A /* URLRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2019050029007CD04A /* URLRequestHelper.m */; };
-		A4F6DB3E19050029007CD04A /* WeiboDialogClosePNG.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2219050029007CD04A /* WeiboDialogClosePNG.m */; };
-		A4F6DB3F19050029007CD04A /* WeiboDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2519050029007CD04A /* WeiboDialog.m */; };
-		A4F6DB4019050029007CD04A /* WeiboLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2719050029007CD04A /* WeiboLoginDialog.m */; };
-		A4F6DB4119050029007CD04A /* Weibo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6DB2919050029007CD04A /* Weibo.m */; };
 		A4FB97EB1909317700D0BDBE /* NightPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FB97EA1909317700D0BDBE /* NightPlayScene.m */; };
 /* End PBXBuildFile section */
 
@@ -159,50 +137,6 @@
 		A4F699011908FD7100FE911A /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
 		A4F699021908FD7100FE911A /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
 		A4F699041908FDFD00FE911A /* BigColorFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BigColorFire.sks; sourceTree = "<group>"; };
-		A4F6DAFC19050029007CD04A /* WeiboAccounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAccounts.h; sourceTree = "<group>"; };
-		A4F6DAFD19050029007CD04A /* WeiboAccounts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAccounts.m; sourceTree = "<group>"; };
-		A4F6DAFE19050029007CD04A /* WeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboRequest.h; sourceTree = "<group>"; };
-		A4F6DAFF19050029007CD04A /* WeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboRequest.m; sourceTree = "<group>"; };
-		A4F6DB0019050029007CD04A /* WeiboRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboRequestOperation.h; sourceTree = "<group>"; };
-		A4F6DB0119050029007CD04A /* WeiboRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboRequestOperation.m; sourceTree = "<group>"; };
-		A4F6DB0219050029007CD04A /* WeiboSignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSignIn.h; sourceTree = "<group>"; };
-		A4F6DB0319050029007CD04A /* WeiboSignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboSignIn.m; sourceTree = "<group>"; };
-		A4F6DB0519050029007CD04A /* GeoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoInfo.h; sourceTree = "<group>"; };
-		A4F6DB0619050029007CD04A /* GeoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoInfo.m; sourceTree = "<group>"; };
-		A4F6DB0719050029007CD04A /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
-		A4F6DB0819050029007CD04A /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
-		A4F6DB0919050029007CD04A /* StatusImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusImage.h; sourceTree = "<group>"; };
-		A4F6DB0A19050029007CD04A /* StatusImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusImage.m; sourceTree = "<group>"; };
-		A4F6DB0B19050029007CD04A /* StatusVisible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusVisible.h; sourceTree = "<group>"; };
-		A4F6DB0C19050029007CD04A /* StatusVisible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusVisible.m; sourceTree = "<group>"; };
-		A4F6DB0D19050029007CD04A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		A4F6DB0E19050029007CD04A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		A4F6DB0F19050029007CD04A /* WeiboAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAccount.h; sourceTree = "<group>"; };
-		A4F6DB1019050029007CD04A /* WeiboAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAccount.m; sourceTree = "<group>"; };
-		A4F6DB1119050029007CD04A /* WeiboAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAuthentication.h; sourceTree = "<group>"; };
-		A4F6DB1219050029007CD04A /* WeiboAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAuthentication.m; sourceTree = "<group>"; };
-		A4F6DB1419050029007CD04A /* WeiboDialogClose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeiboDialogClose.png; sourceTree = "<group>"; };
-		A4F6DB1519050029007CD04A /* WeiboDialogClose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeiboDialogClose@2x.png"; sourceTree = "<group>"; };
-		A4F6DB1719050029007CD04A /* ImageResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageResourceLoader.h; sourceTree = "<group>"; };
-		A4F6DB1819050029007CD04A /* ImageResourceLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageResourceLoader.m; sourceTree = "<group>"; };
-		A4F6DB1919050029007CD04A /* NSDictionary+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Json.h"; sourceTree = "<group>"; };
-		A4F6DB1A19050029007CD04A /* NSDictionary+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Json.m"; sourceTree = "<group>"; };
-		A4F6DB1B19050029007CD04A /* PathHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathHelper.h; sourceTree = "<group>"; };
-		A4F6DB1C19050029007CD04A /* PathHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathHelper.m; sourceTree = "<group>"; };
-		A4F6DB1D19050029007CD04A /* Resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resources.h; sourceTree = "<group>"; };
-		A4F6DB1E19050029007CD04A /* Resources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Resources.m; sourceTree = "<group>"; };
-		A4F6DB1F19050029007CD04A /* URLRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLRequestHelper.h; sourceTree = "<group>"; };
-		A4F6DB2019050029007CD04A /* URLRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLRequestHelper.m; sourceTree = "<group>"; };
-		A4F6DB2119050029007CD04A /* WeiboDialogClosePNG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboDialogClosePNG.h; sourceTree = "<group>"; };
-		A4F6DB2219050029007CD04A /* WeiboDialogClosePNG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboDialogClosePNG.m; sourceTree = "<group>"; };
-		A4F6DB2419050029007CD04A /* WeiboDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboDialog.h; sourceTree = "<group>"; };
-		A4F6DB2519050029007CD04A /* WeiboDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboDialog.m; sourceTree = "<group>"; };
-		A4F6DB2619050029007CD04A /* WeiboLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboLoginDialog.h; sourceTree = "<group>"; };
-		A4F6DB2719050029007CD04A /* WeiboLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboLoginDialog.m; sourceTree = "<group>"; };
-		A4F6DB2819050029007CD04A /* Weibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weibo.h; sourceTree = "<group>"; };
-		A4F6DB2919050029007CD04A /* Weibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weibo.m; sourceTree = "<group>"; };
-		A4F6DB2A19050029007CD04A /* WeiboConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboConfig.h; sourceTree = "<group>"; };
-		A4F6DB2B19050029007CD04A /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		A4FB97E91909317700D0BDBE /* NightPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NightPlayScene.h; sourceTree = "<group>"; };
 		A4FB97EA1909317700D0BDBE /* NightPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NightPlayScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,7 +227,6 @@
 		A4E9E4EB18F7D18E000ADEAE /* ColorAtom */ = {
 			isa = PBXGroup;
 			children = (
-				A4F6DAFA19050029007CD04A /* WeiboSDK */,
 				A4EB2D4F1902279600B28405 /* Emitter */,
 				A4EE478518FA6217003A0B74 /* Visitors */,
 				A46E099118F909C700BCC91D /* Nodes */,
@@ -409,97 +342,6 @@
 			name = Visitors;
 			sourceTree = "<group>";
 		};
-		A4F6DAFA19050029007CD04A /* WeiboSDK */ = {
-			isa = PBXGroup;
-			children = (
-				A4F6DAFB19050029007CD04A /* Engine */,
-				A4F6DB0419050029007CD04A /* Models */,
-				A4F6DB1319050029007CD04A /* Resources */,
-				A4F6DB1619050029007CD04A /* Utilities */,
-				A4F6DB2319050029007CD04A /* Views */,
-				A4F6DB2819050029007CD04A /* Weibo.h */,
-				A4F6DB2919050029007CD04A /* Weibo.m */,
-				A4F6DB2A19050029007CD04A /* WeiboConfig.h */,
-				A4F6DB2B19050029007CD04A /* WeiboSDK.h */,
-			);
-			path = WeiboSDK;
-			sourceTree = "<group>";
-		};
-		A4F6DAFB19050029007CD04A /* Engine */ = {
-			isa = PBXGroup;
-			children = (
-				A4F6DAFC19050029007CD04A /* WeiboAccounts.h */,
-				A4F6DAFD19050029007CD04A /* WeiboAccounts.m */,
-				A4F6DAFE19050029007CD04A /* WeiboRequest.h */,
-				A4F6DAFF19050029007CD04A /* WeiboRequest.m */,
-				A4F6DB0019050029007CD04A /* WeiboRequestOperation.h */,
-				A4F6DB0119050029007CD04A /* WeiboRequestOperation.m */,
-				A4F6DB0219050029007CD04A /* WeiboSignIn.h */,
-				A4F6DB0319050029007CD04A /* WeiboSignIn.m */,
-			);
-			path = Engine;
-			sourceTree = "<group>";
-		};
-		A4F6DB0419050029007CD04A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				A4F6DB0519050029007CD04A /* GeoInfo.h */,
-				A4F6DB0619050029007CD04A /* GeoInfo.m */,
-				A4F6DB0719050029007CD04A /* Status.h */,
-				A4F6DB0819050029007CD04A /* Status.m */,
-				A4F6DB0919050029007CD04A /* StatusImage.h */,
-				A4F6DB0A19050029007CD04A /* StatusImage.m */,
-				A4F6DB0B19050029007CD04A /* StatusVisible.h */,
-				A4F6DB0C19050029007CD04A /* StatusVisible.m */,
-				A4F6DB0D19050029007CD04A /* User.h */,
-				A4F6DB0E19050029007CD04A /* User.m */,
-				A4F6DB0F19050029007CD04A /* WeiboAccount.h */,
-				A4F6DB1019050029007CD04A /* WeiboAccount.m */,
-				A4F6DB1119050029007CD04A /* WeiboAuthentication.h */,
-				A4F6DB1219050029007CD04A /* WeiboAuthentication.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		A4F6DB1319050029007CD04A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A4F6DB1419050029007CD04A /* WeiboDialogClose.png */,
-				A4F6DB1519050029007CD04A /* WeiboDialogClose@2x.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		A4F6DB1619050029007CD04A /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				A4F6DB1719050029007CD04A /* ImageResourceLoader.h */,
-				A4F6DB1819050029007CD04A /* ImageResourceLoader.m */,
-				A4F6DB1919050029007CD04A /* NSDictionary+Json.h */,
-				A4F6DB1A19050029007CD04A /* NSDictionary+Json.m */,
-				A4F6DB1B19050029007CD04A /* PathHelper.h */,
-				A4F6DB1C19050029007CD04A /* PathHelper.m */,
-				A4F6DB1D19050029007CD04A /* Resources.h */,
-				A4F6DB1E19050029007CD04A /* Resources.m */,
-				A4F6DB1F19050029007CD04A /* URLRequestHelper.h */,
-				A4F6DB2019050029007CD04A /* URLRequestHelper.m */,
-				A4F6DB2119050029007CD04A /* WeiboDialogClosePNG.h */,
-				A4F6DB2219050029007CD04A /* WeiboDialogClosePNG.m */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		A4F6DB2319050029007CD04A /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A4F6DB2419050029007CD04A /* WeiboDialog.h */,
-				A4F6DB2519050029007CD04A /* WeiboDialog.m */,
-				A4F6DB2619050029007CD04A /* WeiboLoginDialog.h */,
-				A4F6DB2719050029007CD04A /* WeiboLoginDialog.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -589,10 +431,8 @@
 				A4EB2D6A19023C8700B28405 /* spark.png in Resources */,
 				A4EB2D611902369700B28405 /* bokeh.png in Resources */,
 				A4EB2D6919023C8700B28405 /* PlayerBackground.sks in Resources */,
-				A4F6DB3819050029007CD04A /* WeiboDialogClose@2x.png in Resources */,
 				A4EB2D601902369700B28405 /* BackGround.sks in Resources */,
 				A4ED505919016B0A00A37085 /* pew-pew-lei.caf in Resources */,
-				A4F6DB3719050029007CD04A /* WeiboDialogClose.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,44 +453,24 @@
 			files = (
 				A4E9E4FC18F7D18E000ADEAE /* YXYViewController.m in Sources */,
 				A48FDDD719078A1400772A22 /* AtomSharpNodeContactVisitor.m in Sources */,
-				A4F6DB3C19050029007CD04A /* Resources.m in Sources */,
-				A4F6DB3A19050029007CD04A /* NSDictionary+Json.m in Sources */,
 				A4E9E4FF18F7D18E000ADEAE /* PlayFieldScene.m in Sources */,
-				A4F6DB3419050029007CD04A /* User.m in Sources */,
-				A4F6DB2C19050029007CD04A /* WeiboAccounts.m in Sources */,
 				A4E9E4F218F7D18E000ADEAE /* main.m in Sources */,
 				A4ED50481900FAD500A37085 /* AtomPlusNode.m in Sources */,
 				A4E9E4F618F7D18E000ADEAE /* YXYAppDelegate.m in Sources */,
-				A4F6DB3319050029007CD04A /* StatusVisible.m in Sources */,
 				A4ED505419015E9200A37085 /* GameOverScene.m in Sources */,
-				A4F6DB3619050029007CD04A /* WeiboAuthentication.m in Sources */,
-				A4F6DB3119050029007CD04A /* Status.m in Sources */,
 				A4EE478E18FA6A0C003A0B74 /* VisitablePhysicsBody.m in Sources */,
-				A4F6DB2D19050029007CD04A /* WeiboRequest.m in Sources */,
 				A4EB2D641902377300B28405 /* Background.m in Sources */,
 				A4EB2D7119024DEA00B28405 /* Spark.m in Sources */,
 				A4EE478818FA627C003A0B74 /* ContactVisitor.m in Sources */,
 				A4EB2D74190272EC00B28405 /* DisplayScreen.m in Sources */,
 				A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */,
 				A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */,
-				A4F6DB3919050029007CD04A /* ImageResourceLoader.m in Sources */,
-				A4F6DB3B19050029007CD04A /* PathHelper.m in Sources */,
-				A4F6DB3E19050029007CD04A /* WeiboDialogClosePNG.m in Sources */,
 				A4EE478B18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m in Sources */,
 				A4F699031908FD7100FE911A /* MainScene.m in Sources */,
-				A4F6DB3D19050029007CD04A /* URLRequestHelper.m in Sources */,
 				A4ED504B1900FFF200A37085 /* AtomMinusNodeContactVisitor.m in Sources */,
-				A4F6DB3F19050029007CD04A /* WeiboDialog.m in Sources */,
-				A4F6DB2F19050029007CD04A /* WeiboSignIn.m in Sources */,
-				A4F6DB3519050029007CD04A /* WeiboAccount.m in Sources */,
-				A4F6DB2E19050029007CD04A /* WeiboRequestOperation.m in Sources */,
 				A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */,
 				A4ED504E190103A600A37085 /* AtomMinusNode.m in Sources */,
-				A4F6DB3219050029007CD04A /* StatusImage.m in Sources */,
 				A4EE479118FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m in Sources */,
-				A4F6DB4019050029007CD04A /* WeiboLoginDialog.m in Sources */,
-				A4F6DB3019050029007CD04A /* GeoInfo.m in Sources */,
-				A4F6DB4119050029007CD04A /* Weibo.m in Sources */,
 				A4ED50511901548500A37085 /* PlayerArea.m in Sources */,
 				A4FB97EB1909317700D0BDBE /* NightPlayScene.m in Sources */,
 			);

@@ -27,12 +27,19 @@
     
     // Present the scene.
     [skView presentScene:scene];
+    
     NSError *error;
     NSURL * backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"background-music-aac" withExtension:@"caf"];
-    self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
-    self.backgroundMusicPlayer.numberOfLoops = -1;
-    [self.backgroundMusicPlayer prepareToPlay];
-    [self.backgroundMusicPlayer play];
+    backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
+    backgroundMusicPlayer.numberOfLoops = -1;
+    [backgroundMusicPlayer prepareToPlay];
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    [standardDefaults registerDefaults:@{@"audio": @"on"}];
+    [standardDefaults synchronize];
+    if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"on"]) {
+        [backgroundMusicPlayer play];
+    }
+    
 }
 
 - (BOOL)shouldAutorotate

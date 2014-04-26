@@ -8,23 +8,26 @@
 
 #import "GameOverScene.h"
 #import "PlayFieldScene.h"
-#import "Weibo.h"
+
 
 @implementation GameOverScene
 @synthesize background;
 @synthesize score;
 @synthesize sharingText;
 @synthesize sharingImage;
--(id)initWithSize:(CGSize)size Score:(NSInteger) newscore{
+@synthesize mode;
+-(id)initWithSize:(CGSize)size score:(NSInteger) newscore mode:(NSString *)newmode{
     if (self = [super initWithSize:size]) {
         score = newscore;
-        sharingText = [NSString stringWithFormat:@"我在ColorAtom中得了%ld分，快来超越我吧！ http://yulingtianxia.com/ColorAtom/",score];
+        mode = newmode;
+        sharingText = [NSString stringWithFormat:@"我在ColorAtom的%@中得了%ld分，快来超越我吧！ http://yulingtianxia.com/ColorAtom/",mode,score];
         self.backgroundColor = [SKColor clearColor];
 //        背景效果
         background = [[Background alloc] init];
         background.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:background];
 //        各种label
+        SKLabelNode *modeLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         SKLabelNode *gameover = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         SKLabelNode *newScoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         SKLabelNode *newScoreNumLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
@@ -33,29 +36,34 @@
         SKLabelNode *playAgain = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         SKLabelNode *weiboShare = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         SKLabelNode *mainScene = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        modeLabel.text = mode;
+        modeLabel.fontSize = 40;
+        modeLabel.fontColor = [SKColor purpleColor];
+        modeLabel.position = CGPointMake(self.size.width/2, 3*self.frame.size.height/4+modeLabel.frame.size.height);
+        [self addChild:modeLabel];
         gameover.text = @"GAME OVER";
         gameover.fontSize = 40;
-        gameover.fontColor = [SKColor whiteColor];
+        gameover.fontColor = [SKColor purpleColor];
         gameover.position = CGPointMake(self.size.width/2, 3*self.frame.size.height/4);
         [self addChild:gameover];
         newScoreLabel.text = @"NEWSCORE";
         newScoreLabel.fontSize = 35;
-        newScoreLabel.fontColor = [SKColor whiteColor];
+        newScoreLabel.fontColor = [SKColor greenColor];
         newScoreLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(gameover.frame)-newScoreLabel.frame.size.height);
         [self addChild:newScoreLabel];
         newScoreNumLabel.text = [NSString stringWithFormat:@"%ld",(long)score];
         newScoreNumLabel.fontSize = 35;
-        newScoreNumLabel.fontColor = [SKColor whiteColor];
+        newScoreNumLabel.fontColor = [SKColor greenColor];
         newScoreNumLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(newScoreLabel.frame)-newScoreNumLabel.frame.size.height);
         [self addChild:newScoreNumLabel];
         highScoreLabel.text = @"HIGHSCORE";
         highScoreLabel.fontSize = 35;
-        highScoreLabel.fontColor = [SKColor whiteColor];
+        highScoreLabel.fontColor = [SKColor redColor];
         highScoreLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(newScoreNumLabel.frame)-highScoreLabel.frame.size.height);
         [self addChild:highScoreLabel];
         highScoreNumLabel.text =  [NSString stringWithFormat:@"%ld",(long)[self setNewScore]];
         highScoreNumLabel.fontSize = 35;
-        highScoreNumLabel.fontColor = [SKColor whiteColor];
+        highScoreNumLabel.fontColor = [SKColor redColor];
         highScoreNumLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(highScoreLabel.frame)-highScoreNumLabel.frame.size.height);
         [self addChild:highScoreNumLabel];
         playAgain.text = @"PLAY AGAIN";
@@ -94,9 +102,15 @@
     CGPoint location = [touch locationInNode:self];
     SKLabelNode *touchedNode = (SKLabelNode *)[self nodeAtPoint:location];
     if ([touchedNode.name isEqualToString:(NSString *)PlayAgainButton]) {
-        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-        SKScene * myScene = [[PlayFieldScene alloc] initWithSize:self.size];
-        [self.view presentScene:myScene transition: reveal];
+        if ([mode isEqualToString:(NSString *)NormalMode]) {
+            SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+            SKScene * myScene = [[PlayFieldScene alloc] initWithSize:self.size];
+            [self.view presentScene:myScene transition: reveal];
+        }else if ([mode isEqualToString:(NSString *)NightMode]) {
+            SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+            SKScene * myScene = [[NightPlayScene alloc] initWithSize:self.size];
+            [self.view presentScene:myScene transition: reveal];
+        }
     }else if ([touchedNode.name isEqualToString:(NSString *)WeiboShareButton]){
         sharingImage = [self imageFromNode:self];
         NSArray *activityItems;
@@ -149,11 +163,11 @@
 -(NSInteger)setNewScore{
     NSNumber *newScore = [NSNumber numberWithInteger:score];
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-    [standardDefaults registerDefaults:@{@"highscore": newScore}];
+    [standardDefaults registerDefaults:@{mode: newScore}];
     [standardDefaults synchronize];
-    NSNumber *highScore = [standardDefaults objectForKey:@"highscore"];
+    NSNumber *highScore = [standardDefaults objectForKey:mode];
     if ([newScore compare:highScore]==NSOrderedDescending) {
-        [standardDefaults setObject:newScore forKey:@"highscore"];
+        [standardDefaults setObject:newScore forKey:mode];
         [standardDefaults synchronize];
         return score;
     }

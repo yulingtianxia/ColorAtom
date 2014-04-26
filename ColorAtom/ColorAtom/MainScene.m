@@ -7,7 +7,7 @@
 //
 
 #import "MainScene.h"
-
+#import "YXYViewController.h"
 @implementation MainScene
 @synthesize fire;
 @synthesize background;
@@ -30,6 +30,12 @@
         background = [[Background alloc] init];
         background.position = CGPointMake(self.size.width/2, self.size.height/2+25);
         [self addChild:background];
+        audio = [[SKSpriteNode alloc] init];
+        audio.name = AudioButton;
+        audio.size = CGSizeMake(20, 20);
+        audio.position = CGPointMake(audio.size.width/2, self.size.height-audio.size.height/2);
+        [self setAudioTexture];
+        [self addChild:audio];
         plus = [[AtomPlusNode alloc] init];
         plus.position = CGPointMake(self.size.width/2, 0);
         plus.physicsBody.velocity = CGVectorMake(0, 600);
@@ -88,8 +94,29 @@
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
         SKScene * myScene = [[NightPlayScene alloc] initWithSize:self.size];
         [self.view presentScene:myScene transition: reveal];
+    }else if ([touchedNode.name isEqualToString:(NSString *)AudioButton]) {
+        NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+        if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"on"]){
+            [standardDefaults setObject:@"off" forKey:@"audio"];
+            [((YXYViewController *)[self.view nextResponder]).backgroundMusicPlayer stop];
+        }else if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"off"]){
+            [standardDefaults setObject:@"on" forKey:@"audio"];
+            [((YXYViewController *)[self.view nextResponder]).backgroundMusicPlayer play];
+        }
+        
+        [self setAudioTexture];
     }
     
+}
+
+#pragma mark MyMethods
+-(void) setAudioTexture{
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"on"]) {
+        audio.texture = [SKTexture textureWithImageNamed:@"audio_on"];
+    }else if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"off"]) {
+        audio.texture = [SKTexture textureWithImageNamed:@"audio_off"];
+    }
 }
 
 #pragma mark SKPhysicsContactDelegate

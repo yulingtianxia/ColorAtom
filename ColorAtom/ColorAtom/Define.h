@@ -27,6 +27,7 @@ static NSString const *WeiboShareButton = @"weiboshare";
 static NSString const *NormalPlayButton = @"normalplay";
 static NSString const *NightPlayButton = @"nightplay";
 static NSString const *MainSceneButton = @"mainscene";
+static NSString const *AudioButton = @"audio";
 
 static NSString const *ATOMCOLOR = @"atomcolor";
 
@@ -42,5 +43,6 @@ static CGFloat const AtomMinusCreateInterval = 1;
 
 static NSString const *CreateAtomPlus = @"createatomplus";
 
-
+static NSString const *NormalMode = @"NORMAL MODE";
+static NSString const *NightMode = @"NIGHT MODE";
 #endif

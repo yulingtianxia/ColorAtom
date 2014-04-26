@@ -15,6 +15,6 @@
 @property NSInteger score;
 @property (nonatomic) NSString *sharingText;
 @property (nonatomic) UIImage *sharingImage;
-
--(id)initWithSize:(CGSize)size Score:(NSInteger) score;
+@property (nonatomic) NSString *mode;
+-(id)initWithSize:(CGSize)size score:(NSInteger) newscore mode:(NSString *)newmode;
 @end

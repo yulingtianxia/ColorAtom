@@ -10,6 +10,7 @@
 #import "Define.h"
 #import "GameOverScene.h"
 #import "PlayFieldScene.h"
+#import <objc/runtime.h>
 @implementation DisplayScreen
 @synthesize atomCount;
 @synthesize score;
@@ -85,8 +86,16 @@
 
 -(void)gameCheck{
     if (atomCount<=0) {
+        NSString *bodyClassName = [NSString stringWithUTF8String:class_getName(self.scene.class)];
+        NSString *mode;
+        if ([bodyClassName isEqualToString:@"PlayFieldScene"]) {
+            mode = (NSString *)NormalMode;
+        }
+        else if ([bodyClassName isEqualToString:@"NightPlayScene"]){
+            mode = (NSString *)NightMode;
+        }
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-        SKScene * gameOverScene = [[GameOverScene alloc] initWithSize:self.scene.size Score:score];
+        SKScene * gameOverScene = [[GameOverScene alloc] initWithSize:self.scene.size score:score mode:mode];
         [self.scene.view presentScene:gameOverScene transition: reveal];
     }
 }
