@@ -16,7 +16,7 @@
 #import "Background.h"
 #import "DisplayScreen.h"
 #import "AtomSharpNode.h"
-
+#import "SharpNodeButton.h"
 @implementation PlayFieldScene
 
 @synthesize debugOverlay;
@@ -49,9 +49,8 @@
         background.position = CGPointMake(self.size.width/2, self.size.height/2+AtomRadius);
         [self addChild:background];
 //        添加＃按钮
-        sharpButton = [[SKSpriteNode alloc] initWithTexture:[SKTexture textureWithImageNamed:@"Atomsharp"] color:[UIColor whiteColor] size:CGSizeMake(40, 40)];
+        sharpButton = [[SharpNodeButton alloc]init];
         sharpButton.position = CGPointMake(self.scene.size.width/2, AtomRadius);
-        sharpButton.name = (NSString *)SharpButtonName;
         sharpButton.zPosition = 100;
         [self addChild:sharpButton];
 //        游戏区域场景设置
@@ -141,23 +140,6 @@
 //    [debugOverlay removeAllChildren];
 }
 
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    UITouch * touch = [touches anyObject];
-    CGPoint location = [touch locationInNode:self];
-    SKSpriteNode *touchedNode = (SKSpriteNode *)[self nodeAtPoint:location];
-    if ([touchedNode.name isEqualToString:(NSString *)SharpButtonName]&&sharpCount>0) {
-        AtomSharpNode *atomSharp = [[AtomSharpNode alloc] init];
-        atomSharp.position = CGPointMake(self.size.width/2, playArea.frame.size.height);
-        [self addChild:atomSharp];
-        sharpCount--;
-        displayScreen.sharp = sharpCount;
-        if (sharpCount>0) {
-            touchedNode.alpha = 1;
-        }else{
-            touchedNode.alpha = 0.5;
-        }
-    }
-}
 #pragma mark MyMethod
 
 -(void)createAtomPlusAtPosition:(CGPoint) position
@@ -196,6 +178,20 @@
     }],
                                                                        [SKAction waitForDuration:AtomMinusCreateInterval*rank*10]]]]];
     
+}
+-(void)createAtomSharpByButton:(SharpNodeButton *)button{
+    if (sharpCount>0) {
+        AtomSharpNode *atomSharp = [[AtomSharpNode alloc] init];
+        atomSharp.position = CGPointMake(self.size.width/2, playArea.frame.size.height);
+        [self addChild:atomSharp];
+        sharpCount--;
+        displayScreen.sharp = sharpCount;
+        if (sharpCount>0) {
+            button.alpha = 1;
+        }else{
+            button.alpha = 0.5;
+        }
+    }
 }
 -(void)handlePanFrom:(UILongPressGestureRecognizer *)recognizer{
     if (recognizer.state == UIGestureRecognizerStateBegan) {

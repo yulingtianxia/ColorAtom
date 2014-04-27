@@ -7,19 +7,23 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "AtomPlusNode.h"
-#import "AtomMinusNode.h"
-#import "Background.h"
-#import "ContactVisitor.h"
-#import "VisitablePhysicsBody.h"
-#import "NightPlayScene.h"
+@class AtomPlusNode;
+@class AtomMinusNode;
+@class Background;
+@class ContactVisitor;
+@class VisitablePhysicsBody;
+@class NightPlayScene;
+@class AudioButton;
+@class NormalPlayButton;
+@class NightPlayButton;
+
 @interface MainScene : SKScene <SKPhysicsContactDelegate>
 @property SKEmitterNode *fire;
 @property Background *background;
 @property AtomPlusNode *plus;
 @property AtomMinusNode *minus;
-@property SKSpriteNode *audio;
+@property AudioButton *audio;
 @property SKLabelNode *logo;
-@property SKLabelNode *normalPlay;
-@property SKLabelNode *nightPlay;
+@property NormalPlayButton *normalPlay;
+@property NightPlayButton *nightPlay;
 @end

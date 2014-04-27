@@ -8,6 +8,16 @@
 
 #import "MainScene.h"
 #import "YXYViewController.h"
+#import "AudioButton.h"
+#import "AtomPlusNode.h"
+#import "AtomMinusNode.h"
+#import "Background.h"
+#import "ContactVisitor.h"
+#import "VisitablePhysicsBody.h"
+#import "NightPlayScene.h"
+#import "NormalPlayButton.h"
+#import "NightPlayButton.h"
+
 @implementation MainScene
 @synthesize fire;
 @synthesize background;
@@ -30,11 +40,9 @@
         background = [[Background alloc] init];
         background.position = CGPointMake(self.size.width/2, self.size.height/2+25);
         [self addChild:background];
-        audio = [[SKSpriteNode alloc] init];
-        audio.name = AudioButton;
-        audio.size = CGSizeMake(20, 20);
+        audio = [[AudioButton alloc] init];
         audio.position = CGPointMake(audio.size.width/2, self.size.height-audio.size.height/2);
-        [self setAudioTexture];
+        [audio setAudioTexture];
         [self addChild:audio];
         plus = [[AtomPlusNode alloc] init];
         plus.position = CGPointMake(self.size.width/2, 0);
@@ -46,16 +54,10 @@
         logo.fontSize = 50;
         logo.text = @"ColorAtom";
         logo.position = CGPointMake(self.size.width/2, 3*self.size.height/4);
-        normalPlay = [[SKLabelNode alloc] initWithFontNamed:@"Chalkboard SE"];
-        normalPlay.fontSize = 30;
-        normalPlay.text = @"Nomal Mode";
+        normalPlay = [[NormalPlayButton alloc] init];
         normalPlay.position = CGPointMake(self.size.width/2, self.size.height/2);
-        normalPlay.name = (NSString *)NormalPlayButton;
-        nightPlay = [[SKLabelNode alloc] initWithFontNamed:@"Chalkboard SE"];
-        nightPlay.fontSize = 30;
-        nightPlay.text = @"Night Mode";
+        nightPlay = [[NightPlayButton alloc] init];
         nightPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(normalPlay.frame)-2*normalPlay.frame.size.height);
-        nightPlay.name = (NSString *)NightPlayButton;
         [self runAction:[SKAction sequence:@[[SKAction runBlock:^{
             [self addChild:plus];
             [self addChild:minus];
@@ -80,43 +82,6 @@
         }]]]];
     }
     return self;
-}
-
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    UITouch * touch = [touches anyObject];
-    CGPoint location = [touch locationInNode:self];
-    SKLabelNode *touchedNode = (SKLabelNode *)[self nodeAtPoint:location];
-    if ([touchedNode.name isEqualToString:(NSString *)NormalPlayButton]) {
-        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-        SKScene * myScene = [[PlayFieldScene alloc] initWithSize:self.size];
-        [self.view presentScene:myScene transition: reveal];
-    }else if ([touchedNode.name isEqualToString:(NSString *)NightPlayButton]) {
-        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-        SKScene * myScene = [[NightPlayScene alloc] initWithSize:self.size];
-        [self.view presentScene:myScene transition: reveal];
-    }else if ([touchedNode.name isEqualToString:(NSString *)AudioButton]) {
-        NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-        if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"on"]){
-            [standardDefaults setObject:@"off" forKey:@"audio"];
-            [((YXYViewController *)[self.view nextResponder]).backgroundMusicPlayer stop];
-        }else if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"off"]){
-            [standardDefaults setObject:@"on" forKey:@"audio"];
-            [((YXYViewController *)[self.view nextResponder]).backgroundMusicPlayer play];
-        }
-        
-        [self setAudioTexture];
-    }
-    
-}
-
-#pragma mark MyMethods
--(void) setAudioTexture{
-    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-    if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"on"]) {
-        audio.texture = [SKTexture textureWithImageNamed:@"audio_on"];
-    }else if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"off"]) {
-        audio.texture = [SKTexture textureWithImageNamed:@"audio_off"];
-    }
 }
 
 #pragma mark SKPhysicsContactDelegate

@@ -11,7 +11,7 @@
 @class Background;
 @class DisplayScreen;
 @class YXYDebugNode;
-
+@class SharpNodeButton;
 @interface PlayFieldScene : SKScene <SKPhysicsContactDelegate>
 
 @property YXYDebugNode* debugOverlay;
@@ -23,7 +23,8 @@
 @property NSInteger rank;
 @property NSInteger sharpCount;
 @property NSInteger updateScore;
-@property SKSpriteNode *sharpButton;
+@property SharpNodeButton *sharpButton;
 
 -(void)createAtomMinus;
+-(void)createAtomSharpByButton:(SharpNodeButton *)button;
 @end

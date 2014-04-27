@@ -8,8 +8,9 @@
 
 #import "GameOverScene.h"
 #import "PlayFieldScene.h"
-
-
+#import "PlayAgainButton.h"
+#import "WeiboShareButton.h"
+#import "MainSceneButton.h"
 @implementation GameOverScene
 @synthesize background;
 @synthesize score;
@@ -33,9 +34,9 @@
         SKLabelNode *newScoreNumLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         SKLabelNode *highScoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         SKLabelNode *highScoreNumLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        SKLabelNode *playAgain = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        SKLabelNode *weiboShare = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        SKLabelNode *mainScene = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        PlayAgainButton *playAgain = [[PlayAgainButton alloc] initWithMode:mode];
+        WeiboShareButton *weiboShare = [[WeiboShareButton alloc] init];
+        MainSceneButton *mainScene = [[MainSceneButton alloc] init];
         modeLabel.text = mode;
         modeLabel.fontSize = 40;
         modeLabel.fontColor = [SKColor purpleColor];
@@ -66,75 +67,20 @@
         highScoreNumLabel.fontColor = [SKColor redColor];
         highScoreNumLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(highScoreLabel.frame)-highScoreNumLabel.frame.size.height);
         [self addChild:highScoreNumLabel];
-        playAgain.text = @"PLAY AGAIN";
-        playAgain.name = (NSString *)PlayAgainButton;
-        playAgain.fontSize = 20;
-        playAgain.fontColor = [SKColor whiteColor];
+        
         playAgain.position = CGPointMake(self.size.width/2, self.size.height/3);
         [self addChild:playAgain];
-        weiboShare.text = @"SHARE SCORE";
-        weiboShare.name = (NSString *)WeiboShareButton;
-        weiboShare.fontSize = 20;
+        
         weiboShare.position = CGPointMake(self.size.width/2, CGRectGetMinY(playAgain.frame)-2*playAgain.frame.size.height);
         [self addChild:weiboShare];
-        mainScene.text = @"MENU";
-        mainScene.name = (NSString *)MainSceneButton;
-        mainScene.fontSize = 20;
+        
         mainScene.position = CGPointMake(self.size.width/2, CGRectGetMinY(weiboShare.frame)-2*weiboShare.frame.size.height);
         [self addChild:mainScene];
     }
     return self;
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    UITouch * touch = [touches anyObject];
-    CGPoint location = [touch locationInNode:self];
-//    SKLabelNode *touchedNode = (SKLabelNode *)[self nodeAtPoint:location];
-//    if ([touchedNode.name isEqualToString:@"playagain"]) {
-//        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-//        SKScene * myScene = [[PlayFieldScene alloc] initWithSize:self.size];
-//        [self.view presentScene:myScene transition: reveal];
-//    }
-}
-
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    UITouch * touch = [touches anyObject];
-    CGPoint location = [touch locationInNode:self];
-    SKLabelNode *touchedNode = (SKLabelNode *)[self nodeAtPoint:location];
-    if ([touchedNode.name isEqualToString:(NSString *)PlayAgainButton]) {
-        if ([mode isEqualToString:(NSString *)NormalMode]) {
-            SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-            SKScene * myScene = [[PlayFieldScene alloc] initWithSize:self.size];
-            [self.view presentScene:myScene transition: reveal];
-        }else if ([mode isEqualToString:(NSString *)NightMode]) {
-            SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-            SKScene * myScene = [[NightPlayScene alloc] initWithSize:self.size];
-            [self.view presentScene:myScene transition: reveal];
-        }
-    }else if ([touchedNode.name isEqualToString:(NSString *)WeiboShareButton]){
-        sharingImage = [self imageFromNode:self];
-        NSArray *activityItems;
-        if (sharingImage != nil) {
-            activityItems = @[sharingText, sharingImage];
-        } else {
-            activityItems = @[sharingText];
-        }
-        
-        UIActivityViewController *activityController =
-        [[UIActivityViewController alloc] initWithActivityItems:activityItems
-                                          applicationActivities:nil];
-        
-        [(UIViewController *)[self.view nextResponder] presentViewController:activityController
-                           animated:YES completion:nil];
-    }else if ([touchedNode.name isEqualToString:(NSString *)MainSceneButton]){
-        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-        SKScene * myScene = [[MainScene alloc] initWithSize:self.size];
-        [self.view presentScene:myScene transition: reveal];
-    }
-    
-}
-//截屏
-
+#pragma mark MyMethod
 - (UIImage*) imageWithView:(UIView *)view
 {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
