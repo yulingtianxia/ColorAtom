@@ -8,7 +8,7 @@
 
 #import "GameOverScene.h"
 #import "PlayFieldScene.h"
-
+#import "TestLabel.h"
 
 @implementation GameOverScene
 @synthesize background;
@@ -16,6 +16,7 @@
 @synthesize sharingText;
 @synthesize sharingImage;
 @synthesize mode;
+
 -(id)initWithSize:(CGSize)size score:(NSInteger) newscore mode:(NSString *)newmode{
     if (self = [super initWithSize:size]) {
         score = newscore;
@@ -82,6 +83,12 @@
         mainScene.fontSize = 20;
         mainScene.position = CGPointMake(self.size.width/2, CGRectGetMinY(weiboShare.frame)-2*weiboShare.frame.size.height);
         [self addChild:mainScene];
+        TestLabel *testlabel = [[TestLabel alloc] initWithFontNamed:@"Chalkduster"];
+        testlabel.text = @"test";
+        testlabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(mainScene.frame)-2*mainScene.frame.size.height);
+        testlabel.userInteractionEnabled = YES;
+        [self addChild:testlabel];
+        
     }
     return self;
 }

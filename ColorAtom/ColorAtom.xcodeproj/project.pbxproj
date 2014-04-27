@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		A404E4E51907D98600528624 /* SharpMagic.sks in Resources */ = {isa = PBXBuildFile; fileRef = A404E4E41907D98600528624 /* SharpMagic.sks */; };
 		A413F1EC190BA0A400400EB7 /* sharp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A413F1EB190BA0A400400EB7 /* sharp.mp3 */; };
-		A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099318F90A6D00BCC91D /* AtomNode.m */; };
-		A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099618F9178D00BCC91D /* YXYDebugNode.m */; };
-		A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDDD3190787F800772A22 /* AtomSharpNode.m */; };
 		A48FDDD719078A1400772A22 /* AtomSharpNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDDD619078A1400772A22 /* AtomSharpNodeContactVisitor.m */; };
 		A4D32FFA19064D0F004B2CF3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D32FF919064D0F004B2CF3 /* Social.framework */; };
 		A4E9E4E418F7D18D000ADEAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E318F7D18D000ADEAE /* Foundation.framework */; };
@@ -33,17 +30,11 @@
 		A4E9E51618F7D18E000ADEAE /* ColorAtomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E9E51518F7D18E000ADEAE /* ColorAtomTests.m */; };
 		A4EB2D601902369700B28405 /* BackGround.sks in Resources */ = {isa = PBXBuildFile; fileRef = A4EB2D5E1902369700B28405 /* BackGround.sks */; };
 		A4EB2D611902369700B28405 /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = A4EB2D5F1902369700B28405 /* bokeh.png */; };
-		A4EB2D641902377300B28405 /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB2D631902377300B28405 /* Background.m */; };
 		A4EB2D6919023C8700B28405 /* PlayerBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = A4EB2D6719023C8700B28405 /* PlayerBackground.sks */; };
 		A4EB2D6A19023C8700B28405 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A4EB2D6819023C8700B28405 /* spark.png */; };
 		A4EB2D6C190241ED00B28405 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = A4EB2D6B190241ED00B28405 /* Fire.sks */; };
 		A4EB2D6E19024CA000B28405 /* Spark.sks in Resources */ = {isa = PBXBuildFile; fileRef = A4EB2D6D19024CA000B28405 /* Spark.sks */; };
-		A4EB2D7119024DEA00B28405 /* Spark.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB2D7019024DEA00B28405 /* Spark.m */; };
-		A4EB2D74190272EC00B28405 /* DisplayScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EB2D73190272EC00B28405 /* DisplayScreen.m */; };
-		A4ED50481900FAD500A37085 /* AtomPlusNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED50471900FAD500A37085 /* AtomPlusNode.m */; };
 		A4ED504B1900FFF200A37085 /* AtomMinusNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED504A1900FFF200A37085 /* AtomMinusNodeContactVisitor.m */; };
-		A4ED504E190103A600A37085 /* AtomMinusNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED504D190103A600A37085 /* AtomMinusNode.m */; };
-		A4ED50511901548500A37085 /* PlayerArea.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED50501901548500A37085 /* PlayerArea.m */; };
 		A4ED505419015E9200A37085 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED505319015E9200A37085 /* GameOverScene.m */; };
 		A4ED505819016B0A00A37085 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = A4ED505619016B0A00A37085 /* background-music-aac.caf */; };
 		A4ED505919016B0A00A37085 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = A4ED505719016B0A00A37085 /* pew-pew-lei.caf */; };
@@ -71,12 +62,6 @@
 		A413F1EB190BA0A400400EB7 /* sharp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sharp.mp3; sourceTree = "<group>"; };
 		A46E098F18F908F300BCC91D /* NodeCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCategories.h; sourceTree = "<group>"; };
 		A46E099018F9096A00BCC91D /* RandomHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomHelper.h; sourceTree = "<group>"; };
-		A46E099218F90A6D00BCC91D /* AtomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomNode.h; sourceTree = "<group>"; };
-		A46E099318F90A6D00BCC91D /* AtomNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomNode.m; sourceTree = "<group>"; };
-		A46E099518F9178D00BCC91D /* YXYDebugNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXYDebugNode.h; sourceTree = "<group>"; };
-		A46E099618F9178D00BCC91D /* YXYDebugNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXYDebugNode.m; sourceTree = "<group>"; };
-		A48FDDD2190787F800772A22 /* AtomSharpNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomSharpNode.h; sourceTree = "<group>"; };
-		A48FDDD3190787F800772A22 /* AtomSharpNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomSharpNode.m; sourceTree = "<group>"; };
 		A48FDDD519078A1400772A22 /* AtomSharpNodeContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomSharpNodeContactVisitor.h; sourceTree = "<group>"; };
 		A48FDDD619078A1400772A22 /* AtomSharpNodeContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomSharpNodeContactVisitor.m; sourceTree = "<group>"; };
 		A4D32FF919064D0F004B2CF3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -106,24 +91,12 @@
 		A4E9E52018F7E854000ADEAE /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		A4EB2D5E1902369700B28405 /* BackGround.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BackGround.sks; sourceTree = "<group>"; };
 		A4EB2D5F1902369700B28405 /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
-		A4EB2D621902377300B28405 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
-		A4EB2D631902377300B28405 /* Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Background.m; sourceTree = "<group>"; };
 		A4EB2D6719023C8700B28405 /* PlayerBackground.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerBackground.sks; sourceTree = "<group>"; };
 		A4EB2D6819023C8700B28405 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		A4EB2D6B190241ED00B28405 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
 		A4EB2D6D19024CA000B28405 /* Spark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Spark.sks; sourceTree = "<group>"; };
-		A4EB2D6F19024DEA00B28405 /* Spark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spark.h; sourceTree = "<group>"; };
-		A4EB2D7019024DEA00B28405 /* Spark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spark.m; sourceTree = "<group>"; };
-		A4EB2D72190272EC00B28405 /* DisplayScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayScreen.h; sourceTree = "<group>"; };
-		A4EB2D73190272EC00B28405 /* DisplayScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayScreen.m; sourceTree = "<group>"; };
-		A4ED50461900FAD500A37085 /* AtomPlusNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomPlusNode.h; sourceTree = "<group>"; };
-		A4ED50471900FAD500A37085 /* AtomPlusNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomPlusNode.m; sourceTree = "<group>"; };
 		A4ED50491900FFF200A37085 /* AtomMinusNodeContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomMinusNodeContactVisitor.h; sourceTree = "<group>"; };
 		A4ED504A1900FFF200A37085 /* AtomMinusNodeContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomMinusNodeContactVisitor.m; sourceTree = "<group>"; };
-		A4ED504C190103A600A37085 /* AtomMinusNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomMinusNode.h; sourceTree = "<group>"; };
-		A4ED504D190103A600A37085 /* AtomMinusNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomMinusNode.m; sourceTree = "<group>"; };
-		A4ED504F1901548500A37085 /* PlayerArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerArea.h; sourceTree = "<group>"; };
-		A4ED50501901548500A37085 /* PlayerArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerArea.m; sourceTree = "<group>"; };
 		A4ED505219015E9200A37085 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		A4ED505319015E9200A37085 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
 		A4ED505619016B0A00A37085 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
@@ -169,31 +142,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A46E099118F909C700BCC91D /* Nodes */ = {
-			isa = PBXGroup;
-			children = (
-				A46E099218F90A6D00BCC91D /* AtomNode.h */,
-				A46E099318F90A6D00BCC91D /* AtomNode.m */,
-				A4ED50461900FAD500A37085 /* AtomPlusNode.h */,
-				A4ED50471900FAD500A37085 /* AtomPlusNode.m */,
-				A4ED504C190103A600A37085 /* AtomMinusNode.h */,
-				A4ED504D190103A600A37085 /* AtomMinusNode.m */,
-				A48FDDD2190787F800772A22 /* AtomSharpNode.h */,
-				A48FDDD3190787F800772A22 /* AtomSharpNode.m */,
-				A46E099518F9178D00BCC91D /* YXYDebugNode.h */,
-				A46E099618F9178D00BCC91D /* YXYDebugNode.m */,
-				A4ED504F1901548500A37085 /* PlayerArea.h */,
-				A4ED50501901548500A37085 /* PlayerArea.m */,
-				A4EB2D621902377300B28405 /* Background.h */,
-				A4EB2D631902377300B28405 /* Background.m */,
-				A4EB2D6F19024DEA00B28405 /* Spark.h */,
-				A4EB2D7019024DEA00B28405 /* Spark.m */,
-				A4EB2D72190272EC00B28405 /* DisplayScreen.h */,
-				A4EB2D73190272EC00B28405 /* DisplayScreen.m */,
-			);
-			name = Nodes;
-			sourceTree = "<group>";
-		};
 		A4E9E4D718F7D18D000ADEAE = {
 			isa = PBXGroup;
 			children = (
@@ -231,7 +179,6 @@
 			children = (
 				A4EB2D4F1902279600B28405 /* Emitter */,
 				A4EE478518FA6217003A0B74 /* Visitors */,
-				A46E099118F909C700BCC91D /* Nodes */,
 				A4E9E52118F7E85C000ADEAE /* Scene */,
 				A4E9E51F18F7E82F000ADEAE /* Util */,
 				A4ED505519016AF200A37085 /* Sounds */,
@@ -459,23 +406,14 @@
 				A48FDDD719078A1400772A22 /* AtomSharpNodeContactVisitor.m in Sources */,
 				A4E9E4FF18F7D18E000ADEAE /* PlayFieldScene.m in Sources */,
 				A4E9E4F218F7D18E000ADEAE /* main.m in Sources */,
-				A4ED50481900FAD500A37085 /* AtomPlusNode.m in Sources */,
 				A4E9E4F618F7D18E000ADEAE /* YXYAppDelegate.m in Sources */,
 				A4ED505419015E9200A37085 /* GameOverScene.m in Sources */,
 				A4EE478E18FA6A0C003A0B74 /* VisitablePhysicsBody.m in Sources */,
-				A4EB2D641902377300B28405 /* Background.m in Sources */,
-				A4EB2D7119024DEA00B28405 /* Spark.m in Sources */,
 				A4EE478818FA627C003A0B74 /* ContactVisitor.m in Sources */,
-				A4EB2D74190272EC00B28405 /* DisplayScreen.m in Sources */,
-				A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */,
-				A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */,
 				A4EE478B18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m in Sources */,
 				A4F699031908FD7100FE911A /* MainScene.m in Sources */,
 				A4ED504B1900FFF200A37085 /* AtomMinusNodeContactVisitor.m in Sources */,
-				A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */,
-				A4ED504E190103A600A37085 /* AtomMinusNode.m in Sources */,
 				A4EE479118FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m in Sources */,
-				A4ED50511901548500A37085 /* PlayerArea.m in Sources */,
 				A4FB97EB1909317700D0BDBE /* NightPlayScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
