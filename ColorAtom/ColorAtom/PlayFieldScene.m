@@ -17,6 +17,7 @@
 #import "DisplayScreen.h"
 #import "AtomSharpNode.h"
 #import "SharpNodeButton.h"
+#import "StarRain.h"
 @implementation PlayFieldScene
 
 @synthesize debugOverlay;
@@ -47,7 +48,10 @@
 //        添加游戏背景
         background = [[Background alloc] init];
         background.position = CGPointMake(self.size.width/2, self.size.height/2+AtomRadius);
+        StarRain *starRain = [[StarRain alloc] init];
+        starRain.position = CGPointMake(self.size.width/2, self.size.height);
         [self addChild:background];
+        [self addChild:starRain];
 //        添加＃按钮
         sharpButton = [[SharpNodeButton alloc]init];
         sharpButton.position = CGPointMake(self.scene.size.width/2, AtomRadius);

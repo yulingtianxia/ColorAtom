@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A404E4E51907D98600528624 /* SharpMagic.sks in Resources */ = {isa = PBXBuildFile; fileRef = A404E4E41907D98600528624 /* SharpMagic.sks */; };
 		A413F1EC190BA0A400400EB7 /* sharp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A413F1EB190BA0A400400EB7 /* sharp.mp3 */; };
+		A43C3940192711470092B34D /* StarRain.sks in Resources */ = {isa = PBXBuildFile; fileRef = A43C393F192711470092B34D /* StarRain.sks */; };
+		A43C39431927144E0092B34D /* StarRain.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C39421927144E0092B34D /* StarRain.m */; };
 		A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099318F90A6D00BCC91D /* AtomNode.m */; };
 		A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099618F9178D00BCC91D /* YXYDebugNode.m */; };
 		A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDDD3190787F800772A22 /* AtomSharpNode.m */; };
@@ -76,6 +78,9 @@
 /* Begin PBXFileReference section */
 		A404E4E41907D98600528624 /* SharpMagic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SharpMagic.sks; sourceTree = "<group>"; };
 		A413F1EB190BA0A400400EB7 /* sharp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sharp.mp3; sourceTree = "<group>"; };
+		A43C393F192711470092B34D /* StarRain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarRain.sks; sourceTree = "<group>"; };
+		A43C39411927144E0092B34D /* StarRain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarRain.h; sourceTree = "<group>"; };
+		A43C39421927144E0092B34D /* StarRain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarRain.m; sourceTree = "<group>"; };
 		A46E098F18F908F300BCC91D /* NodeCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCategories.h; sourceTree = "<group>"; };
 		A46E099018F9096A00BCC91D /* RandomHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomHelper.h; sourceTree = "<group>"; };
 		A46E099218F90A6D00BCC91D /* AtomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomNode.h; sourceTree = "<group>"; };
@@ -207,6 +212,8 @@
 				A4ED50501901548500A37085 /* PlayerArea.m */,
 				A4EB2D621902377300B28405 /* Background.h */,
 				A4EB2D631902377300B28405 /* Background.m */,
+				A43C39411927144E0092B34D /* StarRain.h */,
+				A43C39421927144E0092B34D /* StarRain.m */,
 				A4EB2D6F19024DEA00B28405 /* Spark.h */,
 				A4EB2D7019024DEA00B28405 /* Spark.m */,
 				A4EB2D72190272EC00B28405 /* DisplayScreen.h */,
@@ -336,6 +343,7 @@
 				A4EB2D6D19024CA000B28405 /* Spark.sks */,
 				A404E4E41907D98600528624 /* SharpMagic.sks */,
 				A4F699041908FDFD00FE911A /* BigColorFire.sks */,
+				A43C393F192711470092B34D /* StarRain.sks */,
 			);
 			name = Emitter;
 			sourceTree = "<group>";
@@ -436,6 +444,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "杨萧玉";
 				TargetAttributes = {
+					A4E9E4DF18F7D18D000ADEAE = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					A4E9E50718F7D18E000ADEAE = {
 						TestTargetID = A4E9E4DF18F7D18D000ADEAE;
 					};
@@ -480,6 +495,7 @@
 				A4EB2D6919023C8700B28405 /* PlayerBackground.sks in Resources */,
 				A4EB2D601902369700B28405 /* BackGround.sks in Resources */,
 				A4ED505919016B0A00A37085 /* pew-pew-lei.caf in Resources */,
+				A43C3940192711470092B34D /* StarRain.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +527,7 @@
 				A4EB2D7119024DEA00B28405 /* Spark.m in Sources */,
 				A4F6ECEF190CB40F0069DBC9 /* WeiboShareButton.m in Sources */,
 				A4EE478818FA627C003A0B74 /* ContactVisitor.m in Sources */,
+				A43C39431927144E0092B34D /* StarRain.m in Sources */,
 				A4EB2D74190272EC00B28405 /* DisplayScreen.m in Sources */,
 				A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */,
 				A4F6ECF2190CB6160069DBC9 /* MainSceneButton.m in Sources */,
