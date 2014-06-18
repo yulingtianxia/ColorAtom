@@ -9,3 +9,5 @@ ColorAtom
 Demo视频：http://v.163.com/paike/V8H1BJHKV/V9POM33GM.html  
 
 主页：http://coloratom.yulingtianxia.com  
+
+[![Build Status](https://travis-ci.org/yulingtianxia/ColorAtom.svg?branch=master)](https://travis-ci.org/yulingtianxia/ColorAtom)  
