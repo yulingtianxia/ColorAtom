@@ -17,6 +17,8 @@
 #import "NightPlayScene.h"
 #import "NormalPlayButton.h"
 #import "NightPlayButton.h"
+#import "SecretPlayScene.h"
+#import "SecretPlayButton.h"
 
 @implementation MainScene
 @synthesize fire;
@@ -27,7 +29,7 @@
 @synthesize logo;
 @synthesize normalPlay;
 @synthesize nightPlay;
-
+@synthesize secretPlay;
 -(id)initWithSize:(CGSize)size {
     if (self=[super initWithSize:size]) {
         self.backgroundColor = [SKColor clearColor];
@@ -58,6 +60,9 @@
         normalPlay.position = CGPointMake(self.size.width/2, self.size.height/2);
         nightPlay = [[NightPlayButton alloc] init];
         nightPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(normalPlay.frame)-2*normalPlay.frame.size.height);
+        secretPlay = [[SecretPlayButton alloc] init];
+        secretPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(nightPlay.frame)-2*secretPlay.frame.size.height);
+        
         [self runAction:[SKAction sequence:@[[SKAction runBlock:^{
             [self addChild:plus];
             [self addChild:minus];
@@ -79,6 +84,7 @@
                                              [SKAction runBlock:^{
             [self addChild:normalPlay];
             [self addChild:nightPlay];
+            [self addChild:secretPlay];
         }]]]];
     }
     return self;

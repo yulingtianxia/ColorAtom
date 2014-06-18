@@ -16,6 +16,8 @@
 @class AudioButton;
 @class NormalPlayButton;
 @class NightPlayButton;
+@class SecretPlayScene;
+@class SecretPlayButton;
 
 @interface MainScene : SKScene <SKPhysicsContactDelegate>
 @property SKEmitterNode *fire;
@@ -26,4 +28,5 @@
 @property SKLabelNode *logo;
 @property NormalPlayButton *normalPlay;
 @property NightPlayButton *nightPlay;
+@property SecretPlayButton *secretPlay;
 @end

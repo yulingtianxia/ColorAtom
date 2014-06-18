@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A404E4E51907D98600528624 /* SharpMagic.sks in Resources */ = {isa = PBXBuildFile; fileRef = A404E4E41907D98600528624 /* SharpMagic.sks */; };
 		A413F1EC190BA0A400400EB7 /* sharp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A413F1EB190BA0A400400EB7 /* sharp.mp3 */; };
+		A43099D01951CC7E002B35D3 /* SecretPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A43099CF1951CC7E002B35D3 /* SecretPlayScene.m */; };
+		A43099D31951CE03002B35D3 /* SecretForce.m in Sources */ = {isa = PBXBuildFile; fileRef = A43099D21951CE03002B35D3 /* SecretForce.m */; };
+		A43099D61951D0F9002B35D3 /* SecretPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A43099D51951D0F9002B35D3 /* SecretPlayButton.m */; };
 		A43C3940192711470092B34D /* StarRain.sks in Resources */ = {isa = PBXBuildFile; fileRef = A43C393F192711470092B34D /* StarRain.sks */; };
 		A43C39431927144E0092B34D /* StarRain.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C39421927144E0092B34D /* StarRain.m */; };
 		A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099318F90A6D00BCC91D /* AtomNode.m */; };
@@ -78,6 +81,12 @@
 /* Begin PBXFileReference section */
 		A404E4E41907D98600528624 /* SharpMagic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SharpMagic.sks; sourceTree = "<group>"; };
 		A413F1EB190BA0A400400EB7 /* sharp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sharp.mp3; sourceTree = "<group>"; };
+		A43099CE1951CC7E002B35D3 /* SecretPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretPlayScene.h; sourceTree = "<group>"; };
+		A43099CF1951CC7E002B35D3 /* SecretPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretPlayScene.m; sourceTree = "<group>"; };
+		A43099D11951CE03002B35D3 /* SecretForce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretForce.h; sourceTree = "<group>"; };
+		A43099D21951CE03002B35D3 /* SecretForce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretForce.m; sourceTree = "<group>"; };
+		A43099D41951D0F9002B35D3 /* SecretPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretPlayButton.h; sourceTree = "<group>"; };
+		A43099D51951D0F9002B35D3 /* SecretPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretPlayButton.m; sourceTree = "<group>"; };
 		A43C393F192711470092B34D /* StarRain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarRain.sks; sourceTree = "<group>"; };
 		A43C39411927144E0092B34D /* StarRain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarRain.h; sourceTree = "<group>"; };
 		A43C39421927144E0092B34D /* StarRain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarRain.m; sourceTree = "<group>"; };
@@ -218,6 +227,8 @@
 				A4EB2D7019024DEA00B28405 /* Spark.m */,
 				A4EB2D72190272EC00B28405 /* DisplayScreen.h */,
 				A4EB2D73190272EC00B28405 /* DisplayScreen.m */,
+				A43099D11951CE03002B35D3 /* SecretForce.h */,
+				A43099D21951CE03002B35D3 /* SecretForce.m */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -328,6 +339,8 @@
 				A4F699021908FD7100FE911A /* MainScene.m */,
 				A4FB97E91909317700D0BDBE /* NightPlayScene.h */,
 				A4FB97EA1909317700D0BDBE /* NightPlayScene.m */,
+				A43099CE1951CC7E002B35D3 /* SecretPlayScene.h */,
+				A43099CF1951CC7E002B35D3 /* SecretPlayScene.m */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -392,6 +405,8 @@
 				A4F6ECFA190CBDAE0069DBC9 /* NormalPlayButton.m */,
 				A4F6ECFC190CBEEE0069DBC9 /* NightPlayButton.h */,
 				A4F6ECFD190CBEEE0069DBC9 /* NightPlayButton.m */,
+				A43099D41951D0F9002B35D3 /* SecretPlayButton.h */,
+				A43099D51951D0F9002B35D3 /* SecretPlayButton.m */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -523,6 +538,7 @@
 				A4E9E4F618F7D18E000ADEAE /* YXYAppDelegate.m in Sources */,
 				A4ED505419015E9200A37085 /* GameOverScene.m in Sources */,
 				A4EE478E18FA6A0C003A0B74 /* VisitablePhysicsBody.m in Sources */,
+				A43099D01951CC7E002B35D3 /* SecretPlayScene.m in Sources */,
 				A4EB2D641902377300B28405 /* Background.m in Sources */,
 				A4EB2D7119024DEA00B28405 /* Spark.m in Sources */,
 				A4F6ECEF190CB40F0069DBC9 /* WeiboShareButton.m in Sources */,
@@ -540,8 +556,10 @@
 				A4ED504E190103A600A37085 /* AtomMinusNode.m in Sources */,
 				A4EE479118FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m in Sources */,
 				A4ED50511901548500A37085 /* PlayerArea.m in Sources */,
+				A43099D61951D0F9002B35D3 /* SecretPlayButton.m in Sources */,
 				A4F6ECFB190CBDAE0069DBC9 /* NormalPlayButton.m in Sources */,
 				A4F6ECEC190CB11E0069DBC9 /* PlayAgainButton.m in Sources */,
+				A43099D31951CE03002B35D3 /* SecretForce.m in Sources */,
 				A4F6ECF5190CB7DB0069DBC9 /* SharpNodeButton.m in Sources */,
 				A4FB97EB1909317700D0BDBE /* NightPlayScene.m in Sources */,
 			);
@@ -625,7 +643,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -657,7 +675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

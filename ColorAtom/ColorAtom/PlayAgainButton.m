@@ -10,6 +10,7 @@
 #import "Define.h"
 #import "PlayFieldScene.h"
 #import "NightPlayScene.h"
+#import "SecretPlayScene.h"
 @implementation PlayAgainButton
 @synthesize mode;
 -(id)initWithMode:(NSString *)newmode{
@@ -31,6 +32,10 @@
     }else if ([mode isEqualToString:(NSString *)NightMode]) {
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
         SKScene * myScene = [[NightPlayScene alloc] initWithSize:self.scene.size];
+        [self.scene.view presentScene:myScene transition: reveal];
+    }else if ([mode isEqualToString:(NSString *)SecretMode]) {
+        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+        SKScene * myScene = [[SecretPlayScene alloc] initWithSize:self.scene.size];
         [self.scene.view presentScene:myScene transition: reveal];
     }
 }

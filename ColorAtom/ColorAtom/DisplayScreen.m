@@ -94,6 +94,9 @@
         else if ([bodyClassName isEqualToString:@"NightPlayScene"]){
             mode = (NSString *)NightMode;
         }
+        else if ([bodyClassName isEqualToString:@"SecretPlayScene"]){
+            mode = (NSString *)SecretMode;
+        }
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
         SKScene * gameOverScene = [[GameOverScene alloc] initWithSize:self.scene.size score:score mode:mode];
         [self.scene.view presentScene:gameOverScene transition: reveal];
