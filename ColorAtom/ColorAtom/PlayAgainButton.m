@@ -12,7 +12,7 @@
 #import "NightPlayScene.h"
 #import "SecretPlayScene.h"
 @implementation PlayAgainButton
-@synthesize mode;
+@synthesize modeString;
 -(id)initWithMode:(NSString *)newmode{
     if (self = [super init]) {
         self.fontName = @"Chalkduster";
@@ -20,23 +20,20 @@
         self.fontSize = 20;
         self.fontColor = [SKColor whiteColor];
         self.userInteractionEnabled = YES;
-        mode = newmode;
+        modeString = newmode;
     }
     return self;
 }
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    if ([mode isEqualToString:(NSString *)NormalMode]) {
-        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-        SKScene * myScene = [[PlayFieldScene alloc] initWithSize:self.scene.size];
-        [self.scene.view presentScene:myScene transition: reveal];
-    }else if ([mode isEqualToString:(NSString *)NightMode]) {
-        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-        SKScene * myScene = [[NightPlayScene alloc] initWithSize:self.scene.size];
-        [self.scene.view presentScene:myScene transition: reveal];
-    }else if ([mode isEqualToString:(NSString *)SecretMode]) {
-        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-        SKScene * myScene = [[SecretPlayScene alloc] initWithSize:self.scene.size];
-        [self.scene.view presentScene:myScene transition: reveal];
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *mode = [standardDefaults objectForKey:@"mode"];
+    for (NSString* key in mode.keyEnumerator) {
+        if ([[mode objectForKey:key] isEqualToString:modeString]) {
+            Class class = NSClassFromString(key);
+            SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+            SKScene * myScene = [[class alloc] initWithSize:self.scene.size];
+            [self.scene.view presentScene:myScene transition: reveal];
+        }
     }
 }
 @end

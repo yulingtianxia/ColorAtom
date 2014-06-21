@@ -87,18 +87,10 @@
 -(void)gameCheck{
     if (atomCount<=0) {
         NSString *bodyClassName = [NSString stringWithUTF8String:class_getName(self.scene.class)];
-        NSString *mode;
-        if ([bodyClassName isEqualToString:@"PlayFieldScene"]) {
-            mode = (NSString *)NormalMode;
-        }
-        else if ([bodyClassName isEqualToString:@"NightPlayScene"]){
-            mode = (NSString *)NightMode;
-        }
-        else if ([bodyClassName isEqualToString:@"SecretPlayScene"]){
-            mode = (NSString *)SecretMode;
-        }
+        NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+        NSString *modeString = [[standardDefaults objectForKey:@"mode"] objectForKey:bodyClassName];
         SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-        SKScene * gameOverScene = [[GameOverScene alloc] initWithSize:self.scene.size score:score mode:mode];
+        SKScene * gameOverScene = [[GameOverScene alloc] initWithSize:self.scene.size score:score mode:modeString];
         [self.scene.view presentScene:gameOverScene transition: reveal];
     }
 }

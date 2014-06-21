@@ -18,6 +18,8 @@
 @class NightPlayButton;
 @class SecretPlayScene;
 @class SecretPlayButton;
+@class BHPlayButton;
+
 
 @interface MainScene : SKScene <SKPhysicsContactDelegate>
 @property SKEmitterNode *fire;
@@ -29,4 +31,5 @@
 @property NormalPlayButton *normalPlay;
 @property NightPlayButton *nightPlay;
 @property SecretPlayButton *secretPlay;
+@property BHPlayButton *bhPlay;
 @end

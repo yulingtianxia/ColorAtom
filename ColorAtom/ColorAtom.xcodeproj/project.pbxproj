@@ -16,6 +16,9 @@
 		A43C39431927144E0092B34D /* StarRain.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C39421927144E0092B34D /* StarRain.m */; };
 		A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099318F90A6D00BCC91D /* AtomNode.m */; };
 		A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099618F9178D00BCC91D /* YXYDebugNode.m */; };
+		A47F5504195523A200CEDD40 /* BlackHolePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F5503195523A200CEDD40 /* BlackHolePlayScene.m */; };
+		A47F55071955259600CEDD40 /* BlackHole.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F55061955259600CEDD40 /* BlackHole.m */; };
+		A47F550A1955353300CEDD40 /* BHPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F55091955353300CEDD40 /* BHPlayButton.m */; };
 		A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDDD3190787F800772A22 /* AtomSharpNode.m */; };
 		A48FDDD719078A1400772A22 /* AtomSharpNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDDD619078A1400772A22 /* AtomSharpNodeContactVisitor.m */; };
 		A4D32FFA19064D0F004B2CF3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D32FF919064D0F004B2CF3 /* Social.framework */; };
@@ -96,6 +99,12 @@
 		A46E099318F90A6D00BCC91D /* AtomNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomNode.m; sourceTree = "<group>"; };
 		A46E099518F9178D00BCC91D /* YXYDebugNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXYDebugNode.h; sourceTree = "<group>"; };
 		A46E099618F9178D00BCC91D /* YXYDebugNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXYDebugNode.m; sourceTree = "<group>"; };
+		A47F5502195523A200CEDD40 /* BlackHolePlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackHolePlayScene.h; sourceTree = "<group>"; };
+		A47F5503195523A200CEDD40 /* BlackHolePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackHolePlayScene.m; sourceTree = "<group>"; };
+		A47F55051955259600CEDD40 /* BlackHole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackHole.h; sourceTree = "<group>"; };
+		A47F55061955259600CEDD40 /* BlackHole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackHole.m; sourceTree = "<group>"; };
+		A47F55081955353300CEDD40 /* BHPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHPlayButton.h; sourceTree = "<group>"; };
+		A47F55091955353300CEDD40 /* BHPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHPlayButton.m; sourceTree = "<group>"; };
 		A48FDDD2190787F800772A22 /* AtomSharpNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomSharpNode.h; sourceTree = "<group>"; };
 		A48FDDD3190787F800772A22 /* AtomSharpNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomSharpNode.m; sourceTree = "<group>"; };
 		A48FDDD519078A1400772A22 /* AtomSharpNodeContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomSharpNodeContactVisitor.h; sourceTree = "<group>"; };
@@ -229,6 +238,8 @@
 				A4EB2D73190272EC00B28405 /* DisplayScreen.m */,
 				A43099D11951CE03002B35D3 /* SecretForce.h */,
 				A43099D21951CE03002B35D3 /* SecretForce.m */,
+				A47F55051955259600CEDD40 /* BlackHole.h */,
+				A47F55061955259600CEDD40 /* BlackHole.m */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -341,6 +352,8 @@
 				A4FB97EA1909317700D0BDBE /* NightPlayScene.m */,
 				A43099CE1951CC7E002B35D3 /* SecretPlayScene.h */,
 				A43099CF1951CC7E002B35D3 /* SecretPlayScene.m */,
+				A47F5502195523A200CEDD40 /* BlackHolePlayScene.h */,
+				A47F5503195523A200CEDD40 /* BlackHolePlayScene.m */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -407,6 +420,8 @@
 				A4F6ECFD190CBEEE0069DBC9 /* NightPlayButton.m */,
 				A43099D41951D0F9002B35D3 /* SecretPlayButton.h */,
 				A43099D51951D0F9002B35D3 /* SecretPlayButton.m */,
+				A47F55081955353300CEDD40 /* BHPlayButton.h */,
+				A47F55091955353300CEDD40 /* BHPlayButton.m */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -539,6 +554,7 @@
 				A4ED505419015E9200A37085 /* GameOverScene.m in Sources */,
 				A4EE478E18FA6A0C003A0B74 /* VisitablePhysicsBody.m in Sources */,
 				A43099D01951CC7E002B35D3 /* SecretPlayScene.m in Sources */,
+				A47F55071955259600CEDD40 /* BlackHole.m in Sources */,
 				A4EB2D641902377300B28405 /* Background.m in Sources */,
 				A4EB2D7119024DEA00B28405 /* Spark.m in Sources */,
 				A4F6ECEF190CB40F0069DBC9 /* WeiboShareButton.m in Sources */,
@@ -547,11 +563,13 @@
 				A4EB2D74190272EC00B28405 /* DisplayScreen.m in Sources */,
 				A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */,
 				A4F6ECF2190CB6160069DBC9 /* MainSceneButton.m in Sources */,
+				A47F5504195523A200CEDD40 /* BlackHolePlayScene.m in Sources */,
 				A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */,
 				A4EE478B18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m in Sources */,
 				A4F699031908FD7100FE911A /* MainScene.m in Sources */,
 				A4ED504B1900FFF200A37085 /* AtomMinusNodeContactVisitor.m in Sources */,
 				A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */,
+				A47F550A1955353300CEDD40 /* BHPlayButton.m in Sources */,
 				A4F6ECF8190CBB250069DBC9 /* AudioButton.m in Sources */,
 				A4ED504E190103A600A37085 /* AtomMinusNode.m in Sources */,
 				A4EE479118FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m in Sources */,

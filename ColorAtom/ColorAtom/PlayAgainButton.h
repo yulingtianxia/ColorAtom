@@ -9,6 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface PlayAgainButton : SKLabelNode
-@property NSString *mode;
+@property NSString *modeString;
 -(id)initWithMode:(NSString *)newmode;
 @end

@@ -9,7 +9,7 @@
 #import "YXYViewController.h"
 #import "PlayFieldScene.h"
 #import "MainScene.h"
-
+#import "Define.h"
 @implementation YXYViewController
 @synthesize backgroundMusicPlayer;
 - (void)viewDidLoad
@@ -33,12 +33,15 @@
     backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
     backgroundMusicPlayer.numberOfLoops = -1;
     [backgroundMusicPlayer prepareToPlay];
+    NSDictionary *mode = @{@"PlayFieldScene":NormalMode,@"NightPlayScene":NightMode,@"SecretPlayScene":SecretMode,@"BlackHolePlayScene":BlackHoleMode};
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     [standardDefaults registerDefaults:@{@"audio": @"on"}];
+    [standardDefaults registerDefaults:@{@"mode": mode}];
     [standardDefaults synchronize];
     if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"on"]) {
         [backgroundMusicPlayer play];
     }
+    
     
 }
 

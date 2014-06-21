@@ -19,6 +19,8 @@
 #import "NightPlayButton.h"
 #import "SecretPlayScene.h"
 #import "SecretPlayButton.h"
+#import "BlackHolePlayScene.h"
+#import "BHPlayButton.h"
 
 @implementation MainScene
 @synthesize fire;
@@ -30,6 +32,8 @@
 @synthesize normalPlay;
 @synthesize nightPlay;
 @synthesize secretPlay;
+@synthesize bhPlay;
+
 -(id)initWithSize:(CGSize)size {
     if (self=[super initWithSize:size]) {
         self.backgroundColor = [SKColor clearColor];
@@ -57,12 +61,13 @@
         logo.text = @"ColorAtom";
         logo.position = CGPointMake(self.size.width/2, 3*self.size.height/4);
         normalPlay = [[NormalPlayButton alloc] init];
-        normalPlay.position = CGPointMake(self.size.width/2, self.size.height/2);
+        normalPlay.position = CGPointMake(self.size.width/2, 2*self.size.height/3);
         nightPlay = [[NightPlayButton alloc] init];
         nightPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(normalPlay.frame)-2*normalPlay.frame.size.height);
         secretPlay = [[SecretPlayButton alloc] init];
         secretPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(nightPlay.frame)-2*secretPlay.frame.size.height);
-        
+        bhPlay = [[BHPlayButton alloc] init];
+        bhPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(secretPlay.frame)-2*secretPlay.frame.size.height);
         [self runAction:[SKAction sequence:@[[SKAction runBlock:^{
             [self addChild:plus];
             [self addChild:minus];
@@ -85,6 +90,7 @@
             [self addChild:normalPlay];
             [self addChild:nightPlay];
             [self addChild:secretPlay];
+            [self addChild:bhPlay];
         }]]]];
     }
     return self;
