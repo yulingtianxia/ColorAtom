@@ -13,13 +13,8 @@
 -(id)initWithSize:(CGSize)size{
     if (self = [super initWithSize:size]) {
         secretForce = [[BlackHole alloc] init];
-        secretForce.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        secretForce.position = CGPointMake(CGRectGetMidX(self.frame), 3*self.frame.size.height/4);
         [self addChild:secretForce];
-        SKSpriteNode *blackhole = [[SKSpriteNode alloc] initWithTexture:[SKTexture textureWithImageNamed:@"blackhole"]];
-        blackhole.position = secretForce.position;
-        blackhole.size = CGSizeMake(50, 50);
-        [self addChild:blackhole];
-        [blackhole runAction:[SKAction repeatActionForever:[SKAction rotateByAngle:2*M_PI duration:1]]];
     }
     return self;
 }

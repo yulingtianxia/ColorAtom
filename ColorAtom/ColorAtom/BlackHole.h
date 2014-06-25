@@ -8,6 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface BlackHole : SKFieldNode
-
+@interface BlackHole : SKNode
+@property SKSpriteNode *vortex;
+@property SKFieldNode *blackHole;
 @end
