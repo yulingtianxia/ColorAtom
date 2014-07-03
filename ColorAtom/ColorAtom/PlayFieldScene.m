@@ -197,7 +197,7 @@
         }
     }
 }
--(void)handlePanFrom:(UILongPressGestureRecognizer *)recognizer{
+-(void)handlePanFrom:(UIPanGestureRecognizer *)recognizer{
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         //        debugOverlay.label.text = @"Began";
         CGPoint touchLocation = [recognizer locationInView:recognizer.view];
