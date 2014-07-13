@@ -92,9 +92,10 @@
 {
     [self enumerateChildNodesWithName:(NSString*)AtomMinusName usingBlock:^(SKNode *node, BOOL *stop) {
         if (node.position.y<3*AtomRadius) {
+            [node removeFromParent];
             [displayScreen AtomMinusAttacked];
             *stop=YES;
-            [node removeFromParent];
+
         }
         
     }];

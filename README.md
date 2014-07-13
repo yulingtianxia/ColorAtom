@@ -5,7 +5,7 @@ ColorAtom	[![Build Status](https://travis-ci.org/yulingtianxia/ColorAtom.svg?bra
 
 使用SpriteKit引擎  
 新版本加入了力场，请在iOS8下运行  
-
+Xcode6Beta3测试有异常，建议用旧版本的Xcode
 Demo视频（较久）：http://v.163.com/paike/V8H1BJHKV/V9POM33GM.html  
 
 主页：http://coloratom.yulingtianxia.com  
