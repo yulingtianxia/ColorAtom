@@ -90,30 +90,49 @@
 
 -(void)didSimulatePhysics
 {
-    [self enumerateChildNodesWithName:(NSString*)AtomMinusName usingBlock:^(SKNode *node, BOOL *stop) {
-        if (node.position.y<3*AtomRadius) {
+    NSArray *children = [self children];
+    for (int i=0; i<children.count; i++) {
+        SKNode *node = (SKNode *)children[i];
+        if ([node.name isEqualToString:(NSString*)AtomMinusName]&&node.position.y<3*AtomRadius) {
             [node removeFromParent];
             [displayScreen AtomMinusAttacked];
-            *stop=YES;
-
+            break;
+        }
+        if ([node.name isEqualToString:(NSString*)AtomPlusName]&&node.position.y>self.size.height+AtomRadius) {
+            [node removeFromParent];
+        }
+        if ([node.name isEqualToString:(NSString*)AtomMinusName]&&node.position.y>self.size.height+AtomRadius) {
+            [node removeFromParent];
+        }
+        if ([node.name isEqualToString:(NSString*)AtomSharpName]&&node.position.y>self.size.height+AtomRadius*2) {
+            [node removeFromParent];
         }
         
-    }];
-    [self enumerateChildNodesWithName:(NSString *)AtomPlusName usingBlock:^(SKNode *node, BOOL *stop) {
-        if (node.position.y>self.size.height+AtomRadius) {
-            [node removeFromParent];
-        }
-    }];
-    [self enumerateChildNodesWithName:(NSString *)AtomMinusName usingBlock:^(SKNode *node, BOOL *stop) {
-        if (node.position.y>self.size.height+AtomRadius) {
-            [node removeFromParent];
-        }
-    }];
-    [self enumerateChildNodesWithName:(NSString *)AtomSharpName usingBlock:^(SKNode *node, BOOL *stop) {
-        if (node.position.y>self.size.height+AtomRadius*2) {
-            [node removeFromParent];
-        }
-    }];
+    }
+//    [self enumerateChildNodesWithName:(NSString*)AtomMinusName usingBlock:^(SKNode *node, BOOL *stop) {
+//        if (node.position.y<3*AtomRadius) {
+//            [node removeFromParent];
+//            [displayScreen AtomMinusAttacked];
+//            *stop=YES;
+//
+//        }
+//        
+//    }];
+//    [self enumerateChildNodesWithName:(NSString *)AtomPlusName usingBlock:^(SKNode *node, BOOL *stop) {
+//        if (node.position.y>self.size.height+AtomRadius) {
+//            [node removeFromParent];
+//        }
+//    }];
+//    [self enumerateChildNodesWithName:(NSString *)AtomMinusName usingBlock:^(SKNode *node, BOOL *stop) {
+//        if (node.position.y>self.size.height+AtomRadius) {
+//            [node removeFromParent];
+//        }
+//    }];
+//    [self enumerateChildNodesWithName:(NSString *)AtomSharpName usingBlock:^(SKNode *node, BOOL *stop) {
+//        if (node.position.y>self.size.height+AtomRadius*2) {
+//            [node removeFromParent];
+//        }
+//    }];
     //add debug node
     [self addChild:debugOverlay];
 

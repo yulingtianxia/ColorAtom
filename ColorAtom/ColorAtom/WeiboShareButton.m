@@ -20,7 +20,7 @@
 }
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     GameOverScene *gameover = (GameOverScene *)self.scene;
-    gameover.sharingImage = [gameover imageFromNode:self];
+    gameover.sharingImage = [gameover imageFromNode:gameover];
     NSArray *activityItems;
     if (gameover.sharingImage != nil) {
         activityItems = @[gameover.sharingText, gameover.sharingImage];
