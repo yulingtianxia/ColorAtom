@@ -1,16 +1,13 @@
 {
   "images" : [
     {
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "audio_on.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "Atomplus.png"
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",

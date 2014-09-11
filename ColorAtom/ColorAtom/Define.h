@@ -37,9 +37,9 @@ static CGFloat const AtomMinusCreateInterval = 1;
 
 static NSString const *CreateAtomPlus = @"createatomplus";
 
-static NSString const *NormalMode = @"NORMAL MODE";
-static NSString const *NightMode = @"NIGHT MODE";
-static NSString const *SecretMode = @"SECRET MODE";
-static NSString const *BlackHoleMode = @"BLACKHOLE MODE";
+static NSString const *NormalMode = @"NORMAL";
+static NSString const *NightMode = @"NIGHT";
+static NSString const *SecretMode = @"SECRET";
+static NSString const *BlackHoleMode = @"BLACKHOLE";
 
 #endif
