@@ -11,6 +11,8 @@
 #import "PlayAgainButton.h"
 #import "WeiboShareButton.h"
 #import "MainSceneButton.h"
+#import "GameKitHelper.h"
+#import "GameConstants.h"
 @implementation GameOverScene
 @synthesize background;
 @synthesize score;
@@ -21,7 +23,7 @@
     if (self = [super initWithSize:size]) {
         score = newscore;
         mode = newmode;
-        sharingText = [NSString stringWithFormat:@"我在ColorAtom的%@中得了%ld分，快来超越我吧！ http://yulingtianxia.com/ColorAtom/",mode,score];
+        sharingText = [NSString stringWithFormat:@"我在ColorAtom的%@中得了%ld分，快来超越我吧！ http://yulingtianxia.com/ColorAtom/",mode,(long)score];
         self.backgroundColor = [SKColor clearColor];
 //        背景效果
         background = [[Background alloc] init];
@@ -62,12 +64,11 @@
         highScoreLabel.fontColor = [SKColor redColor];
         highScoreLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(newScoreNumLabel.frame)-highScoreLabel.frame.size.height);
         [self addChild:highScoreLabel];
-        highScoreNumLabel.text =  [NSString stringWithFormat:@"%ld",(long)[self setNewScore]];
+        highScoreNumLabel.text =  [NSString stringWithFormat:@"%ld",(long)[self setHighScore]];
         highScoreNumLabel.fontSize = 35;
         highScoreNumLabel.fontColor = [SKColor redColor];
         highScoreNumLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(highScoreLabel.frame)-highScoreNumLabel.frame.size.height);
         [self addChild:highScoreNumLabel];
-        
         playAgain.position = CGPointMake(self.size.width/2, self.size.height/3);
         [self addChild:playAgain];
         
@@ -106,17 +107,16 @@
     
     return [self imageWithView:view];
 }
--(NSInteger)setNewScore{
-    NSNumber *newScore = [NSNumber numberWithInteger:score];
+-(NSInteger)setHighScore{
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-    [standardDefaults registerDefaults:@{mode: newScore}];
-    [standardDefaults synchronize];
-    NSNumber *highScore = [standardDefaults objectForKey:mode];
-    if ([newScore compare:highScore]==NSOrderedDescending) {
-        [standardDefaults setObject:newScore forKey:mode];
+    NSInteger highScore = [standardDefaults integerForKey:mode];
+    if (score > highScore) {
+        [standardDefaults setInteger:score forKey:mode];
         [standardDefaults synchronize];
+        //sent high score to gamecenter
+        [[GameKitHelper sharedGameKitHelper] submitScore:score identifier:kHighScoreLeaderboardIdentifier];
         return score;
     }
-    return [highScore integerValue];
+    return highScore;
 }
 @end

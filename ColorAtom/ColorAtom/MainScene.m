@@ -36,6 +36,8 @@
 
 -(id)initWithSize:(CGSize)size {
     if (self=[super initWithSize:size]) {
+        [[GameKitHelper sharedGameKitHelper]
+         authenticateLocalPlayer];
         self.backgroundColor = [SKColor clearColor];
         self.physicsWorld.gravity = CGVectorMake(0, 0);
         self.physicsWorld.contactDelegate = self;
