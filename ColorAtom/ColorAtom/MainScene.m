@@ -50,7 +50,6 @@
         [self addChild:background];
         audio = [[AudioButton alloc] init];
         audio.position = CGPointMake(audio.size.width/2, self.size.height-audio.size.height/2);
-        [audio setAudioTexture];
         [self addChild:audio];
         plus = [[AtomPlusNode alloc] init];
         plus.position = CGPointMake(self.size.width/2, 0);

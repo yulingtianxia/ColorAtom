@@ -13,6 +13,7 @@
     if (self = [super init]) {
         self.size = CGSizeMake(20, 20);
         self.userInteractionEnabled = YES;
+        [self setAudioTexture];
     }
     return self;
 }
