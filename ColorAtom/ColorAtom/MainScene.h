@@ -16,10 +16,9 @@
 @class AudioButton;
 @class NormalPlayButton;
 @class NightPlayButton;
-@class SecretPlayScene;
 @class SecretPlayButton;
 @class BHPlayButton;
-
+@class AgainstPlayButton;
 
 @interface MainScene : SKScene <SKPhysicsContactDelegate>
 @property SKEmitterNode *fire;
@@ -32,4 +31,5 @@
 @property NightPlayButton *nightPlay;
 @property SecretPlayButton *secretPlay;
 @property BHPlayButton *bhPlay;
+@property AgainstPlayButton *againstPlay;
 @end

@@ -23,7 +23,7 @@
     if (self = [super initWithSize:size]) {
         score = newscore;
         mode = newmode;
-        sharingText = [NSString stringWithFormat:@"我在ColorAtom的%@中得了%ld分，快来超越我吧！ http://yulingtianxia.com/ColorAtom/",mode,(long)score];
+        sharingText = [NSString stringWithFormat:@"我在ColorAtom的%@模式中得了%ld分，快来超越我吧！ https://itunes.apple.com/us/app/coloratom/id918469696",mode,(long)score];
         self.backgroundColor = [SKColor clearColor];
 //        背景效果
         background = [[Background alloc] init];

@@ -70,6 +70,8 @@
 		A4F6ECF8190CBB250069DBC9 /* AudioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6ECF7190CBB250069DBC9 /* AudioButton.m */; };
 		A4F6ECFB190CBDAE0069DBC9 /* NormalPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6ECFA190CBDAE0069DBC9 /* NormalPlayButton.m */; };
 		A4F6ECFE190CBEEE0069DBC9 /* NightPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F6ECFD190CBEEE0069DBC9 /* NightPlayButton.m */; };
+		A4F9474C19DFBC1F00384C81 /* AgainstPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F9474B19DFBC1F00384C81 /* AgainstPlayScene.m */; };
+		A4F9474F19DFC42000384C81 /* AgainstPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F9474E19DFC42000384C81 /* AgainstPlayButton.m */; };
 		A4FB97EB1909317700D0BDBE /* NightPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FB97EA1909317700D0BDBE /* NightPlayScene.m */; };
 		E778D4B647894D0A9B2475F5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D96E473B977C49BDB2470D4B /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -191,6 +193,10 @@
 		A4F6ECFA190CBDAE0069DBC9 /* NormalPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalPlayButton.m; sourceTree = "<group>"; };
 		A4F6ECFC190CBEEE0069DBC9 /* NightPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NightPlayButton.h; sourceTree = "<group>"; };
 		A4F6ECFD190CBEEE0069DBC9 /* NightPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NightPlayButton.m; sourceTree = "<group>"; };
+		A4F9474A19DFBC1F00384C81 /* AgainstPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgainstPlayScene.h; sourceTree = "<group>"; };
+		A4F9474B19DFBC1F00384C81 /* AgainstPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgainstPlayScene.m; sourceTree = "<group>"; };
+		A4F9474D19DFC42000384C81 /* AgainstPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgainstPlayButton.h; sourceTree = "<group>"; };
+		A4F9474E19DFC42000384C81 /* AgainstPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgainstPlayButton.m; sourceTree = "<group>"; };
 		A4FB97E91909317700D0BDBE /* NightPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NightPlayScene.h; sourceTree = "<group>"; };
 		A4FB97EA1909317700D0BDBE /* NightPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NightPlayScene.m; sourceTree = "<group>"; };
 		D96E473B977C49BDB2470D4B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -379,6 +385,8 @@
 				A43099CF1951CC7E002B35D3 /* SecretPlayScene.m */,
 				A47F5502195523A200CEDD40 /* BlackHolePlayScene.h */,
 				A47F5503195523A200CEDD40 /* BlackHolePlayScene.m */,
+				A4F9474A19DFBC1F00384C81 /* AgainstPlayScene.h */,
+				A4F9474B19DFBC1F00384C81 /* AgainstPlayScene.m */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -447,6 +455,8 @@
 				A43099D51951D0F9002B35D3 /* SecretPlayButton.m */,
 				A47F55081955353300CEDD40 /* BHPlayButton.h */,
 				A47F55091955353300CEDD40 /* BHPlayButton.m */,
+				A4F9474D19DFC42000384C81 /* AgainstPlayButton.h */,
+				A4F9474E19DFC42000384C81 /* AgainstPlayButton.m */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -627,6 +637,7 @@
 				A4EB2D74190272EC00B28405 /* DisplayScreen.m in Sources */,
 				A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */,
 				A4F6ECF2190CB6160069DBC9 /* MainSceneButton.m in Sources */,
+				A4F9474F19DFC42000384C81 /* AgainstPlayButton.m in Sources */,
 				A47F5504195523A200CEDD40 /* BlackHolePlayScene.m in Sources */,
 				A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */,
 				A4EE478B18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m in Sources */,
@@ -642,6 +653,7 @@
 				A43099D61951D0F9002B35D3 /* SecretPlayButton.m in Sources */,
 				A4F6ECFB190CBDAE0069DBC9 /* NormalPlayButton.m in Sources */,
 				A4F6ECEC190CB11E0069DBC9 /* PlayAgainButton.m in Sources */,
+				A4F9474C19DFBC1F00384C81 /* AgainstPlayScene.m in Sources */,
 				A43099D31951CE03002B35D3 /* SecretForce.m in Sources */,
 				A4F6ECF5190CB7DB0069DBC9 /* SharpNodeButton.m in Sources */,
 				A4FB97EB1909317700D0BDBE /* NightPlayScene.m in Sources */,

@@ -12,7 +12,6 @@
 #import "VisitablePhysicsBody.h"
 #import "YXYDebugNode.h"
 #import "PlayerArea.h"
-#import "GameOverScene.h"
 #import "Background.h"
 #import "DisplayScreen.h"
 #import "AtomSharpNode.h"
@@ -223,6 +222,7 @@
         CGPoint touchLocation = [recognizer locationInView:recognizer.view];
         touchLocation = [self convertPointFromView:touchLocation];
         panPosition = touchLocation;
+        [self sendPosition:panPosition];
         SKAction *createAtomPlusAction = [SKAction repeatActionForever:[SKAction sequence:@[[SKAction runBlock:^{
             [self createAtomPlusAtPosition:panPosition];
         }],
@@ -236,7 +236,7 @@
         CGPoint touchLocation = [recognizer locationInView:recognizer.view];
         touchLocation = [self convertPointFromView:touchLocation];
         panPosition = touchLocation;
-        
+        [self sendPosition:panPosition];
     }
     else if (recognizer.state == UIGestureRecognizerStateEnded){
         //        debugOverlay.label.text = @"Ended";
@@ -253,6 +253,7 @@
         CGPoint touchLocation = [recognizer locationInView:recognizer.view];
         touchLocation = [self convertPointFromView:touchLocation];
         longPressPosition = touchLocation;
+        [self sendPosition:longPressPosition];
         SKAction *createAtomPlusAction = [SKAction repeatActionForever:[SKAction sequence:@[[SKAction runBlock:^{
             [self createAtomPlusAtPosition:longPressPosition];
         }],
@@ -266,7 +267,7 @@
         CGPoint touchLocation = [recognizer locationInView:recognizer.view];
         touchLocation = [self convertPointFromView:touchLocation];
         longPressPosition = touchLocation;
-        
+        [self sendPosition:longPressPosition];
     }
     else if (recognizer.state == UIGestureRecognizerStateEnded){
 //        debugOverlay.label.text = @"Ended";
@@ -277,6 +278,9 @@
     }
 }
 
+- (void) sendPosition:(CGPoint) position{
+    
+}
 #pragma mark SKPhysicsContactDelegate
 -(void)didBeginContact:(SKPhysicsContact *)contact
 {

@@ -26,5 +26,6 @@
 @property SharpNodeButton *sharpButton;
 
 -(void)createAtomMinus;
+- (void) sendPosition:(CGPoint) position;
 -(void)createAtomSharpByButton:(SharpNodeButton *)button;
 @end

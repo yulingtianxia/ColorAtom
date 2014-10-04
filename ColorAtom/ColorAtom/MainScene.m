@@ -14,13 +14,11 @@
 #import "Background.h"
 #import "ContactVisitor.h"
 #import "VisitablePhysicsBody.h"
-#import "NightPlayScene.h"
 #import "NormalPlayButton.h"
 #import "NightPlayButton.h"
-#import "SecretPlayScene.h"
 #import "SecretPlayButton.h"
-#import "BlackHolePlayScene.h"
 #import "BHPlayButton.h"
+#import "AgainstPlayButton.h"
 
 @implementation MainScene
 @synthesize fire;
@@ -33,6 +31,7 @@
 @synthesize nightPlay;
 @synthesize secretPlay;
 @synthesize bhPlay;
+@synthesize againstPlay;
 
 -(id)initWithSize:(CGSize)size {
     if (self=[super initWithSize:size]) {
@@ -69,6 +68,8 @@
         secretPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(nightPlay.frame)-2*secretPlay.frame.size.height);
         bhPlay = [[BHPlayButton alloc] init];
         bhPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(secretPlay.frame)-2*secretPlay.frame.size.height);
+        againstPlay = [[AgainstPlayButton alloc] init];
+        againstPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(bhPlay.frame)-2*bhPlay.frame.size.height);
         [self runAction:[SKAction sequence:@[[SKAction runBlock:^{
             [self addChild:plus];
             [self addChild:minus];
@@ -92,6 +93,7 @@
             [self addChild:nightPlay];
             [self addChild:secretPlay];
             [self addChild:bhPlay];
+            [self addChild:againstPlay];
         }]]]];
     }
     return self;
