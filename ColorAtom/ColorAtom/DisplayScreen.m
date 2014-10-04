@@ -11,6 +11,9 @@
 #import "GameOverScene.h"
 #import "PlayFieldScene.h"
 #import <objc/runtime.h>
+#import "GameConstants.h"
+#import "AgainstResult.h"
+
 @implementation DisplayScreen
 @synthesize atomCount;
 @synthesize score;
@@ -89,9 +92,27 @@
         NSString *bodyClassName = [NSString stringWithUTF8String:class_getName(self.scene.class)];
         NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
         NSString *modeString = [[standardDefaults objectForKey:@"mode"] objectForKey:bodyClassName];
-        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-        SKScene * gameOverScene = [[GameOverScene alloc] initWithSize:self.scene.size score:score mode:modeString];
-        [self.scene.view presentScene:gameOverScene transition: reveal];
+        if (modeString == AgainstMode) {
+            NSError *error;
+            MessageGameOver mg;
+            mg.message.messageType = kMessageTypeGameOver;
+            NSData *packet = [NSData dataWithBytes:&mg length:sizeof(MessageGameOver)];
+            
+            [[GameKitHelper sharedGameKitHelper].match sendDataToAllPlayers: packet withDataMode: GKMatchSendDataUnreliable error:&error];
+            if (error != nil)
+            {
+                // Handle the error.
+            }
+            SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+            SKScene * gameOverScene = [[AgainstResult alloc] initWithSize:self.scene.size score:score win:NO];
+            [self.scene.view presentScene:gameOverScene transition: reveal];
+        }
+        else {
+            SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+            SKScene * gameOverScene = [[GameOverScene alloc] initWithSize:self.scene.size score:score mode:modeString];
+            [self.scene.view presentScene:gameOverScene transition: reveal];
+        }
+        
     }
 }
 @end

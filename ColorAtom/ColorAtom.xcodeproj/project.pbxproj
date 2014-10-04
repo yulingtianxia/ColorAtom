@@ -23,6 +23,7 @@
 		A47F550A1955353300CEDD40 /* BHPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F55091955353300CEDD40 /* BHPlayButton.m */; };
 		A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDDD3190787F800772A22 /* AtomSharpNode.m */; };
 		A48FDDD719078A1400772A22 /* AtomSharpNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDDD619078A1400772A22 /* AtomSharpNodeContactVisitor.m */; };
+		A498947319E025DF00A7E598 /* AgainstResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A498947219E025DF00A7E598 /* AgainstResult.m */; };
 		A4D32FFA19064D0F004B2CF3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D32FF919064D0F004B2CF3 /* Social.framework */; };
 		A4E9E4E418F7D18D000ADEAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E318F7D18D000ADEAE /* Foundation.framework */; };
 		A4E9E4E618F7D18E000ADEAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E518F7D18E000ADEAE /* CoreGraphics.framework */; };
@@ -119,6 +120,8 @@
 		A48FDDD3190787F800772A22 /* AtomSharpNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomSharpNode.m; sourceTree = "<group>"; };
 		A48FDDD519078A1400772A22 /* AtomSharpNodeContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomSharpNodeContactVisitor.h; sourceTree = "<group>"; };
 		A48FDDD619078A1400772A22 /* AtomSharpNodeContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomSharpNodeContactVisitor.m; sourceTree = "<group>"; };
+		A498947119E025DF00A7E598 /* AgainstResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgainstResult.h; sourceTree = "<group>"; };
+		A498947219E025DF00A7E598 /* AgainstResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgainstResult.m; sourceTree = "<group>"; };
 		A4D32FF919064D0F004B2CF3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A4E9E4E018F7D18D000ADEAE /* ColorAtom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorAtom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E9E4E318F7D18D000ADEAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -387,6 +390,8 @@
 				A47F5503195523A200CEDD40 /* BlackHolePlayScene.m */,
 				A4F9474A19DFBC1F00384C81 /* AgainstPlayScene.h */,
 				A4F9474B19DFBC1F00384C81 /* AgainstPlayScene.m */,
+				A498947119E025DF00A7E598 /* AgainstResult.h */,
+				A498947219E025DF00A7E598 /* AgainstResult.m */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -642,6 +647,7 @@
 				A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */,
 				A4EE478B18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m in Sources */,
 				A4F699031908FD7100FE911A /* MainScene.m in Sources */,
+				A498947319E025DF00A7E598 /* AgainstResult.m in Sources */,
 				A4ED504B1900FFF200A37085 /* AtomMinusNodeContactVisitor.m in Sources */,
 				A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */,
 				A47F550A1955353300CEDD40 /* BHPlayButton.m in Sources */,

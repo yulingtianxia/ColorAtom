@@ -168,6 +168,7 @@
 -(void)createAtomPlusAtPosition:(CGPoint) position
 {
     if (displayScreen.atomCount>0) {
+        [self sendPosition:position];
         [displayScreen AtomPlusUsed:1];
         AtomNode *Atom = [[AtomPlusNode alloc] init];
         Atom.position = CGPointMake(position.x,AtomRadius);
@@ -222,7 +223,6 @@
         CGPoint touchLocation = [recognizer locationInView:recognizer.view];
         touchLocation = [self convertPointFromView:touchLocation];
         panPosition = touchLocation;
-        [self sendPosition:panPosition];
         SKAction *createAtomPlusAction = [SKAction repeatActionForever:[SKAction sequence:@[[SKAction runBlock:^{
             [self createAtomPlusAtPosition:panPosition];
         }],
@@ -236,7 +236,6 @@
         CGPoint touchLocation = [recognizer locationInView:recognizer.view];
         touchLocation = [self convertPointFromView:touchLocation];
         panPosition = touchLocation;
-        [self sendPosition:panPosition];
     }
     else if (recognizer.state == UIGestureRecognizerStateEnded){
         //        debugOverlay.label.text = @"Ended";
@@ -253,7 +252,6 @@
         CGPoint touchLocation = [recognizer locationInView:recognizer.view];
         touchLocation = [self convertPointFromView:touchLocation];
         longPressPosition = touchLocation;
-        [self sendPosition:longPressPosition];
         SKAction *createAtomPlusAction = [SKAction repeatActionForever:[SKAction sequence:@[[SKAction runBlock:^{
             [self createAtomPlusAtPosition:longPressPosition];
         }],
@@ -267,7 +265,6 @@
         CGPoint touchLocation = [recognizer locationInView:recognizer.view];
         touchLocation = [self convertPointFromView:touchLocation];
         longPressPosition = touchLocation;
-        [self sendPosition:longPressPosition];
     }
     else if (recognizer.state == UIGestureRecognizerStateEnded){
 //        debugOverlay.label.text = @"Ended";
