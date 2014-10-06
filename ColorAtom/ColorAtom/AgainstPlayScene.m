@@ -74,11 +74,11 @@
 }
 
 - (void)matchStarted {
-    NSLog(@"Match started");
+//    NSLog(@"Match started");
 }
 
 - (void)matchEnded {
-    NSLog(@"Match ended");
+//    NSLog(@"Match ended");
     NSString *title = NSLocalizedString(@"GameOver", "");
     NSString *message = NSLocalizedString(@"Connection lost", "");
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];

@@ -1,5 +1,5 @@
 //
-//  BlackHolePlayScene.h
+//  WormHolePlayScene.h
 //  ColorAtom
 //
 //  Created by 杨萧玉 on 14-6-21.
@@ -7,7 +7,7 @@
 //
 
 #import "PlayFieldScene.h"
-#import "BlackHole.h"
-@interface BlackHolePlayScene : PlayFieldScene
-@property BlackHole *secretForce;
+#import "WormHole.h"
+@interface WormHolePlayScene : PlayFieldScene
+@property WormHole *secretForce;
 @end

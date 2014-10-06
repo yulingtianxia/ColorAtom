@@ -17,7 +17,7 @@
 @class NormalPlayButton;
 @class NightPlayButton;
 @class SecretPlayButton;
-@class BHPlayButton;
+@class WHPlayButton;
 @class AgainstPlayButton;
 
 @interface MainScene : SKScene <SKPhysicsContactDelegate>
@@ -30,6 +30,6 @@
 @property NormalPlayButton *normalPlay;
 @property NightPlayButton *nightPlay;
 @property SecretPlayButton *secretPlay;
-@property BHPlayButton *bhPlay;
+@property WHPlayButton *bhPlay;
 @property AgainstPlayButton *againstPlay;
 @end

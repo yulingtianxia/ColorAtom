@@ -17,7 +17,7 @@
 #import "NormalPlayButton.h"
 #import "NightPlayButton.h"
 #import "SecretPlayButton.h"
-#import "BHPlayButton.h"
+#import "WHPlayButton.h"
 #import "AgainstPlayButton.h"
 
 @implementation MainScene
@@ -66,7 +66,7 @@
         nightPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(normalPlay.frame)-2*normalPlay.frame.size.height);
         secretPlay = [[SecretPlayButton alloc] init];
         secretPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(nightPlay.frame)-2*secretPlay.frame.size.height);
-        bhPlay = [[BHPlayButton alloc] init];
+        bhPlay = [[WHPlayButton alloc] init];
         bhPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(secretPlay.frame)-2*secretPlay.frame.size.height);
         againstPlay = [[AgainstPlayButton alloc] init];
         againstPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(bhPlay.frame)-2*bhPlay.frame.size.height);

@@ -33,7 +33,7 @@
     backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
     backgroundMusicPlayer.numberOfLoops = -1;
     [backgroundMusicPlayer prepareToPlay];
-    NSDictionary *mode = @{@"PlayFieldScene":NormalMode,@"NightPlayScene":NightMode,@"SecretPlayScene":SecretMode,@"BlackHolePlayScene":BlackHoleMode,@"AgainstPlayScene":AgainstMode};
+    NSDictionary *mode = @{@"PlayFieldScene":NormalMode,@"NightPlayScene":NightMode,@"SecretPlayScene":SecretMode,@"WormHolePlayScene":WormHoleMode,@"AgainstPlayScene":AgainstMode};
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     [standardDefaults registerDefaults:@{@"audio": @"on"}];
     [standardDefaults registerDefaults:@{@"mode": mode}];

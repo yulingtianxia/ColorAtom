@@ -23,7 +23,7 @@
     if (self = [super initWithSize:size]) {
         score = newscore;
         mode = newmode;
-        sharingText = [NSString stringWithFormat:@"我在ColorAtom的%@模式中得了%ld分，快来超越我吧！ https://itunes.apple.com/us/app/coloratom/id918469696",mode,(long)score];
+        sharingText = [NSString localizedStringWithFormat:NSLocalizedString(@"I have got %ld points in %@ mode of ColorAtom, Come on with me! https://itunes.apple.com/us/app/coloratom/id918469696", @""),(long)score,mode];
         self.backgroundColor = [SKColor clearColor];
 //        背景效果
         background = [[Background alloc] init];
@@ -44,12 +44,12 @@
         modeLabel.fontColor = [SKColor purpleColor];
         modeLabel.position = CGPointMake(self.size.width/2, 3*self.frame.size.height/4+modeLabel.frame.size.height);
         [self addChild:modeLabel];
-        gameover.text = @"GAME OVER";
+        gameover.text = NSLocalizedString(@"GAME OVER", @"");
         gameover.fontSize = 40;
         gameover.fontColor = [SKColor purpleColor];
         gameover.position = CGPointMake(self.size.width/2, 3*self.frame.size.height/4);
         [self addChild:gameover];
-        newScoreLabel.text = @"NEWSCORE";
+        newScoreLabel.text = NSLocalizedString(@"NEWSCORE", @"");
         newScoreLabel.fontSize = 35;
         newScoreLabel.fontColor = [SKColor greenColor];
         newScoreLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(gameover.frame)-newScoreLabel.frame.size.height);
@@ -59,7 +59,7 @@
         newScoreNumLabel.fontColor = [SKColor greenColor];
         newScoreNumLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(newScoreLabel.frame)-newScoreNumLabel.frame.size.height);
         [self addChild:newScoreNumLabel];
-        highScoreLabel.text = @"HIGHSCORE";
+        highScoreLabel.text = NSLocalizedString(@"HIGHSCORE", @"");
         highScoreLabel.fontSize = 35;
         highScoreLabel.fontColor = [SKColor redColor];
         highScoreLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(newScoreNumLabel.frame)-highScoreLabel.frame.size.height);

@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  ColorAtom
+
+  Created by 杨萧玉 on 14-10-6.
+  Copyright (c) 2014年 杨萧玉. All rights reserved.
+*/
+"PLAY AGAIN" = "再来一发";
+"SHARE SCORE" = "分享战绩";
+"MAIN MENU" = "回到主菜单";
+"Nomal Mode" = "普通模式";
+"Night Mode" = "暗夜模式";
+"Secret Mode" = "诡秘模式";
+"WormHole Mode" = "虫洞模式";
+"Against Mode" = "对战模式";
+"Get Ready" = "准备游戏";
+"Waiting opponent" = "等待对方准备";
+"Score:%ld/%ld" = "得分:%1$ld/%2$ld";
+"Rank:%ld" = "难度:%1$ld";
+"I have got %ld points in %@ mode of ColorAtom, Come on with me! https://itunes.apple.com/us/app/coloratom/id918469696" = "我在ColorAtom的%2$@模式中得了%1$ld分，快来超越我吧！ https://itunes.apple.com/cn/app/coloratom/id918469696?mt=8";
+"GAME OVER" = "游戏结束";
+"NEWSCORE" = "新的分数";
+"HIGHSCORE" = "最高得分";
+"Connection lost" = "失去连接";
+"OK" = "好的";
+"I just defeated %@ in ColorAtom!" = "我刚刚在ColorAtom中击败了%1$@";
+"I was defeated by %@ in ColorAtom!" = "我在ColorAtom中被%1$@击败";
+"WIN" = "胜利";
+"LOSE" = "失败";
+"Opponent Name:" = "对手名称:";
+"GameOver" = "游戏结束";
+"Play Again?" = "再来一个回合？";
+"Your opponent wants to play with you again" = "你的对手想跟你再玩一个回合";
+"Refuse" = "拒绝";
+"Sorry" = "对不起";
+"Your opponent has refused your request" = "你的对手拒绝了你";
+

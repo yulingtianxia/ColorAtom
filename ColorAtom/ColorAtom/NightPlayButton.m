@@ -13,7 +13,7 @@
     if (self = [super init]) {
         self.fontName = @"Chalkboard SE";
         self.fontSize = 30;
-        self.text = @"Night Mode";
+        self.text = NSLocalizedString(@"Night Mode", @"");
         self.userInteractionEnabled = YES;
     }
     return self;

@@ -1,5 +1,5 @@
 //
-//  BlackHole.h
+//  WormHole.h
 //  ColorAtom
 //
 //  Created by 杨萧玉 on 14-6-21.
@@ -8,7 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface BlackHole : SKNode
+@interface WormHole : SKNode
 @property SKSpriteNode *vortex;
-@property SKFieldNode *blackHole;
+@property SKFieldNode *wormHole;
 @end

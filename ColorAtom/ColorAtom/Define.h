@@ -40,6 +40,6 @@ static NSString const *CreateAtomPlus = @"createatomplus";
 static NSString const *NormalMode = @"NORMAL";
 static NSString const *NightMode = @"NIGHT";
 static NSString const *SecretMode = @"SECRET";
-static NSString const *BlackHoleMode = @"BLACKHOLE";
+static NSString const *WormHoleMode = @"WORMHOLE";
 static NSString const *AgainstMode = @"AGAINST";
 #endif

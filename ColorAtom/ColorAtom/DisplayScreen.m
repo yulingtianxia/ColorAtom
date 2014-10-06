@@ -37,8 +37,8 @@
         rankLabel = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Bold"];
         rankLabel.fontSize = 20;
         atomCountLabel.text = [NSString stringWithFormat:@"%ld",(long)atomCount];
-        scoreLabel.text = [NSString stringWithFormat:@"Score:%ld/%ld",(long)score,(long)(((PlayFieldScene *)self.scene).updateScore)];
-        rankLabel.text = [NSString stringWithFormat:@"Rank:%ld",(long)rank];
+        scoreLabel.text = [NSString localizedStringWithFormat:NSLocalizedString(@"Score:%ld/%ld", @"") ,(long)score,(long)(((PlayFieldScene *)self.scene).updateScore)];
+        rankLabel.text = [NSString localizedStringWithFormat:NSLocalizedString(@"Rank:%ld", @""),(long)rank];
         [self addChild:atomCountLabel];
         [self addChild:scoreLabel];
         [self addChild:rankLabel];
@@ -64,8 +64,8 @@
     atomCount+=3;
     score+=10;
     atomCountLabel.text = [NSString stringWithFormat:@"%ld",(long)atomCount];
-    scoreLabel.text = [NSString stringWithFormat:@"Score:%ld/%ld",(long)score,(long)(((PlayFieldScene *)self.scene).updateScore)];
-    rankLabel.text = [NSString stringWithFormat:@"Rank:%ld",(long)rank];
+    scoreLabel.text = [NSString localizedStringWithFormat:NSLocalizedString(@"Score:%ld/%ld", @""),(long)score,(long)(((PlayFieldScene *)self.scene).updateScore)];
+    rankLabel.text = [NSString localizedStringWithFormat:NSLocalizedString(@"Rank:%ld", @""),(long)rank];
     [self gameCheck];
     [self setPosition];
 }
@@ -74,8 +74,8 @@
     atomCount-=num;
     score+=5*num;
     atomCountLabel.text = [NSString stringWithFormat:@"%ld",(long)atomCount];
-    scoreLabel.text = [NSString stringWithFormat:@"Score:%ld/%ld",(long)score,(long)(((PlayFieldScene *)self.scene).updateScore)];
-    rankLabel.text = [NSString stringWithFormat:@"Rank:%ld",(long)rank];
+    scoreLabel.text = [NSString localizedStringWithFormat:NSLocalizedString(@"Score:%ld/%ld", @""),(long)score,(long)(((PlayFieldScene *)self.scene).updateScore)];
+    rankLabel.text = [NSString localizedStringWithFormat:NSLocalizedString(@"Rank:%ld", @""),(long)rank];
     [self gameCheck];
     [self setPosition];
 }

@@ -12,7 +12,7 @@
 -(id)init{
     if (self = [super init]) {
         self.fontName = @"Chalkduster";
-        self.text = @"MENU";
+        self.text = NSLocalizedString(@"MAIN MENU", @"");
         self.fontSize = 20;
         self.userInteractionEnabled = YES;
     }

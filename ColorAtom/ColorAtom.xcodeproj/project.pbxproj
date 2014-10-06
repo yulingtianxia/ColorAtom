@@ -19,9 +19,9 @@
 		A44506D119C3226300905DEF /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A44506D019C3226300905DEF /* GameKitHelper.m */; };
 		A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099318F90A6D00BCC91D /* AtomNode.m */; };
 		A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099618F9178D00BCC91D /* YXYDebugNode.m */; };
-		A47F5504195523A200CEDD40 /* BlackHolePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F5503195523A200CEDD40 /* BlackHolePlayScene.m */; };
-		A47F55071955259600CEDD40 /* BlackHole.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F55061955259600CEDD40 /* BlackHole.m */; };
-		A47F550A1955353300CEDD40 /* BHPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F55091955353300CEDD40 /* BHPlayButton.m */; };
+		A47F5504195523A200CEDD40 /* WormHolePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F5503195523A200CEDD40 /* WormHolePlayScene.m */; };
+		A47F55071955259600CEDD40 /* WormHole.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F55061955259600CEDD40 /* WormHole.m */; };
+		A47F550A1955353300CEDD40 /* WHPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F55091955353300CEDD40 /* WHPlayButton.m */; };
 		A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDDD3190787F800772A22 /* AtomSharpNode.m */; };
 		A48FDDD719078A1400772A22 /* AtomSharpNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDDD619078A1400772A22 /* AtomSharpNodeContactVisitor.m */; };
 		A498947319E025DF00A7E598 /* AgainstResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A498947219E025DF00A7E598 /* AgainstResult.m */; };
@@ -75,6 +75,7 @@
 		A4F9474C19DFBC1F00384C81 /* AgainstPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F9474B19DFBC1F00384C81 /* AgainstPlayScene.m */; };
 		A4F9474F19DFC42000384C81 /* AgainstPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F9474E19DFC42000384C81 /* AgainstPlayButton.m */; };
 		A4FB97EB1909317700D0BDBE /* NightPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FB97EA1909317700D0BDBE /* NightPlayScene.m */; };
+		A4FC862C19E2C78E006F784C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4FC862E19E2C78E006F784C /* Localizable.strings */; };
 		E778D4B647894D0A9B2475F5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D96E473B977C49BDB2470D4B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -113,12 +114,12 @@
 		A46E099318F90A6D00BCC91D /* AtomNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomNode.m; sourceTree = "<group>"; };
 		A46E099518F9178D00BCC91D /* YXYDebugNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXYDebugNode.h; sourceTree = "<group>"; };
 		A46E099618F9178D00BCC91D /* YXYDebugNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXYDebugNode.m; sourceTree = "<group>"; };
-		A47F5502195523A200CEDD40 /* BlackHolePlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackHolePlayScene.h; sourceTree = "<group>"; };
-		A47F5503195523A200CEDD40 /* BlackHolePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackHolePlayScene.m; sourceTree = "<group>"; };
-		A47F55051955259600CEDD40 /* BlackHole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackHole.h; sourceTree = "<group>"; };
-		A47F55061955259600CEDD40 /* BlackHole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackHole.m; sourceTree = "<group>"; };
-		A47F55081955353300CEDD40 /* BHPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHPlayButton.h; sourceTree = "<group>"; };
-		A47F55091955353300CEDD40 /* BHPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHPlayButton.m; sourceTree = "<group>"; };
+		A47F5502195523A200CEDD40 /* WormHolePlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WormHolePlayScene.h; sourceTree = "<group>"; };
+		A47F5503195523A200CEDD40 /* WormHolePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WormHolePlayScene.m; sourceTree = "<group>"; };
+		A47F55051955259600CEDD40 /* WormHole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WormHole.h; sourceTree = "<group>"; };
+		A47F55061955259600CEDD40 /* WormHole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WormHole.m; sourceTree = "<group>"; };
+		A47F55081955353300CEDD40 /* WHPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHPlayButton.h; sourceTree = "<group>"; };
+		A47F55091955353300CEDD40 /* WHPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHPlayButton.m; sourceTree = "<group>"; };
 		A48FDDD2190787F800772A22 /* AtomSharpNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomSharpNode.h; sourceTree = "<group>"; };
 		A48FDDD3190787F800772A22 /* AtomSharpNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomSharpNode.m; sourceTree = "<group>"; };
 		A48FDDD519078A1400772A22 /* AtomSharpNodeContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomSharpNodeContactVisitor.h; sourceTree = "<group>"; };
@@ -205,6 +206,10 @@
 		A4F9474E19DFC42000384C81 /* AgainstPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgainstPlayButton.m; sourceTree = "<group>"; };
 		A4FB97E91909317700D0BDBE /* NightPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NightPlayScene.h; sourceTree = "<group>"; };
 		A4FB97EA1909317700D0BDBE /* NightPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NightPlayScene.m; sourceTree = "<group>"; };
+		A4FC862919E2C759006F784C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		A4FC862A19E2C759006F784C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A4FC862B19E2C759006F784C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A4FC862D19E2C78E006F784C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D96E473B977C49BDB2470D4B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -271,8 +276,8 @@
 				A4EB2D73190272EC00B28405 /* DisplayScreen.m */,
 				A43099D11951CE03002B35D3 /* SecretForce.h */,
 				A43099D21951CE03002B35D3 /* SecretForce.m */,
-				A47F55051955259600CEDD40 /* BlackHole.h */,
-				A47F55061955259600CEDD40 /* BlackHole.m */,
+				A47F55051955259600CEDD40 /* WormHole.h */,
+				A47F55061955259600CEDD40 /* WormHole.m */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				A4E9E50018F7D18E000ADEAE /* Spaceship.png */,
 				A4E9E50218F7D18E000ADEAE /* Images.xcassets */,
 				A4E9E4EC18F7D18E000ADEAE /* Supporting Files */,
+				A4FC862E19E2C78E006F784C /* Localizable.strings */,
 			);
 			path = ColorAtom;
 			sourceTree = "<group>";
@@ -389,8 +395,8 @@
 				A4FB97EA1909317700D0BDBE /* NightPlayScene.m */,
 				A43099CE1951CC7E002B35D3 /* SecretPlayScene.h */,
 				A43099CF1951CC7E002B35D3 /* SecretPlayScene.m */,
-				A47F5502195523A200CEDD40 /* BlackHolePlayScene.h */,
-				A47F5503195523A200CEDD40 /* BlackHolePlayScene.m */,
+				A47F5502195523A200CEDD40 /* WormHolePlayScene.h */,
+				A47F5503195523A200CEDD40 /* WormHolePlayScene.m */,
 				A4F9474A19DFBC1F00384C81 /* AgainstPlayScene.h */,
 				A4F9474B19DFBC1F00384C81 /* AgainstPlayScene.m */,
 				A498947119E025DF00A7E598 /* AgainstResult.h */,
@@ -461,8 +467,8 @@
 				A4F6ECFD190CBEEE0069DBC9 /* NightPlayButton.m */,
 				A43099D41951D0F9002B35D3 /* SecretPlayButton.h */,
 				A43099D51951D0F9002B35D3 /* SecretPlayButton.m */,
-				A47F55081955353300CEDD40 /* BHPlayButton.h */,
-				A47F55091955353300CEDD40 /* BHPlayButton.m */,
+				A47F55081955353300CEDD40 /* WHPlayButton.h */,
+				A47F55091955353300CEDD40 /* WHPlayButton.m */,
 				A4F9474D19DFC42000384C81 /* AgainstPlayButton.h */,
 				A4F9474E19DFC42000384C81 /* AgainstPlayButton.m */,
 				A409789019E12553003A14AE /* ReadyButton.h */,
@@ -544,6 +550,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = A4E9E4D718F7D18D000ADEAE;
 			productRefGroup = A4E9E4E118F7D18D000ADEAE /* Products */;
@@ -561,6 +568,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FC862C19E2C78E006F784C /* Localizable.strings in Resources */,
 				A4EB2D6C190241ED00B28405 /* Fire.sks in Resources */,
 				A4ED505819016B0A00A37085 /* background-music-aac.caf in Resources */,
 				A4E9E4F018F7D18E000ADEAE /* InfoPlist.strings in Resources */,
@@ -638,7 +646,7 @@
 				A4ED505419015E9200A37085 /* GameOverScene.m in Sources */,
 				A4EE478E18FA6A0C003A0B74 /* VisitablePhysicsBody.m in Sources */,
 				A43099D01951CC7E002B35D3 /* SecretPlayScene.m in Sources */,
-				A47F55071955259600CEDD40 /* BlackHole.m in Sources */,
+				A47F55071955259600CEDD40 /* WormHole.m in Sources */,
 				A409789219E12553003A14AE /* ReadyButton.m in Sources */,
 				A4EB2D641902377300B28405 /* Background.m in Sources */,
 				A4EB2D7119024DEA00B28405 /* Spark.m in Sources */,
@@ -649,14 +657,14 @@
 				A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */,
 				A4F6ECF2190CB6160069DBC9 /* MainSceneButton.m in Sources */,
 				A4F9474F19DFC42000384C81 /* AgainstPlayButton.m in Sources */,
-				A47F5504195523A200CEDD40 /* BlackHolePlayScene.m in Sources */,
+				A47F5504195523A200CEDD40 /* WormHolePlayScene.m in Sources */,
 				A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */,
 				A4EE478B18FA6600003A0B74 /* AtomPlusNodeContactVisitor.m in Sources */,
 				A4F699031908FD7100FE911A /* MainScene.m in Sources */,
 				A498947319E025DF00A7E598 /* AgainstResult.m in Sources */,
 				A4ED504B1900FFF200A37085 /* AtomMinusNodeContactVisitor.m in Sources */,
 				A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */,
-				A47F550A1955353300CEDD40 /* BHPlayButton.m in Sources */,
+				A47F550A1955353300CEDD40 /* WHPlayButton.m in Sources */,
 				A4F6ECF8190CBB250069DBC9 /* AudioButton.m in Sources */,
 				A4ED504E190103A600A37085 /* AtomMinusNode.m in Sources */,
 				A4EE479118FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m in Sources */,
@@ -695,6 +703,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A4E9E4EF18F7D18E000ADEAE /* en */,
+				A4FC862A19E2C759006F784C /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -703,6 +712,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A4E9E4F818F7D18E000ADEAE /* Base */,
+				A4FC862919E2C759006F784C /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -711,8 +721,17 @@
 			isa = PBXVariantGroup;
 			children = (
 				A4E9E51318F7D18E000ADEAE /* en */,
+				A4FC862B19E2C759006F784C /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A4FC862E19E2C78E006F784C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4FC862D19E2C78E006F784C /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

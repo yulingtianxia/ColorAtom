@@ -1,22 +1,22 @@
 //
-//  BlackHole.m
+//  WormHole.m
 //  ColorAtom
 //
 //  Created by 杨萧玉 on 14-6-21.
 //  Copyright (c) 2014年 杨萧玉. All rights reserved.
 //
 
-#import "BlackHole.h"
+#import "WormHole.h"
 
-@implementation BlackHole
+@implementation WormHole
 @synthesize vortex;
-@synthesize blackHole;
+@synthesize wormHole;
 - (id)init{
     if (self=[super init]) {
         
-        blackHole = [SKFieldNode radialGravityField];
-        blackHole.strength = 1;
-        [self addChild:blackHole];
+        wormHole = [SKFieldNode radialGravityField];
+        wormHole.strength = 1;
+        [self addChild:wormHole];
         vortex = [[SKSpriteNode alloc] initWithTexture:[SKTexture textureWithImageNamed:@"blackhole"]];
         vortex.size = CGSizeMake(50, 50);
         vortex.physicsBody.collisionBitMask = 0;

@@ -12,7 +12,7 @@
 -(id)init{
     if (self = [super init]) {
         self.fontName = @"Chalkduster";
-        self.text = @"SHARE SCORE";
+        self.text = NSLocalizedString(@"SHARE SCORE", @"");
         self.fontSize = 20;
         self.userInteractionEnabled = YES;
     }

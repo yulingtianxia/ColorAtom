@@ -8,6 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface BHPlayButton : SKLabelNode
+@interface WHPlayButton : SKLabelNode
 
 @end

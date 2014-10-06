@@ -49,7 +49,7 @@
             _gameCenterFeaturesEnabled = YES;
             [GKMatchmaker sharedMatchmaker].inviteHandler = ^(GKInvite *acceptedInvite, NSArray *playersToInvite) {
                 
-                NSLog(@"Received invite");
+//                NSLog(@"Received invite");
                 self.pendingInvite = acceptedInvite;
                 self.pendingPlayersToInvite = playersToInvite;
                 [_delegate inviteReceived];
@@ -70,8 +70,8 @@
 -(void) setLastError:(NSError*)error {
     _lastError = [error copy];
     if (_lastError) {
-        NSLog(@"GameKitHelper ERROR: %@", [[_lastError userInfo]
-                                           description]);
+//        NSLog(@"GameKitHelper ERROR: %@", [[_lastError userInfo]
+//                                           description]);
     }
 }
 
@@ -179,7 +179,7 @@
     [_presentingViewController dismissViewControllerAnimated:YES completion:^{
 
     }];
-    NSLog(@"Match was cancelled");
+//    NSLog(@"Match was cancelled");
 }
 
 // Matchmaking has failed with an error
@@ -187,7 +187,7 @@
     [_presentingViewController dismissViewControllerAnimated:YES completion:^{
 
     }];
-    NSLog(@"Error finding match: %@", error.localizedDescription);
+//    NSLog(@"Error finding match: %@", error.localizedDescription);
 }
 
 // A peer-to-peer match has been found, the game should start
@@ -199,7 +199,7 @@
     _match.delegate= self;
     if (!matchStarted && _match.expectedPlayerCount ==0) {
         matchStarted = YES;
-        NSLog(@"Ready to start match!");
+//        NSLog(@"Ready to start match!");
     }
 }
 
@@ -211,11 +211,11 @@
     Message *message = (Message *) [data bytes];
     if (message->messageType == kMessageTypeGameBeginRequest) {
         _opponentReady = YES;
-        NSLog(@"receive beginrequest");
+//        NSLog(@"receive beginrequest");
     }
     else if (message->messageType == kMessageTypeGameBeginResponse) {
         _opponentReady = YES;
-        NSLog(@"receive beginresponse");
+//        NSLog(@"receive beginresponse");
     }
     [_delegate match:theMatch didReceiveData:data fromPlayer:playerID];
 }
@@ -227,16 +227,16 @@
     switch (state) {
         case GKPlayerStateConnected:
             // handle a new player connection.
-            NSLog(@"Player connected!");
+//            NSLog(@"Player connected!");
             
             if (!matchStarted && theMatch.expectedPlayerCount == 0) {
-                NSLog(@"Ready to start match!");
+//                NSLog(@"Ready to start match!");
             }
             
             break;
         case GKPlayerStateDisconnected:
             // a player just disconnected.
-            NSLog(@"Player disconnected!");
+//            NSLog(@"Player disconnected!");
             matchStarted = NO;
             if (_delegate!=nil&&_delegate!=NULL) {
                 [_delegate matchEnded];
@@ -244,7 +244,7 @@
             
             break;
         case GKPlayerStateUnknown:
-            NSLog(@"state unknown");
+//            NSLog(@"state unknown");
             break;
     }
     if (!matchStarted && _match.expectedPlayerCount == 0)
@@ -259,7 +259,7 @@
     
     if (_match != theMatch) return;
     
-    NSLog(@"Failed to connect to player with error: %@", error.localizedDescription);
+//    NSLog(@"Failed to connect to player with error: %@", error.localizedDescription);
     matchStarted = NO;
     if (_delegate!=nil&&_delegate!=NULL) {
         [_delegate matchEnded];
@@ -271,7 +271,7 @@
     
     if (_match != theMatch) return;
     
-    NSLog(@"Match failed with error: %@", error.localizedDescription);
+//    NSLog(@"Match failed with error: %@", error.localizedDescription);
     matchStarted = NO;
     if (_delegate!=nil&&_delegate!=NULL) {
         [_delegate matchEnded];

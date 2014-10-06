@@ -18,7 +18,7 @@
 -(id)initWithMode:(NSString *)newmode{
     if (self = [super init]) {
         self.fontName = @"Chalkduster";
-        self.text = @"PLAY AGAIN";
+        self.text = NSLocalizedString(@"PLAY AGAIN", @"");
         self.fontSize = 20;
         self.fontColor = [SKColor whiteColor];
         self.userInteractionEnabled = YES;

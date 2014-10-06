@@ -25,9 +25,14 @@
     if (self = [super initWithSize:size]) {
         [GameKitHelper sharedGameKitHelper].delegate = self;
         [GameKitHelper sharedGameKitHelper].opponentReady = NO;
-        sharingText = [NSString localizedStringWithFormat:NSLocalizedString(@"", @"")];
+        NSString *opponentName = ((GKPlayer *)[GameKitHelper sharedGameKitHelper].match.players[0]).displayName;
         win = isWin;
-        
+        if (win) {
+            sharingText = [NSString localizedStringWithFormat:NSLocalizedString(@"I just defeated %@ in ColorAtom!", @""),opponentName];
+        }
+        else{
+            sharingText = [NSString localizedStringWithFormat:NSLocalizedString(@"I was defeated by %@ in ColorAtom!", @""),opponentName];
+        }
         self.backgroundColor = [SKColor clearColor];
 //        背景效果
         background = [[Background alloc] init];
@@ -53,14 +58,14 @@
         [self addChild:winLabel];
         
         SKLabelNode *playerLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        playerLabel.text = NSLocalizedString(@"Opponent Name:%@", @"");
+        playerLabel.text = NSLocalizedString(@"Opponent Name:", @"");
         playerLabel.fontSize = 30;
         playerLabel.fontColor = [SKColor greenColor];
         playerLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(winLabel.frame)-playerLabel.frame.size.height);
         [self addChild:playerLabel];
         
         SKLabelNode *nameLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        NSString *playerName = ((GKPlayer *)[GameKitHelper sharedGameKitHelper].match.players[0]).displayName;
+        NSString *playerName = opponentName;
         nameLabel.text = playerName;
         nameLabel.fontSize = 30;
         nameLabel.fontColor = [SKColor greenColor];
@@ -120,11 +125,11 @@
 }
 
 - (void)matchStarted {
-    NSLog(@"Match started");
+//    NSLog(@"Match started");
 }
 
 - (void)matchEnded {
-    NSLog(@"Match ended");
+//    NSLog(@"Match ended");
     NSString *title = NSLocalizedString(@"GameOver", @"");
     NSString *message = NSLocalizedString(@"Connection lost", @"");
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
