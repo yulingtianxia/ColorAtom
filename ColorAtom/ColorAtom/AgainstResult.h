@@ -7,16 +7,18 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "Background.h"
+@class Background;
+@class PlayAgainButton;
 @import Social;
 
-@interface AgainstResult : SKScene
+@interface AgainstResult : SKScene <GameKitHelperProtocol>
 @property Background *background;
-@property NSInteger score;
 @property (nonatomic) NSString *sharingText;
 @property (nonatomic) UIImage *sharingImage;
 @property (nonatomic) BOOL win;
-- (id)initWithSize:(CGSize)size score:(NSInteger)newscore win:(BOOL)win;
+@property (nonatomic) PlayAgainButton *playAgain;
+
+- (id)initWithSize:(CGSize)size win:(BOOL)win;
 - (UIImage*) imageFromNode:(SKNode*)node;
 
 @end

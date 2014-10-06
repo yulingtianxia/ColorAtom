@@ -16,19 +16,25 @@
 - (void)matchEnded;
 - (void)match:(GKMatch *)match didReceiveData:(NSData *)data
    fromPlayer:(NSString *)playerID;
+- (void)inviteReceived;
 @end
 
 @interface GameKitHelper : NSObject
 
-@property (nonatomic,assign) id<GameKitHelperProtocol> delegate;
+@property (nonatomic,weak) id<GameKitHelperProtocol> delegate;
 @property (nonatomic, readonly) NSError* lastError;
-@property (retain) UIViewController *presentingViewController;
-@property (retain) GKMatch *match;
-@property (retain) AgainstPlayButton *btn;
+@property (strong) UIViewController *presentingViewController;
+@property (strong) GKMatch *match;
+@property (weak) AgainstPlayButton *btn;
+@property BOOL opponentReady;
+@property (strong) GKInvite *pendingInvite;
+@property (strong) NSArray *pendingPlayersToInvite;
+
 
 + (instancetype) sharedGameKitHelper;
 -(void) authenticateLocalPlayer;
 -(void) submitScore:(int64_t)score identifier:(NSString*)category;
 - (void)findMatchWithViewController:(UIViewController *)viewController
                            delegate:(id<GameKitHelperProtocol>)theDelegate;
+-(void)sendData:(NSData *)packet withCompleteBlock:(void(^)(void)) block;
 @end

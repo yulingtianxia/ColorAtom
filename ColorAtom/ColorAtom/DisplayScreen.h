@@ -21,4 +21,5 @@
 -(void)AtomPlusUsed:(NSInteger) num;
 -(void)setPosition;
 -(void)AtomMinusAttacked;
+-(id)initWithAtomCount:(NSInteger) count;
 @end

@@ -19,6 +19,7 @@
     return self;
 }
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    [[GameKitHelper sharedGameKitHelper].match disconnect];
     SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
     SKScene * myScene = [[MainScene alloc] initWithSize:self.scene.size];
     [self.scene.view presentScene:myScene transition: reveal];

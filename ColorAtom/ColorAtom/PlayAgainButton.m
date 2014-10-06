@@ -11,6 +11,8 @@
 #import "PlayFieldScene.h"
 #import "NightPlayScene.h"
 #import "SecretPlayScene.h"
+#import "GameConstants.h"
+
 @implementation PlayAgainButton
 @synthesize modeString;
 -(id)initWithMode:(NSString *)newmode{
@@ -30,9 +32,18 @@
     for (NSString* key in mode.keyEnumerator) {
         if ([[mode objectForKey:key] isEqualToString:modeString]) {
             Class class = NSClassFromString(key);
-            SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-            SKScene * myScene = [[class alloc] initWithSize:self.scene.size];
-            [self.scene.view presentScene:myScene transition: reveal];
+            if ([modeString isEqualToString: (NSString *)AgainstMode]) {
+                MessageReplayRequest request;
+                request.message.messageType = kMessageTypeReplayRequest;
+                NSData *packet = [NSData dataWithBytes:&request length:sizeof(MessageReplayRequest)];
+                [[GameKitHelper sharedGameKitHelper] sendData:packet withCompleteBlock:nil];
+            }
+            else {
+                SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+                SKScene * myScene = [[class alloc] initWithSize:self.scene.size];
+                [self.scene.view presentScene:myScene transition: reveal];
+            }
+            
         }
     }
 }

@@ -37,7 +37,7 @@
         debugOverlay.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:debugOverlay];
 //        添加记分显示屏
-        displayScreen = [[DisplayScreen alloc] init];
+        displayScreen = [[DisplayScreen alloc] initWithAtomCount:10];
         [self addChild:displayScreen];
         [displayScreen setPosition];
 //        添加玩家胜负区域
@@ -168,7 +168,9 @@
 -(void)createAtomPlusAtPosition:(CGPoint) position
 {
     if (displayScreen.atomCount>0) {
-        [self sendPosition:position];
+        if (![self sendPosition:position]) {
+            return;
+        }
         [displayScreen AtomPlusUsed:1];
         AtomNode *Atom = [[AtomPlusNode alloc] init];
         Atom.position = CGPointMake(position.x,AtomRadius);
@@ -204,6 +206,9 @@
     
 }
 -(void)createAtomSharpByButton:(SharpNodeButton *)button{
+    if (![self sendPosition:button.position]) {
+        return;
+    }
     if (sharpCount>0) {
         AtomSharpNode *atomSharp = [[AtomSharpNode alloc] init];
         atomSharp.position = CGPointMake(self.size.width/2, playArea.frame.size.height);
@@ -275,8 +280,8 @@
     }
 }
 
-- (void) sendPosition:(CGPoint) position{
-    
+- (BOOL) sendPosition:(CGPoint) position{
+    return YES;
 }
 #pragma mark SKPhysicsContactDelegate
 -(void)didBeginContact:(SKPhysicsContact *)contact

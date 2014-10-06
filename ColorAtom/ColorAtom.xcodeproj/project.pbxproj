@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A404E4E51907D98600528624 /* SharpMagic.sks in Resources */ = {isa = PBXBuildFile; fileRef = A404E4E41907D98600528624 /* SharpMagic.sks */; };
+		A409789219E12553003A14AE /* ReadyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A409789119E12553003A14AE /* ReadyButton.m */; };
 		A413F1EC190BA0A400400EB7 /* sharp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A413F1EB190BA0A400400EB7 /* sharp.mp3 */; };
 		A43099D01951CC7E002B35D3 /* SecretPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A43099CF1951CC7E002B35D3 /* SecretPlayScene.m */; };
 		A43099D31951CE03002B35D3 /* SecretForce.m in Sources */ = {isa = PBXBuildFile; fileRef = A43099D21951CE03002B35D3 /* SecretForce.m */; };
@@ -91,6 +92,8 @@
 		9F94762221084485A45B0905 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		A400FDB619C58729000FE0C0 /* GameConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConstants.h; sourceTree = "<group>"; };
 		A404E4E41907D98600528624 /* SharpMagic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SharpMagic.sks; sourceTree = "<group>"; };
+		A409789019E12553003A14AE /* ReadyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadyButton.h; sourceTree = "<group>"; };
+		A409789119E12553003A14AE /* ReadyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadyButton.m; sourceTree = "<group>"; };
 		A413F1EB190BA0A400400EB7 /* sharp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sharp.mp3; sourceTree = "<group>"; };
 		A43099CE1951CC7E002B35D3 /* SecretPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretPlayScene.h; sourceTree = "<group>"; };
 		A43099CF1951CC7E002B35D3 /* SecretPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretPlayScene.m; sourceTree = "<group>"; };
@@ -462,6 +465,8 @@
 				A47F55091955353300CEDD40 /* BHPlayButton.m */,
 				A4F9474D19DFC42000384C81 /* AgainstPlayButton.h */,
 				A4F9474E19DFC42000384C81 /* AgainstPlayButton.m */,
+				A409789019E12553003A14AE /* ReadyButton.h */,
+				A409789119E12553003A14AE /* ReadyButton.m */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -634,6 +639,7 @@
 				A4EE478E18FA6A0C003A0B74 /* VisitablePhysicsBody.m in Sources */,
 				A43099D01951CC7E002B35D3 /* SecretPlayScene.m in Sources */,
 				A47F55071955259600CEDD40 /* BlackHole.m in Sources */,
+				A409789219E12553003A14AE /* ReadyButton.m in Sources */,
 				A4EB2D641902377300B28405 /* Background.m in Sources */,
 				A4EB2D7119024DEA00B28405 /* Spark.m in Sources */,
 				A4F6ECEF190CB40F0069DBC9 /* WeiboShareButton.m in Sources */,

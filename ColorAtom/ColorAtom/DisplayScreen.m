@@ -23,10 +23,10 @@
 @synthesize scoreLabel;
 @synthesize rankLabel;
 @synthesize atomIcon;
--(id)init{
+-(id)initWithAtomCount:(NSInteger) count{
     if (self = [super init]) {
         self.name = (NSString *)DisplayScreenName;
-        atomCount = 10;
+        atomCount = count;
         score = 0;
         sharp = 1;
         rank = 1;
@@ -92,20 +92,16 @@
         NSString *bodyClassName = [NSString stringWithUTF8String:class_getName(self.scene.class)];
         NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
         NSString *modeString = [[standardDefaults objectForKey:@"mode"] objectForKey:bodyClassName];
-        if (modeString == AgainstMode) {
-            NSError *error;
+        if ([modeString isEqualToString: (NSString *)AgainstMode]) {
             MessageGameOver mg;
             mg.message.messageType = kMessageTypeGameOver;
             NSData *packet = [NSData dataWithBytes:&mg length:sizeof(MessageGameOver)];
+            [[GameKitHelper sharedGameKitHelper] sendData:packet withCompleteBlock:^{
+                SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+                SKScene * gameOverScene = [[AgainstResult alloc] initWithSize:self.scene.size win:NO];
+                [self.scene.view presentScene:gameOverScene transition: reveal];
+            }];
             
-            [[GameKitHelper sharedGameKitHelper].match sendDataToAllPlayers: packet withDataMode: GKMatchSendDataUnreliable error:&error];
-            if (error != nil)
-            {
-                // Handle the error.
-            }
-            SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
-            SKScene * gameOverScene = [[AgainstResult alloc] initWithSize:self.scene.size score:score win:NO];
-            [self.scene.view presentScene:gameOverScene transition: reveal];
         }
         else {
             SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];

@@ -9,5 +9,6 @@
 #import "PlayFieldScene.h"
 
 @interface AgainstPlayScene : PlayFieldScene <GameKitHelperProtocol>
-
+@property BOOL playerReady;
+@property BOOL gameReady;
 @end

@@ -9,13 +9,18 @@
 #import "GameKitHelper.h"
 #import <EXTScope.h>
 #import "AgainstPlayButton.h"
-@interface GameKitHelper () <GKGameCenterControllerDelegate,GKMatchmakerViewControllerDelegate, GKMatchDelegate> {
+#import "GameConstants.h"
+
+@interface GameKitHelper () <GKGameCenterControllerDelegate,GKMatchmakerViewControllerDelegate, GKMatchDelegate, GKLocalPlayerListener> {
     BOOL _gameCenterFeaturesEnabled;
     BOOL matchStarted;
 }
 @end
 
 @implementation GameKitHelper
+
+@synthesize pendingInvite;
+@synthesize pendingPlayersToInvite;
 
 #pragma mark Singleton stuff
 +(instancetype) sharedGameKitHelper {
@@ -42,6 +47,15 @@
         [self setLastError:error];
         if (localPlayer.authenticated) {
             _gameCenterFeaturesEnabled = YES;
+            [GKMatchmaker sharedMatchmaker].inviteHandler = ^(GKInvite *acceptedInvite, NSArray *playersToInvite) {
+                
+                NSLog(@"Received invite");
+                self.pendingInvite = acceptedInvite;
+                self.pendingPlayersToInvite = playersToInvite;
+                [_delegate inviteReceived];
+                
+            };
+//            [localPlayer registerListener:self];
         } else if(viewController) {
             //TODO:palse
             [self presentViewController:viewController];
@@ -74,7 +88,7 @@
                        completion:nil];
 }
 
-#pragma mark GameKitHelperProtocol
+#pragma mark CustomMethod
 -(void) submitScore:(int64_t)score
            identifier:(NSString*)identifier {
     //1: Check if Game Center
@@ -118,18 +132,44 @@
     [_presentingViewController dismissViewControllerAnimated:NO completion:^{
     }];
 
-    GKMatchRequest *request = [[GKMatchRequest alloc] init];
-    request.minPlayers = 2;
-    request.maxPlayers = 2;
     
-    GKMatchmakerViewController *mmvc =
-    [[GKMatchmakerViewController alloc] initWithMatchRequest:request];
-    mmvc.matchmakerDelegate = self;
-    
-    [_presentingViewController presentViewController:mmvc animated:YES completion:^{
+    if (self.pendingInvite) {
+        GKMatchmakerViewController *mmvc =
+        [[GKMatchmakerViewController alloc] initWithInvite:self.pendingInvite];
+        mmvc.matchmakerDelegate = self;
+        [_presentingViewController presentViewController:mmvc animated:YES completion:nil];
+        self.pendingInvite = nil;
+        self.pendingPlayersToInvite = nil;
+    }
+    else {
+        GKMatchRequest *request = [[GKMatchRequest alloc] init];
+        request.minPlayers = 2;
+        request.maxPlayers = 2;
+        request.recipients = self.pendingPlayersToInvite;
         
-    }];
+        GKMatchmakerViewController *mmvc = [[GKMatchmakerViewController alloc] initWithMatchRequest:request];
+        mmvc.matchmakerDelegate = self;
+        [_presentingViewController presentViewController:mmvc animated:YES completion:nil];
+        self.pendingInvite = nil;
+        self.pendingPlayersToInvite = nil;
+    }
     
+}
+
+-(void)sendData:(NSData *)packet withCompleteBlock:(void(^)(void)) block{
+    NSError *error;
+    if (![[GameKitHelper sharedGameKitHelper].match sendDataToAllPlayers: packet withDataMode: GKMatchSendDataUnreliable error:&error]) {
+        [self sendData:packet withCompleteBlock:block];
+    }
+    else{
+        if (block!=nil) {
+            block();
+        }
+    }
+    if (error != nil)
+    {
+        // Handle the error.
+    }
 }
 
 #pragma mark GKMatchmakerViewControllerDelegate
@@ -168,7 +208,15 @@
 // The match received data sent from the player.
 - (void)match:(GKMatch *)theMatch didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID {
 //    if (_match != theMatch) return;
-    
+    Message *message = (Message *) [data bytes];
+    if (message->messageType == kMessageTypeGameBeginRequest) {
+        _opponentReady = YES;
+        NSLog(@"receive beginrequest");
+    }
+    else if (message->messageType == kMessageTypeGameBeginResponse) {
+        _opponentReady = YES;
+        NSLog(@"receive beginresponse");
+    }
     [_delegate match:theMatch didReceiveData:data fromPlayer:playerID];
 }
 
@@ -190,7 +238,10 @@
             // a player just disconnected.
             NSLog(@"Player disconnected!");
             matchStarted = NO;
-            [_delegate matchEnded];
+            if (_delegate!=nil&&_delegate!=NULL) {
+                [_delegate matchEnded];
+            }
+            
             break;
         case GKPlayerStateUnknown:
             NSLog(@"state unknown");
@@ -210,7 +261,9 @@
     
     NSLog(@"Failed to connect to player with error: %@", error.localizedDescription);
     matchStarted = NO;
-    [_delegate matchEnded];
+    if (_delegate!=nil&&_delegate!=NULL) {
+        [_delegate matchEnded];
+    }
 }
 
 // The match was unable to be established with any players due to an error.
@@ -220,7 +273,25 @@
     
     NSLog(@"Match failed with error: %@", error.localizedDescription);
     matchStarted = NO;
-    [_delegate matchEnded];
+    if (_delegate!=nil&&_delegate!=NULL) {
+        [_delegate matchEnded];
+    }
 }
 
+#pragma mark GKLocalPlayerListener
+//-(void)player:(GKPlayer *)player didAcceptInvite:(GKInvite *)invite{
+//    self.pendingInvite = invite;
+//    GKMatchmakerViewController *mmvc =
+//    [[GKMatchmakerViewController alloc] initWithInvite:self.pendingInvite];
+//    mmvc.matchmakerDelegate = self;
+//    [_presentingViewController presentViewController:mmvc animated:YES completion:nil];
+//    self.pendingInvite = nil;
+//    self.pendingPlayersToInvite = nil;
+//    [_delegate inviteReceived];
+//}
+//
+//-(void)player:(GKPlayer *)player didRequestMatchWithRecipients:(NSArray *)recipientPlayers{
+//    self.pendingPlayersToInvite = recipientPlayers;
+//    
+//}
 @end
