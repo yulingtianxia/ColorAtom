@@ -11,9 +11,11 @@
 #import "RandomHelper.h"
 #import "NodeCategories.h"
 #import "Spark.h"
+@class WormHole;
 @interface AtomNode : SKSpriteNode
 
 - (id)initWithName:(NSString *)name ImageName:(NSString *)imageName;
 -(void) changeColorWithSameAtom:(AtomNode *) atom;
 -(void) changeColorWithDiffAtom:(SKSpriteNode *) atom;
+-(void) changeColorWithWormHole:(WormHole *)wormHole;
 @end

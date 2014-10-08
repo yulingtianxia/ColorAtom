@@ -7,6 +7,7 @@
 //
 
 #import "AtomNode.h"
+#import "WormHole.h"
 
 @implementation AtomNode
 
@@ -17,6 +18,7 @@
         self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:AtomRadius];
         self.physicsBody.dynamic = YES;
         self.physicsBody.usesPreciseCollisionDetection = YES;
+        self.physicsBody.collisionBitMask = AtomSharpCategory|AtomMinusCategory|AtomPlusCategory|PlayFieldCategory;
         self.physicsBody.contactTestBitMask = AtomPlusCategory|AtomMinusCategory|PlayFieldCategory|AtomSharpCategory;
         self.physicsBody.linearDamping = 0.65;
         self.physicsBody.angularDamping = 0.8;
@@ -49,6 +51,7 @@
         
     
 }
+
 -(void) changeColorWithDiffAtom:(SKSpriteNode *) atom{
     
     [self runAction:[SKAction sequence:@[[SKAction runBlock:^{
@@ -66,4 +69,20 @@
         
     }]]]];
 }
+
+-(void) changeColorWithWormHole:(WormHole *)wormHole{
+    [self runAction:[SKAction sequence:@[[SKAction runBlock:^{
+        self.physicsBody.velocity = CGVectorMake(0, 0);
+        self.physicsBody.collisionBitMask = 0;
+        self.physicsBody.contactTestBitMask = 0;
+        
+        self.physicsBody = NULL;
+    }],
+                                         [SKAction colorizeWithColor:[UIColor clearColor] colorBlendFactor:1 duration:0.5],
+                                         [SKAction runBlock:^{
+//        [wormHole.anotherWH shootAtomNodeWithCategory:self.physicsBody.categoryBitMask];
+        [self removeFromParent];
+    }]]]];
+}
+
 @end

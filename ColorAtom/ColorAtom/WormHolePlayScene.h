@@ -9,5 +9,6 @@
 #import "PlayFieldScene.h"
 #import "WormHole.h"
 @interface WormHolePlayScene : PlayFieldScene
-@property WormHole *secretForce;
+@property WormHole *wormHole_A;
+@property WormHole *wormHole_B;
 @end

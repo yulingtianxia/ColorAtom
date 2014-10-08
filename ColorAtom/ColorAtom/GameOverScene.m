@@ -13,6 +13,8 @@
 #import "MainSceneButton.h"
 #import "GameKitHelper.h"
 #import "GameConstants.h"
+#import "Define.h"
+
 @implementation GameOverScene
 @synthesize background;
 @synthesize score;
@@ -23,7 +25,7 @@
     if (self = [super initWithSize:size]) {
         score = newscore;
         mode = newmode;
-        sharingText = [NSString localizedStringWithFormat:NSLocalizedString(@"I have got %ld points in %@ mode of ColorAtom, Come on with me! https://itunes.apple.com/us/app/coloratom/id918469696", @""),(long)score,mode];
+        sharingText = [NSString localizedStringWithFormat:NSLocalizedString(@"I have got %ld points in %@ mode of ColorAtom, Come on with me! https://itunes.apple.com/us/app/coloratom/id918469696", @""),(long)score,NSLocalizedString(mode, @"")];
         self.backgroundColor = [SKColor clearColor];
 //        背景效果
         background = [[Background alloc] init];
@@ -39,7 +41,7 @@
         PlayAgainButton *playAgain = [[PlayAgainButton alloc] initWithMode:mode];
         WeiboShareButton *weiboShare = [[WeiboShareButton alloc] init];
         MainSceneButton *mainScene = [[MainSceneButton alloc] init];
-        modeLabel.text = mode;
+        modeLabel.text = NSLocalizedString(mode, @"");
         modeLabel.fontSize = 40;
         modeLabel.fontColor = [SKColor purpleColor];
         modeLabel.position = CGPointMake(self.size.width/2, 3*self.frame.size.height/4+modeLabel.frame.size.height);
@@ -114,7 +116,19 @@
         [standardDefaults setInteger:score forKey:mode];
         [standardDefaults synchronize];
         //sent high score to gamecenter
-        [[GameKitHelper sharedGameKitHelper] submitScore:score identifier:kHighScoreLeaderboardIdentifier];
+//        [[GameKitHelper sharedGameKitHelper] submitScore:score identifier:kHighScoreLeaderboardIdentifier];
+        if ([mode isEqualToString:(NSString *)NormalMode]) {
+            [[GameKitHelper sharedGameKitHelper] submitScore:score identifier:kNormalHighScoreLeaderboardIdentifier];
+        }
+        else if ([mode isEqualToString:(NSString *)NightMode]) {
+            [[GameKitHelper sharedGameKitHelper] submitScore:score identifier:kNightHighScoreLeaderboardIdentifier];
+        }
+        else if ([mode isEqualToString:(NSString *)SecretMode]) {
+            [[GameKitHelper sharedGameKitHelper] submitScore:score identifier:kSecretHighScoreLeaderboardIdentifier];
+        }
+        else if ([mode isEqualToString:(NSString *)WormHoleMode]) {
+            [[GameKitHelper sharedGameKitHelper] submitScore:score identifier:kWormHoleHighScoreLeaderboardIdentifier];
+        }
         return score;
     }
     return highScore;

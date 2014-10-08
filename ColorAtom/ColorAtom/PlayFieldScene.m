@@ -172,11 +172,11 @@
             return;
         }
         [displayScreen AtomPlusUsed:1];
-        AtomNode *Atom = [[AtomPlusNode alloc] init];
-        Atom.position = CGPointMake(position.x,AtomRadius);
-        playArea.fillColor = Atom.color;
-        playArea.strokeColor = Atom.color;
-        [self addChild:Atom];
+        AtomNode *plusAtom = [[AtomPlusNode alloc] init];
+        plusAtom.position = CGPointMake(position.x,AtomRadius);
+        playArea.fillColor = plusAtom.color;
+        playArea.strokeColor = plusAtom.color;
+        [self addChild:plusAtom];
         NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
         if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"on"]) {
             [self runAction:[SKAction playSoundFileNamed:@"pew-pew-lei.caf" waitForCompletion:NO]];
@@ -187,18 +187,18 @@
 
 -(void)createAtomMinus{
     [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[[SKAction runBlock:^{
-        AtomNode *Atom = [[AtomMinusNode alloc] init];
-        Atom.position = CGPointMake(skRand(AtomRadius, self.size.width-AtomRadius),self.size.height-AtomRadius);
+        AtomNode *minusAtom = [[AtomMinusNode alloc] init];
+        minusAtom.position = CGPointMake(skRand(AtomRadius, self.size.width-AtomRadius),self.size.height-AtomRadius);
         
-        [self addChild:Atom];
+        [self addChild:minusAtom];
     }],
                                                                        [SKAction waitForDuration:AtomMinusCreateInterval/rank withRange:0.5/rank]]]]];
     [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[[SKAction runBlock:^{
         for (int i=0; i<rank; i++) {
-            AtomNode *Atom = [[AtomMinusNode alloc] init];
-            Atom.position = CGPointMake(skRand(AtomRadius, self.size.width-AtomRadius),self.size.height-AtomRadius);
+            AtomNode *minusAtom = [[AtomMinusNode alloc] init];
+            minusAtom.position = CGPointMake(skRand(AtomRadius, self.size.width-AtomRadius),self.size.height-AtomRadius);
             
-            [self addChild:Atom];
+            [self addChild:minusAtom];
         }
         
     }],

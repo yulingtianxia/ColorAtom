@@ -63,13 +63,13 @@
         normalPlay = [[NormalPlayButton alloc] init];
         normalPlay.position = CGPointMake(self.size.width/2, 2*self.size.height/3);
         nightPlay = [[NightPlayButton alloc] init];
-        nightPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(normalPlay.frame)-2*normalPlay.frame.size.height);
+        nightPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(normalPlay.frame)-1.5*normalPlay.frame.size.height);
         secretPlay = [[SecretPlayButton alloc] init];
-        secretPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(nightPlay.frame)-2*secretPlay.frame.size.height);
+        secretPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(nightPlay.frame)-1.5*secretPlay.frame.size.height);
         bhPlay = [[WHPlayButton alloc] init];
-        bhPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(secretPlay.frame)-2*secretPlay.frame.size.height);
+        bhPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(secretPlay.frame)-1.5*secretPlay.frame.size.height);
         againstPlay = [[AgainstPlayButton alloc] init];
-        againstPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(bhPlay.frame)-2*bhPlay.frame.size.height);
+        againstPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(bhPlay.frame)-1.5*bhPlay.frame.size.height);
         [self runAction:[SKAction sequence:@[[SKAction runBlock:^{
             [self addChild:plus];
             [self addChild:minus];

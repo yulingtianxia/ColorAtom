@@ -7,22 +7,42 @@
 //
 
 #import "WormHole.h"
+#import "NodeCategories.h"
+#import "AtomNode.h"
+#import "AtomPlusNode.h"
+#import "AtomMinusNode.h"
 
 @implementation WormHole
-@synthesize vortex;
+@synthesize anotherWH;
 @synthesize wormHole;
 - (id)init{
     if (self=[super init]) {
-        
+        self.texture = [SKTexture textureWithImageNamed:@"blackhole"];
         wormHole = [SKFieldNode radialGravityField];
-        wormHole.strength = 1;
+        wormHole.strength = 0.7;
+//        wormHole.falloff = 1;
         [self addChild:wormHole];
-        vortex = [[SKSpriteNode alloc] initWithTexture:[SKTexture textureWithImageNamed:@"blackhole"]];
-        vortex.size = CGSizeMake(50, 50);
-        vortex.physicsBody.collisionBitMask = 0;
-        [self addChild:vortex];
-        [vortex runAction:[SKAction repeatActionForever:[SKAction rotateByAngle:2*M_PI duration:1]]];
+        self.size = CGSizeMake(50, 50);
+        self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:5];
+        self.physicsBody.categoryBitMask = WormHoleCategory;
+        self.physicsBody.contactTestBitMask = AtomPlusCategory|AtomMinusCategory|AtomSharpCategory;
+        self.physicsBody.collisionBitMask = 0;
+        self.physicsBody.usesPreciseCollisionDetection = YES;
+        [self runAction:[SKAction repeatActionForever:[SKAction rotateByAngle:2*M_PI duration:1]]];
     }
     return self;
+}
+
+-(void) shootAtomNodeWithCategory:(uint32_t)category{
+    if ((category&AtomPlusCategory)!=0) {
+        AtomNode *atom = [[AtomPlusNode alloc] init];
+        atom.position = CGPointMake(self.position.x,self.position.y+15);
+        [self.scene addChild:atom];
+    }
+    else if ((category&AtomMinusCategory)!=0) {
+        AtomNode *atom = [[AtomMinusNode alloc] init];
+        atom.position = CGPointMake(self.position.x,self.position.y-15);
+        [self.scene addChild:atom];
+    }
 }
 @end

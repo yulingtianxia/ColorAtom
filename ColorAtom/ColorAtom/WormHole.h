@@ -7,8 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+@class AtomNode;
+@interface WormHole : SKSpriteNode
 
-@interface WormHole : SKNode
-@property SKSpriteNode *vortex;
 @property SKFieldNode *wormHole;
+@property (weak) WormHole * anotherWH;
+
+-(void) shootAtomNodeWithCategory:(uint32_t)category;
+
 @end

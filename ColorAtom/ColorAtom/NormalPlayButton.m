@@ -14,7 +14,7 @@
     if (self = [super init]) {
         self.fontName = @"Chalkboard SE";
         self.fontSize = 30;
-        self.text = NSLocalizedString(@"Nomal Mode", @"");
+        self.text = NSLocalizedString(@"Normal Mode", @"");
         self.userInteractionEnabled = YES;
     }
     return self;

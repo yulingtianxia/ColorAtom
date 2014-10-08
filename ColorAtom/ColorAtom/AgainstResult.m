@@ -39,7 +39,7 @@
         background.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:background];
         SKLabelNode *modeLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        modeLabel.text = (NSString *)AgainstMode;
+        modeLabel.text = NSLocalizedString((NSString *)AgainstMode, @"") ;
         modeLabel.fontSize = 40;
         modeLabel.fontColor = [SKColor purpleColor];
         modeLabel.position = CGPointMake(self.size.width/2, 3*self.frame.size.height/4+modeLabel.frame.size.height);

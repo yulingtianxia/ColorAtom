@@ -9,6 +9,10 @@
 #ifndef ColorAtom_GameConstants_h
 #define ColorAtom_GameConstants_h
 #define kHighScoreLeaderboardIdentifier @"com.yulingtianxia.ColorAtom.HighScores"
+#define kNormalHighScoreLeaderboardIdentifier @"com.yulingtianxia.ColorAtom.NormalHighScores"
+#define kNightHighScoreLeaderboardIdentifier @"com.yulingtianxia.ColorAtom.NightHighScores"
+#define kSecretHighScoreLeaderboardIdentifier @"com.yulingtianxia.ColorAtom.SecretHighScores"
+#define kWormHoleHighScoreLeaderboardIdentifier @"com.yulingtianxia.ColorAtom.WormHoleHighScores"
 typedef enum {
     kMessageTypeGameBeginRequest = 0,
     kMessageTypeGameBeginResponse,
