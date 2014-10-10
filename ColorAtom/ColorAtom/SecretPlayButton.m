@@ -11,7 +11,7 @@
 @implementation SecretPlayButton
 -(id)init{
     if (self = [super init]) {
-        self.fontName = @"Chalkboard SE";
+        self.fontName = @"Transformers";
         self.fontSize = 30;
         self.text = NSLocalizedString(@"Secret Mode", @"");
         self.userInteractionEnabled = YES;

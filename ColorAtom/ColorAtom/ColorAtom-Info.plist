@@ -28,6 +28,10 @@
 	<array>
 		<string>fetch</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Transformers Movie.ttf</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

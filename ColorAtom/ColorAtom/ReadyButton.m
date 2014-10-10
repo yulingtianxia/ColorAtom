@@ -13,7 +13,7 @@
 @implementation ReadyButton
 -(id)init{
     if (self = [super init]) {
-        self.fontName = @"Chalkboard SE";
+        self.fontName = @"Transformers";
         self.fontSize = 40;
         self.text = NSLocalizedString(@"Get Ready", @"");
         self.userInteractionEnabled = YES;

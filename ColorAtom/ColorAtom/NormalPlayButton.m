@@ -12,7 +12,7 @@
 @implementation NormalPlayButton
 -(id)init{
     if (self = [super init]) {
-        self.fontName = @"Chalkboard SE";
+        self.fontName = @"Transformers";
         self.fontSize = 30;
         self.text = NSLocalizedString(@"Normal Mode", @"");
         self.userInteractionEnabled = YES;

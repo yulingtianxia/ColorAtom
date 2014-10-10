@@ -12,7 +12,7 @@
 @synthesize myScene;
 -(id)init{
     if (self = [super init]) {
-        self.fontName = @"Chalkboard SE";
+        self.fontName = @"Transformers";
         self.fontSize = 30;
         self.text = NSLocalizedString(@"Against Mode", @"");
         self.userInteractionEnabled = YES;

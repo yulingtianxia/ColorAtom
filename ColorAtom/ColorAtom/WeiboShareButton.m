@@ -11,7 +11,7 @@
 @implementation WeiboShareButton
 -(id)init{
     if (self = [super init]) {
-        self.fontName = @"Chalkduster";
+        self.fontName = @"Transformers";
         self.text = NSLocalizedString(@"SHARE SCORE", @"");
         self.fontSize = 20;
         self.userInteractionEnabled = YES;

@@ -56,20 +56,21 @@
         minus = [[AtomMinusNode alloc] init];
         minus.position = CGPointMake(self.size.width/2, self.size.height);
         minus.physicsBody.velocity = CGVectorMake(0, -200);
-        logo = [[SKLabelNode alloc] initWithFontNamed:@"Chalkboard SE"];
+//        logo = [[SKLabelNode alloc] initWithFontNamed:@"Transformers"];
+        logo = [[SKLabelNode alloc] initWithFontNamed:@"Transformers"];
         logo.fontSize = 50;
         logo.text = @"ColorAtom";
         logo.position = CGPointMake(self.size.width/2, 3*self.size.height/4);
         normalPlay = [[NormalPlayButton alloc] init];
         normalPlay.position = CGPointMake(self.size.width/2, 2*self.size.height/3);
         nightPlay = [[NightPlayButton alloc] init];
-        nightPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(normalPlay.frame)-1.5*normalPlay.frame.size.height);
+        nightPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(normalPlay.frame)-logo.frame.size.height);
         secretPlay = [[SecretPlayButton alloc] init];
-        secretPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(nightPlay.frame)-1.5*secretPlay.frame.size.height);
+        secretPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(nightPlay.frame)-logo.frame.size.height);
         bhPlay = [[WHPlayButton alloc] init];
-        bhPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(secretPlay.frame)-1.5*secretPlay.frame.size.height);
+        bhPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(secretPlay.frame)-logo.frame.size.height);
         againstPlay = [[AgainstPlayButton alloc] init];
-        againstPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(bhPlay.frame)-1.5*bhPlay.frame.size.height);
+        againstPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(bhPlay.frame)-logo.frame.size.height);
         [self runAction:[SKAction sequence:@[[SKAction runBlock:^{
             [self addChild:plus];
             [self addChild:minus];

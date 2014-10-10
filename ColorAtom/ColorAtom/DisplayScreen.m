@@ -30,11 +30,11 @@
         score = 0;
         sharp = 1;
         rank = 1;
-        atomCountLabel = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Bold"];
+        atomCountLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
         atomCountLabel.fontSize = 20;
-        scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Bold"];
+        scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
         scoreLabel.fontSize = 20;
-        rankLabel = [SKLabelNode labelNodeWithFontNamed:@"ChalkboardSE-Bold"];
+        rankLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
         rankLabel.fontSize = 20;
         atomCountLabel.text = [NSString stringWithFormat:@"%ld",(long)atomCount];
         scoreLabel.text = [NSString localizedStringWithFormat:NSLocalizedString(@"Score:%ld/%ld", @"") ,(long)score,(long)(((PlayFieldScene *)self.scene).updateScore)];

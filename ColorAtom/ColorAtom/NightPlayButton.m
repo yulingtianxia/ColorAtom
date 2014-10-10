@@ -11,7 +11,7 @@
 @implementation NightPlayButton
 -(id)init{
     if (self = [super init]) {
-        self.fontName = @"Chalkboard SE";
+        self.fontName = @"Transformers";
         self.fontSize = 30;
         self.text = NSLocalizedString(@"Night Mode", @"");
         self.userInteractionEnabled = YES;

@@ -17,6 +17,7 @@
 		A43C39431927144E0092B34D /* StarRain.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C39421927144E0092B34D /* StarRain.m */; };
 		A44506CD19C321C600905DEF /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44506CC19C321C600905DEF /* GameKit.framework */; };
 		A44506D119C3226300905DEF /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A44506D019C3226300905DEF /* GameKitHelper.m */; };
+		A454867019E81E9200AD0F5E /* Transformers Movie.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A454866C19E8170E00AD0F5E /* Transformers Movie.ttf */; };
 		A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099318F90A6D00BCC91D /* AtomNode.m */; };
 		A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099618F9178D00BCC91D /* YXYDebugNode.m */; };
 		A47F5504195523A200CEDD40 /* WormHolePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F5503195523A200CEDD40 /* WormHolePlayScene.m */; };
@@ -109,6 +110,7 @@
 		A44506CC19C321C600905DEF /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		A44506CF19C3226300905DEF /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
 		A44506D019C3226300905DEF /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
+		A454866C19E8170E00AD0F5E /* Transformers Movie.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Transformers Movie.ttf"; sourceTree = "<group>"; };
 		A46E098F18F908F300BCC91D /* NodeCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCategories.h; sourceTree = "<group>"; };
 		A46E099018F9096A00BCC91D /* RandomHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomHelper.h; sourceTree = "<group>"; };
 		A46E099218F90A6D00BCC91D /* AtomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomNode.h; sourceTree = "<group>"; };
@@ -254,6 +256,14 @@
 			name = GameKitFiles;
 			sourceTree = "<group>";
 		};
+		A454866F19E81DB900AD0F5E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A454866C19E8170E00AD0F5E /* Transformers Movie.ttf */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		A46E099118F909C700BCC91D /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +333,7 @@
 		A4E9E4EB18F7D18E000ADEAE /* ColorAtom */ = {
 			isa = PBXGroup;
 			children = (
+				A454866F19E81DB900AD0F5E /* Resource */,
 				A44506CE19C3222E00905DEF /* GameKitFiles */,
 				A4F6ECE9190CB0C80069DBC9 /* Buttons */,
 				A4EB2D4F1902279600B28405 /* Emitter */,
@@ -573,6 +584,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A454867019E81E9200AD0F5E /* Transformers Movie.ttf in Resources */,
 				A4FC862C19E2C78E006F784C /* Localizable.strings in Resources */,
 				A4EB2D6C190241ED00B28405 /* Fire.sks in Resources */,
 				A4ED505819016B0A00A37085 /* background-music-aac.caf in Resources */,
