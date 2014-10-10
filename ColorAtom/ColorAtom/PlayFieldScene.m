@@ -20,8 +20,7 @@
 @implementation PlayFieldScene
 
 @synthesize debugOverlay;
-@synthesize longPressPosition;
-@synthesize panPosition;
+@synthesize swipePosition;
 @synthesize playArea;
 @synthesize background;
 @synthesize displayScreen;
@@ -80,10 +79,9 @@
 
 -(void)didMoveToView:(SKView *)view
 {
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanFrom:)];
-    [[self view] addGestureRecognizer:pan];
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressFrom:)];
-    [[self view] addGestureRecognizer:longPress];
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+    swipe.direction = UISwipeGestureRecognizerDirectionUp;
+    [[self view] addGestureRecognizer:swipe];
     
 }
 
@@ -222,63 +220,22 @@
         }
     }
 }
--(void)handlePanFrom:(UIPanGestureRecognizer *)recognizer{
-    if (recognizer.state == UIGestureRecognizerStateBegan) {
+-(void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer{
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
         //        debugOverlay.label.text = @"Began";
         CGPoint touchLocation = [recognizer locationInView:recognizer.view];
         touchLocation = [self convertPointFromView:touchLocation];
-        panPosition = touchLocation;
-        SKAction *createAtomPlusAction = [SKAction repeatActionForever:[SKAction sequence:@[[SKAction runBlock:^{
-            [self createAtomPlusAtPosition:panPosition];
-        }],
-                                                                                            [SKAction waitForDuration:AtomPlusCreateInterval]]]];
+        swipePosition = touchLocation;
+        [self createAtomPlusAtPosition:swipePosition];
+//        SKAction *createAtomPlusAction = [SKAction runBlock:^{
+//            
+//        }];
+//        
+//        [self runAction:createAtomPlusAction withKey:(NSString*)CreateAtomPlus];
         
-        [self runAction:createAtomPlusAction withKey:(NSString*)CreateAtomPlus];
-        
-    }
-    else if (recognizer.state == UIGestureRecognizerStateChanged){
-        //        debugOverlay.label.text = @"Changed";
-        CGPoint touchLocation = [recognizer locationInView:recognizer.view];
-        touchLocation = [self convertPointFromView:touchLocation];
-        panPosition = touchLocation;
-    }
-    else if (recognizer.state == UIGestureRecognizerStateEnded){
-        //        debugOverlay.label.text = @"Ended";
-        [self removeActionForKey:(NSString*)CreateAtomPlus];
-    }
-    else{
-        //        debugOverlay.label.text = @"No";
     }
 }
 
--(void)handleLongPressFrom:(UILongPressGestureRecognizer *)recognizer{
-    if (recognizer.state == UIGestureRecognizerStateBegan) {
-//        debugOverlay.label.text = @"Began";
-        CGPoint touchLocation = [recognizer locationInView:recognizer.view];
-        touchLocation = [self convertPointFromView:touchLocation];
-        longPressPosition = touchLocation;
-        SKAction *createAtomPlusAction = [SKAction repeatActionForever:[SKAction sequence:@[[SKAction runBlock:^{
-            [self createAtomPlusAtPosition:longPressPosition];
-        }],
-                                                                                           [SKAction waitForDuration:AtomPlusCreateInterval]]]];
-        
-        [self runAction:createAtomPlusAction withKey:(NSString*)CreateAtomPlus];
-        
-    }
-    else if (recognizer.state == UIGestureRecognizerStateChanged){
-//        debugOverlay.label.text = @"Changed";
-        CGPoint touchLocation = [recognizer locationInView:recognizer.view];
-        touchLocation = [self convertPointFromView:touchLocation];
-        longPressPosition = touchLocation;
-    }
-    else if (recognizer.state == UIGestureRecognizerStateEnded){
-//        debugOverlay.label.text = @"Ended";
-        [self removeActionForKey:(NSString*)CreateAtomPlus];
-    }
-    else{
-//        debugOverlay.label.text = @"No";
-    }
-}
 
 - (BOOL) sendPosition:(CGPoint) position{
     return YES;

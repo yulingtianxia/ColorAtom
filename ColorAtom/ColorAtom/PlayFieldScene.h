@@ -15,8 +15,7 @@
 @interface PlayFieldScene : SKScene <SKPhysicsContactDelegate>
 
 @property YXYDebugNode* debugOverlay;
-@property CGPoint longPressPosition;
-@property CGPoint panPosition;
+@property CGPoint swipePosition;
 @property PlayerArea *playArea;
 @property Background *background;
 @property DisplayScreen *displayScreen;
