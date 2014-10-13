@@ -28,7 +28,7 @@
         sharingText = [NSString localizedStringWithFormat:NSLocalizedString(@"I have got %ld points in %@ mode of ColorAtom, Come on with me! https://itunes.apple.com/us/app/coloratom/id918469696", @""),(long)score,NSLocalizedString(mode, @"")];
         self.backgroundColor = [SKColor clearColor];
 //        背景效果
-        background = [[Background alloc] init];
+        background = [[Background alloc] initWithSize:size];
         background.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:background];
 //        各种label

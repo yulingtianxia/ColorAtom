@@ -35,7 +35,7 @@
         }
         self.backgroundColor = [SKColor clearColor];
 //        背景效果
-        background = [[Background alloc] init];
+        background = [[Background alloc] initWithSize:size];
         background.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:background];
         SKLabelNode *modeLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];

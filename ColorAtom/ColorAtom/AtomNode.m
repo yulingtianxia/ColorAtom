@@ -20,7 +20,7 @@
         self.physicsBody.usesPreciseCollisionDetection = YES;
         self.physicsBody.collisionBitMask = AtomSharpCategory|AtomMinusCategory|AtomPlusCategory|PlayFieldCategory;
         self.physicsBody.contactTestBitMask = AtomPlusCategory|AtomMinusCategory|PlayFieldCategory|AtomSharpCategory;
-        self.physicsBody.linearDamping = 0.65;
+        self.physicsBody.linearDamping = 0.5;
         self.physicsBody.angularDamping = 0.8;
 //        The userData property is initially nil. You have to create a dictionary and assign it first
         self.userData = [NSMutableDictionary dictionaryWithDictionary:@{ATOMCOLOR:self.color}];

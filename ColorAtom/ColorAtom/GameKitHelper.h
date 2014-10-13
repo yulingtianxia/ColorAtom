@@ -32,6 +32,7 @@
 
 
 + (instancetype) sharedGameKitHelper;
+-(UIViewController*) getRootViewController;
 -(void) authenticateLocalPlayer;
 -(void) submitScore:(int64_t)score identifier:(NSString*)category;
 - (void)findMatchWithViewController:(UIViewController *)viewController

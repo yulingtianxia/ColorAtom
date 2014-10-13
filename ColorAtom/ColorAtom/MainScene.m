@@ -42,9 +42,10 @@
         self.physicsWorld.contactDelegate = self;
         NSString *path = [[NSBundle mainBundle] pathForResource:@"BigColorFire" ofType:@"sks"];
         fire = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        fire.particlePositionRange = CGVectorMake(size.width, 50);
         fire.position = CGPointMake(self.size.width/2, 25);
         [self addChild:fire];
-        background = [[Background alloc] init];
+        background = [[Background alloc] initWithSize:size];
         background.position = CGPointMake(self.size.width/2, self.size.height/2+25);
         [self addChild:background];
         audio = [[AudioButton alloc] init];

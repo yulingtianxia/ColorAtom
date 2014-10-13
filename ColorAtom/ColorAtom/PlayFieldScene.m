@@ -44,7 +44,7 @@
         [self addChild:playArea];
         [playArea beginWork];
 //        添加游戏背景
-        background = [[Background alloc] init];
+        background = [[Background alloc] initWithSize:size];
         background.position = CGPointMake(self.size.width/2, self.size.height/2+AtomRadius);
         StarRain *starRain = [[StarRain alloc] init];
         starRain.position = CGPointMake(self.size.width/2, self.size.height);
@@ -58,10 +58,10 @@
 //        游戏区域场景设置
         self.name = (NSString*)PlayFieldName;
         CGMutablePathRef path = CGPathCreateMutable();
-        CGPathMoveToPoint(path, 0, 0, self.size.height);
+        CGPathMoveToPoint(path, 0, 0, self.size.height+100);
         CGPathAddLineToPoint(path, 0, 0, 0);
         CGPathAddLineToPoint(path, 0, self.size.width, 0);
-        CGPathAddLineToPoint(path, 0, self.size.width, self.size.height);
+        CGPathAddLineToPoint(path, 0, self.size.width, self.size.height+100);
         self.physicsBody = [SKPhysicsBody bodyWithEdgeChainFromPath:path];
         self.physicsBody.contactTestBitMask = 1;
         self.physicsBody.categoryBitMask = PlayFieldCategory;
@@ -95,13 +95,13 @@
             [displayScreen AtomMinusAttacked];
             break;
         }
-        if ([node.name isEqualToString:(NSString*)AtomPlusName]&&node.position.y>self.size.height+AtomRadius) {
+        else if ([node.name isEqualToString:(NSString*)AtomPlusName]&&node.position.y>self.size.height+AtomRadius) {
             [node removeFromParent];
         }
-        if ([node.name isEqualToString:(NSString*)AtomMinusName]&&node.position.y>self.size.height+AtomRadius) {
+        else if ([node.name isEqualToString:(NSString*)AtomMinusName]&&node.position.y>self.size.height+AtomRadius) {
             [node removeFromParent];
         }
-        if ([node.name isEqualToString:(NSString*)AtomSharpName]&&node.position.y>self.size.height+AtomRadius*2) {
+        else if ([node.name isEqualToString:(NSString*)AtomSharpName]&&node.position.y>self.size.height+AtomRadius*2) {
             [node removeFromParent];
         }
         

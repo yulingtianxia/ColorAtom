@@ -7,14 +7,16 @@
 //
 
 #import "Background.h"
-
+#import "GameKitHelper.h"
 @implementation Background
--(id)init{
+
+-(id)initWithSize:(CGSize) size{
     if (self = [super init]) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"BackGround" ofType:@"sks"];
         self = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
-        
+        self.particlePositionRange = CGVectorMake(size.width, size.height);
     } 
     return self;
 }
+
 @end
