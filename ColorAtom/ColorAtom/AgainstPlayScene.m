@@ -65,7 +65,13 @@
     }
 }
 
+-(void)pause{
+    
+}
 
+-(void)resume{
+    
+}
 
 #pragma mark GCHelperDelegate
 

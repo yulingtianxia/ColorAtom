@@ -17,6 +17,8 @@
 #import "AtomSharpNode.h"
 #import "SharpNodeButton.h"
 #import "StarRain.h"
+#import "YXYViewController.h"
+
 @implementation PlayFieldScene
 
 @synthesize debugOverlay;
@@ -71,6 +73,9 @@
         updateScore = 500;
         rank = 1;
         sharpCount = 1;
+        //添加暂停通知
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pause) name:UIApplicationWillResignActiveNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pause) name:UIApplicationDidEnterBackgroundNotification object:nil];
 //          产生负离子
         [self createAtomMinus];
     }
@@ -79,10 +84,12 @@
 
 -(void)didMoveToView:(SKView *)view
 {
-    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-    swipe.direction = UISwipeGestureRecognizerDirectionUp;
-    [[self view] addGestureRecognizer:swipe];
-    
+    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+    swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
+    [[self view] addGestureRecognizer:swipeUp];
+    UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+    swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
+    [[self view] addGestureRecognizer:swipeDown];
 }
 
 -(void)didSimulatePhysics
@@ -161,7 +168,7 @@
 //    [debugOverlay removeAllChildren];
 }
 
-#pragma mark MyMethod
+#pragma mark FactoryMethods
 
 -(void)createAtomPlusAtPosition:(CGPoint) position
 {
@@ -203,6 +210,7 @@
                                                                        [SKAction waitForDuration:AtomMinusCreateInterval*rank*10]]]]];
     
 }
+
 -(void)createAtomSharpByButton:(SharpNodeButton *)button{
     if (![self sendPosition:button.position]) {
         return;
@@ -220,26 +228,64 @@
         }
     }
 }
+
+#pragma mark handleGestures
+
 -(void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer{
     if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
         //        debugOverlay.label.text = @"Began";
+        [self resume];
         CGPoint touchLocation = [recognizer locationInView:recognizer.view];
         touchLocation = [self convertPointFromView:touchLocation];
         swipePosition = touchLocation;
         [self createAtomPlusAtPosition:swipePosition];
-//        SKAction *createAtomPlusAction = [SKAction runBlock:^{
-//            
-//        }];
-//        
-//        [self runAction:createAtomPlusAction withKey:(NSString*)CreateAtomPlus];
-        
+    }
+    else if (recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
+        [self pause];
     }
 }
 
+#pragma mark pause&resume
+
+-(void)pause{
+    [self runAction:[SKAction runBlock:^{
+        [displayScreen pause];
+    }] completion:^{
+        self.view.paused = YES;
+    }];
+}
+
+-(void)resume{
+    if (self.view.paused == YES) {
+        [displayScreen resume];
+        self.view.paused = NO;
+    }
+}
 
 - (BOOL) sendPosition:(CGPoint) position{
     return YES;
 }
+
+-(void) hideGame{
+    NSArray *children = [self children];
+    for (int i=0; i<children.count; i++) {
+        SKNode *node = (SKNode *)children[i];
+        if (![node.name isEqualToString:(NSString*)DisplayScreenName]) {
+            node.alpha = 0.2;
+        }
+    }
+}
+
+-(void) showGame{
+    NSArray *children = [self children];
+    for (int i=0; i<children.count; i++) {
+        SKNode *node = (SKNode *)children[i];
+        if (![node.name isEqualToString:(NSString*)DisplayScreenName]) {
+            node.alpha = 1;
+        }
+    }
+}
+
 #pragma mark SKPhysicsContactDelegate
 -(void)didBeginContact:(SKPhysicsContact *)contact
 {

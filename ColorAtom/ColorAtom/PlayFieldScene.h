@@ -27,4 +27,9 @@
 -(void)createAtomMinus;
 - (BOOL) sendPosition:(CGPoint) position;
 -(void)createAtomSharpByButton:(SharpNodeButton *)button;
+-(void) pause;
+-(void) resume;
+-(void) hideGame;
+-(void) showGame;
+
 @end

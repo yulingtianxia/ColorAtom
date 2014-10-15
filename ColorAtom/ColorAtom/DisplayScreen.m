@@ -23,6 +23,7 @@
 @synthesize scoreLabel;
 @synthesize rankLabel;
 @synthesize atomIcon;
+@synthesize pauseLabel;
 -(id)initWithAtomCount:(NSInteger) count{
     if (self = [super init]) {
         self.name = (NSString *)DisplayScreenName;
@@ -36,13 +37,17 @@
         scoreLabel.fontSize = 20;
         rankLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
         rankLabel.fontSize = 20;
+        pauseLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
+        pauseLabel.fontSize = 40;
+        pauseLabel.alpha = 0;
         atomCountLabel.text = [NSString stringWithFormat:@"%ld",(long)atomCount];
         scoreLabel.text = [NSString localizedStringWithFormat:NSLocalizedString(@"Score:%ld/%ld", @"") ,(long)score,(long)(((PlayFieldScene *)self.scene).updateScore)];
         rankLabel.text = [NSString localizedStringWithFormat:NSLocalizedString(@"Rank:%ld", @""),(long)rank];
+        pauseLabel.text = NSLocalizedString(@"PAUSE", @"");
         [self addChild:atomCountLabel];
         [self addChild:scoreLabel];
         [self addChild:rankLabel];
-        
+        [self addChild:pauseLabel];
         atomIcon = [[SKSpriteNode alloc] initWithTexture:[SKTexture textureWithImageNamed:@"Atomplus"]];
         atomIcon.size = CGSizeMake(20, 20);
         [self addChild:atomIcon];
@@ -57,7 +62,7 @@
     scoreLabel.position = CGPointMake(0, self.size.height/2-scoreLabel.frame.size.height);
     rankLabel.position = CGPointMake(self.size.width/2-rankLabel.frame.size.width/2, -self.size.height/2+rankLabel.frame.size.height/2);
     atomIcon.position = CGPointMake(-self.size.width/2+atomIcon.size.width/2, -self.size.height/2+3*atomIcon.size.height/4);
-    
+    pauseLabel.position = CGPointMake(0, 0);
 
 }
 -(void)AtomMinusKilled{
@@ -110,5 +115,15 @@
         }
         
     }
+}
+
+-(void)pause{
+    pauseLabel.alpha = 1;
+    [((PlayFieldScene *)self.scene) hideGame];
+}
+
+-(void)resume{
+    pauseLabel.alpha = 0;
+    [((PlayFieldScene *)self.scene) showGame];
 }
 @end
