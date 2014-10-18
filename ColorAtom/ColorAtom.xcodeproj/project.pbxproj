@@ -28,6 +28,7 @@
 		A498947319E025DF00A7E598 /* AgainstResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A498947219E025DF00A7E598 /* AgainstResult.m */; };
 		A498C93F19E4DDAC003E9A19 /* WormHoleContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A498C93E19E4DDAC003E9A19 /* WormHoleContactVisitor.m */; };
 		A4D32FFA19064D0F004B2CF3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D32FF919064D0F004B2CF3 /* Social.framework */; };
+		A4E3098D19F2A5380014E962 /* GameCenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E3098C19F2A5380014E962 /* GameCenterButton.m */; };
 		A4E9E4E418F7D18D000ADEAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E318F7D18D000ADEAE /* Foundation.framework */; };
 		A4E9E4E618F7D18E000ADEAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E518F7D18E000ADEAE /* CoreGraphics.framework */; };
 		A4E9E4E818F7D18E000ADEAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E718F7D18E000ADEAE /* UIKit.framework */; };
@@ -132,6 +133,8 @@
 		A498C93D19E4DDAC003E9A19 /* WormHoleContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WormHoleContactVisitor.h; sourceTree = "<group>"; };
 		A498C93E19E4DDAC003E9A19 /* WormHoleContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WormHoleContactVisitor.m; sourceTree = "<group>"; };
 		A4D32FF919064D0F004B2CF3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A4E3098B19F2A5380014E962 /* GameCenterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterButton.h; sourceTree = "<group>"; };
+		A4E3098C19F2A5380014E962 /* GameCenterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterButton.m; sourceTree = "<group>"; };
 		A4E9E4E018F7D18D000ADEAE /* ColorAtom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorAtom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E9E4E318F7D18D000ADEAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A4E9E4E518F7D18E000ADEAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -489,6 +492,8 @@
 				A4F9474E19DFC42000384C81 /* AgainstPlayButton.m */,
 				A409789019E12553003A14AE /* ReadyButton.h */,
 				A409789119E12553003A14AE /* ReadyButton.m */,
+				A4E3098B19F2A5380014E962 /* GameCenterButton.h */,
+				A4E3098C19F2A5380014E962 /* GameCenterButton.m */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -668,6 +673,7 @@
 				A4EB2D641902377300B28405 /* Background.m in Sources */,
 				A4EB2D7119024DEA00B28405 /* Spark.m in Sources */,
 				A4F6ECEF190CB40F0069DBC9 /* WeiboShareButton.m in Sources */,
+				A4E3098D19F2A5380014E962 /* GameCenterButton.m in Sources */,
 				A4EE478818FA627C003A0B74 /* ContactVisitor.m in Sources */,
 				A43C39431927144E0092B34D /* StarRain.m in Sources */,
 				A4EB2D74190272EC00B28405 /* DisplayScreen.m in Sources */,

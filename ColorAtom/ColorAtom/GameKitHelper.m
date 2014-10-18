@@ -19,6 +19,7 @@
 
 @implementation GameKitHelper
 
+@synthesize achievementsDictionary;
 @synthesize pendingInvite;
 @synthesize pendingPlayersToInvite;
 
@@ -31,6 +32,13 @@
         [[GameKitHelper alloc] init];
     });
     return sharedGameKitHelper;
+}
+
+-(instancetype) init{
+    if (self = [super init]) {
+        achievementsDictionary = [[NSMutableDictionary alloc] init];
+    }
+    return self;
 }
 
 #pragma mark Player Authentication
@@ -47,6 +55,7 @@
         [self setLastError:error];
         if (localPlayer.authenticated) {
             _gameCenterFeaturesEnabled = YES;
+            [self loadAchievements];
             [GKMatchmaker sharedMatchmaker].inviteHandler = ^(GKInvite *acceptedInvite, NSArray *playersToInvite) {
                 
 //                NSLog(@"Received invite");
@@ -72,6 +81,61 @@
     if (_lastError) {
 //        NSLog(@"GameKitHelper ERROR: %@", [[_lastError userInfo]
 //                                           description]);
+    }
+}
+
+#pragma mark Achievements Methods
+- (void) loadAchievements
+{
+    [GKAchievement loadAchievementsWithCompletionHandler:^(NSArray *achievements, NSError *error)
+     {
+         if (error == nil)
+         {
+             for (GKAchievement* achievement in achievements)
+                 [achievementsDictionary setObject: achievement forKey: achievement.identifier];
+         }
+     }];
+}
+
+- (GKAchievement*) getAchievementForIdentifier: (NSString*) identifier
+{
+    GKAchievement *achievement = [achievementsDictionary objectForKey:identifier];
+    if (achievement == nil)
+    {
+        achievement = [[GKAchievement alloc] initWithIdentifier:identifier];
+        [achievementsDictionary setObject:achievement forKey:achievement.identifier];
+    }
+    return achievement;
+}
+
+- (void) updateAchievement:(GKAchievement*) achievement Identifier: (NSString*) identifier
+{
+    if (achievement)
+    {
+        [self.achievementsDictionary setObject:achievement forKey:identifier];
+    }
+}
+
+- (void) reportMultipleAchievements
+{
+    
+    [GKAchievement reportAchievements:[self.achievementsDictionary allValues]  withCompletionHandler:^(NSError *error)
+     {
+         if (error != nil)
+         {
+             NSLog(@"Error in reporting achievements: %@", error);
+         }
+     }];
+}
+
+- (void) showLeaderboard
+{
+    GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+    if (gameCenterController != nil)
+    {
+        gameCenterController.gameCenterDelegate = self;
+        gameCenterController.viewState = GKGameCenterViewControllerStateAchievements;
+        [self presentViewController: gameCenterController];
     }
 }
 
@@ -277,6 +341,13 @@
         [_delegate matchEnded];
     }
 }
+
+#pragma mark GKGameCenterControllerDelegate
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
+{
+    [[self getRootViewController] dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma mark GKLocalPlayerListener
 //-(void)player:(GKPlayer *)player didAcceptInvite:(GKInvite *)invite{

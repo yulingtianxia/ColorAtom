@@ -79,6 +79,8 @@
         
         mainScene.position = CGPointMake(self.size.width/2, CGRectGetMinY(weiboShare.frame)-2*weiboShare.frame.size.height);
         [self addChild:mainScene];
+        
+        [self sendDataToGameCenter];
     }
     return self;
 }
@@ -109,6 +111,38 @@
     
     return [self imageWithView:view];
 }
+
+-(void)sendDataToGameCenter{
+    if (score>=100) {
+        [self updateAchievement:kget100PointsAchievementID];
+    }
+    if (score>=300) {
+        [self updateAchievement:kget300PointsAchievementID];
+    }
+    if (score>=500) {
+        [self updateAchievement:kget500PointsAchievementID];
+    }
+    if (score>=1000) {
+        [self updateAchievement:kget1KPointsAchievementID];
+    }
+    if (score>=2000) {
+        [self updateAchievement:kget2KPointsAchievementID];
+    }
+    if (score>=4000) {
+        [self updateAchievement:kget4KPointsAchievementID];
+    }
+    if (score>=8000) {
+        [self updateAchievement:kget8KPointsAchievementID];
+    }
+    [[GameKitHelper sharedGameKitHelper] reportMultipleAchievements];
+}
+
+-(void)updateAchievement:(NSString *) identifier{
+    GKAchievement * achievement = [[GameKitHelper sharedGameKitHelper] getAchievementForIdentifier:identifier];
+    achievement.percentComplete = 100;
+    [[GameKitHelper sharedGameKitHelper] updateAchievement:achievement Identifier:identifier];
+}
+
 -(NSInteger)setHighScore{
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     NSInteger highScore = [standardDefaults integerForKey:mode];
@@ -129,6 +163,7 @@
         else if ([mode isEqualToString:(NSString *)WormHoleMode]) {
             [[GameKitHelper sharedGameKitHelper] submitScore:score identifier:kWormHoleHighScoreLeaderboardIdentifier];
         }
+        [[GameKitHelper sharedGameKitHelper] submitScore:score identifier:kHighScoreLeaderboardIdentifier];
         return score;
     }
     return highScore;

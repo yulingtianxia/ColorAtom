@@ -19,6 +19,7 @@
 #import "SecretPlayButton.h"
 #import "WHPlayButton.h"
 #import "AgainstPlayButton.h"
+#import "GameCenterButton.h"
 
 @implementation MainScene
 @synthesize fire;
@@ -32,6 +33,7 @@
 @synthesize secretPlay;
 @synthesize bhPlay;
 @synthesize againstPlay;
+@synthesize gameCenter;
 
 -(id)initWithSize:(CGSize)size {
     if (self=[super initWithSize:size]) {
@@ -72,6 +74,10 @@
         bhPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(secretPlay.frame)-logo.frame.size.height);
         againstPlay = [[AgainstPlayButton alloc] init];
         againstPlay.position = CGPointMake(self.size.width/2, CGRectGetMinY(bhPlay.frame)-logo.frame.size.height);
+        gameCenter = [[GameCenterButton alloc] init];
+        gameCenter.position = CGPointMake(self.size.width-gameCenter.size.width/2, self.size.height-gameCenter.size.height/2);
+        [self addChild:gameCenter];
+        
         [self runAction:[SKAction sequence:@[[SKAction runBlock:^{
             [self addChild:plus];
             [self addChild:minus];

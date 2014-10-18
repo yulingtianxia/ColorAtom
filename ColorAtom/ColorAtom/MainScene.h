@@ -19,6 +19,7 @@
 @class SecretPlayButton;
 @class WHPlayButton;
 @class AgainstPlayButton;
+@class GameCenterButton;
 
 @interface MainScene : SKScene <SKPhysicsContactDelegate>
 @property SKEmitterNode *fire;
@@ -32,4 +33,6 @@
 @property SecretPlayButton *secretPlay;
 @property WHPlayButton *bhPlay;
 @property AgainstPlayButton *againstPlay;
+@property GameCenterButton *gameCenter;
+
 @end

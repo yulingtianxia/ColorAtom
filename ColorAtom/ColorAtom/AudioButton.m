@@ -11,7 +11,7 @@
 @implementation AudioButton
 -(id)init{
     if (self = [super init]) {
-        self.size = CGSizeMake(20, 20);
+        self.size = CGSizeMake(40, 40);
         self.userInteractionEnabled = YES;
         [self setAudioTexture];
     }
@@ -19,10 +19,10 @@
 }
 -(void) setAudioTexture{
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-    if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"on"]) {
-        self.texture = [SKTexture textureWithImageNamed:@"audio_on"];
-    }else if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"off"]) {
+    if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"off"]) {
         self.texture = [SKTexture textureWithImageNamed:@"audio_off"];
+    }else {
+        self.texture = [SKTexture textureWithImageNamed:@"audio_on"];
     }
 }
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -30,7 +30,7 @@
     if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"on"]){
         [standardDefaults setObject:@"off" forKey:@"audio"];
         [((YXYViewController *)[self.scene.view nextResponder]).backgroundMusicPlayer stop];
-    }else if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"off"]){
+    }else {
         [standardDefaults setObject:@"on" forKey:@"audio"];
         [((YXYViewController *)[self.scene.view nextResponder]).backgroundMusicPlayer play];
     }

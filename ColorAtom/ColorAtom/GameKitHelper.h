@@ -29,7 +29,7 @@
 @property BOOL opponentReady;
 @property (strong) GKInvite *pendingInvite;
 @property (strong) NSArray *pendingPlayersToInvite;
-
+@property(nonatomic, retain) NSMutableDictionary *achievementsDictionary;
 
 + (instancetype) sharedGameKitHelper;
 -(UIViewController*) getRootViewController;
@@ -38,4 +38,9 @@
 - (void)findMatchWithViewController:(UIViewController *)viewController
                            delegate:(id<GameKitHelperProtocol>)theDelegate;
 -(void)sendData:(NSData *)packet withCompleteBlock:(void(^)(void)) block;
+- (GKAchievement*) getAchievementForIdentifier: (NSString*) identifier;
+- (void) updateAchievement:(GKAchievement*) achievement Identifier: (NSString*) identifier;
+- (void) reportMultipleAchievements;
+- (void) showLeaderboard;
+
 @end
