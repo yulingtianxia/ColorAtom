@@ -1,13 +1,16 @@
 {
   "images" : [
     {
+      "idiom" : "universal"
+    },
+    {
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "blackhole.png"
+      "filename" : "blackhole@2x.png"
     },
     {
       "idiom" : "universal",

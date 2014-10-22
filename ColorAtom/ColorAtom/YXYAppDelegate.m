@@ -13,6 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [WXApi registerApp:@"wx7559e631e2534fb2"];
     return YES;
 }
 							
@@ -43,4 +44,30 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+-(void)onReq:(BaseReq *)req{
+    
+}
+
+-(void)onResp:(BaseResp *)resp{
+
+    if([resp isKindOfClass:[SendMessageToWXResp class]])
+    {
+        if (resp.errCode == -2) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"错误" message:@"分享失败" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"哦" style:UIAlertActionStyleDefault handler:nil];
+            [alert addAction:action];
+            [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+        }
+    }
+}
 @end

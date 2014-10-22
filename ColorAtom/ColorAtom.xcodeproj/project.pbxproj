@@ -18,6 +18,7 @@
 		A44506CD19C321C600905DEF /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44506CC19C321C600905DEF /* GameKit.framework */; };
 		A44506D119C3226300905DEF /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A44506D019C3226300905DEF /* GameKitHelper.m */; };
 		A454867019E81E9200AD0F5E /* Transformers Movie.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A454866C19E8170E00AD0F5E /* Transformers Movie.ttf */; };
+		A45A9F6B19F39DA20087C192 /* vortexShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A45A9F6A19F39DA20087C192 /* vortexShader.fsh */; };
 		A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099318F90A6D00BCC91D /* AtomNode.m */; };
 		A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099618F9178D00BCC91D /* YXYDebugNode.m */; };
 		A47F5504195523A200CEDD40 /* WormHolePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F5503195523A200CEDD40 /* WormHolePlayScene.m */; };
@@ -29,6 +30,8 @@
 		A498C93F19E4DDAC003E9A19 /* WormHoleContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A498C93E19E4DDAC003E9A19 /* WormHoleContactVisitor.m */; };
 		A4D32FFA19064D0F004B2CF3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D32FF919064D0F004B2CF3 /* Social.framework */; };
 		A4E3098D19F2A5380014E962 /* GameCenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E3098C19F2A5380014E962 /* GameCenterButton.m */; };
+		A4E7595F19F7CA0300C08783 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E7595C19F7CA0300C08783 /* libWeChatSDK.a */; };
+		A4E7596219F7D8A700C08783 /* SendWX.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7596119F7D8A700C08783 /* SendWX.m */; };
 		A4E9E4E418F7D18D000ADEAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E318F7D18D000ADEAE /* Foundation.framework */; };
 		A4E9E4E618F7D18E000ADEAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E518F7D18E000ADEAE /* CoreGraphics.framework */; };
 		A4E9E4E818F7D18E000ADEAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E718F7D18E000ADEAE /* UIKit.framework */; };
@@ -112,6 +115,7 @@
 		A44506CF19C3226300905DEF /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
 		A44506D019C3226300905DEF /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
 		A454866C19E8170E00AD0F5E /* Transformers Movie.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Transformers Movie.ttf"; sourceTree = "<group>"; };
+		A45A9F6A19F39DA20087C192 /* vortexShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = vortexShader.fsh; sourceTree = "<group>"; };
 		A46E098F18F908F300BCC91D /* NodeCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCategories.h; sourceTree = "<group>"; };
 		A46E099018F9096A00BCC91D /* RandomHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomHelper.h; sourceTree = "<group>"; };
 		A46E099218F90A6D00BCC91D /* AtomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomNode.h; sourceTree = "<group>"; };
@@ -135,6 +139,11 @@
 		A4D32FF919064D0F004B2CF3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A4E3098B19F2A5380014E962 /* GameCenterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterButton.h; sourceTree = "<group>"; };
 		A4E3098C19F2A5380014E962 /* GameCenterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterButton.m; sourceTree = "<group>"; };
+		A4E7595C19F7CA0300C08783 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		A4E7595D19F7CA0300C08783 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		A4E7595E19F7CA0300C08783 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		A4E7596019F7D8A700C08783 /* SendWX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendWX.h; sourceTree = "<group>"; };
+		A4E7596119F7D8A700C08783 /* SendWX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendWX.m; sourceTree = "<group>"; };
 		A4E9E4E018F7D18D000ADEAE /* ColorAtom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorAtom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E9E4E318F7D18D000ADEAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A4E9E4E518F7D18E000ADEAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -228,6 +237,7 @@
 			files = (
 				A4D32FFA19064D0F004B2CF3 /* Social.framework in Frameworks */,
 				A4E9E4E618F7D18E000ADEAE /* CoreGraphics.framework in Frameworks */,
+				A4E7595F19F7CA0300C08783 /* libWeChatSDK.a in Frameworks */,
 				A4E9E4E818F7D18E000ADEAE /* UIKit.framework in Frameworks */,
 				A44506CD19C321C600905DEF /* GameKit.framework in Frameworks */,
 				A4E9E4EA18F7D18E000ADEAE /* SpriteKit.framework in Frameworks */,
@@ -262,6 +272,7 @@
 		A454866F19E81DB900AD0F5E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A45A9F6A19F39DA20087C192 /* vortexShader.fsh */,
 				A454866C19E8170E00AD0F5E /* Transformers Movie.ttf */,
 			);
 			name = Resource;
@@ -296,6 +307,18 @@
 				A47F55061955259600CEDD40 /* WormHole.m */,
 			);
 			name = Nodes;
+			sourceTree = "<group>";
+		};
+		A4E7595B19F7C9DD00C08783 /* WeiXin */ = {
+			isa = PBXGroup;
+			children = (
+				A4E7595C19F7CA0300C08783 /* libWeChatSDK.a */,
+				A4E7595D19F7CA0300C08783 /* WXApi.h */,
+				A4E7595E19F7CA0300C08783 /* WXApiObject.h */,
+				A4E7596019F7D8A700C08783 /* SendWX.h */,
+				A4E7596119F7D8A700C08783 /* SendWX.m */,
+			);
+			name = WeiXin;
 			sourceTree = "<group>";
 		};
 		A4E9E4D718F7D18D000ADEAE = {
@@ -390,6 +413,7 @@
 		A4E9E51F18F7E82F000ADEAE /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A4E7595B19F7C9DD00C08783 /* WeiXin */,
 				A4E9E52018F7E854000ADEAE /* Define.h */,
 				A46E098F18F908F300BCC91D /* NodeCategories.h */,
 				A46E099018F9096A00BCC91D /* RandomHelper.h */,
@@ -603,6 +627,7 @@
 				A4EB2D6A19023C8700B28405 /* spark.png in Resources */,
 				A413F1EC190BA0A400400EB7 /* sharp.mp3 in Resources */,
 				A4EB2D611902369700B28405 /* bokeh.png in Resources */,
+				A45A9F6B19F39DA20087C192 /* vortexShader.fsh in Resources */,
 				A4EB2D6919023C8700B28405 /* PlayerBackground.sks in Resources */,
 				A4EB2D601902369700B28405 /* BackGround.sks in Resources */,
 				A4ED505919016B0A00A37085 /* pew-pew-lei.caf in Resources */,
@@ -670,6 +695,7 @@
 				A43099D01951CC7E002B35D3 /* SecretPlayScene.m in Sources */,
 				A47F55071955259600CEDD40 /* WormHole.m in Sources */,
 				A409789219E12553003A14AE /* ReadyButton.m in Sources */,
+				A4E7596219F7D8A700C08783 /* SendWX.m in Sources */,
 				A4EB2D641902377300B28405 /* Background.m in Sources */,
 				A4EB2D7119024DEA00B28405 /* Spark.m in Sources */,
 				A4F6ECEF190CB40F0069DBC9 /* WeiboShareButton.m in Sources */,
@@ -842,6 +868,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorAtom/ColorAtom-Prefix.pch";
 				INFOPLIST_FILE = "ColorAtom/ColorAtom-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ColorAtom",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
@@ -861,6 +891,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorAtom/ColorAtom-Prefix.pch";
 				INFOPLIST_FILE = "ColorAtom/ColorAtom-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ColorAtom",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;

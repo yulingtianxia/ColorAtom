@@ -17,7 +17,7 @@
 @synthesize wormHole;
 - (id)init{
     if (self=[super init]) {
-        self.texture = [SKTexture textureWithImageNamed:@"blackhole"];
+        self.texture = [SKTexture textureWithImageNamed:@"wormhole"];
         wormHole = [SKFieldNode radialGravityField];
         wormHole.strength = 0.7;
 //        wormHole.falloff = 1;
@@ -28,6 +28,7 @@
         self.physicsBody.contactTestBitMask = AtomPlusCategory|AtomMinusCategory|AtomSharpCategory;
         self.physicsBody.collisionBitMask = 0;
         self.physicsBody.usesPreciseCollisionDetection = YES;
+//        self.shader = [SKShader shaderWithFileNamed:@"vortexShader.fsh"];
         [self runAction:[SKAction repeatActionForever:[SKAction rotateByAngle:2*M_PI duration:1]]];
     }
     return self;

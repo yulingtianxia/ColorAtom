@@ -8,6 +8,8 @@
 
 #import "WeiboShareButton.h"
 #import "GameOverScene.h"
+#import "SendWX.h"
+
 @implementation WeiboShareButton
 -(id)init{
     if (self = [super init]) {
@@ -28,11 +30,18 @@
         activityItems = @[gameover.sharingText];
     }
     
-    UIActivityViewController *activityController =
-    [[UIActivityViewController alloc] initWithActivityItems:activityItems
-                                      applicationActivities:nil];
+    NSString * lang = (NSString *)[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0];
+    if ([lang isEqualToString:@"zh-Hans"]) {
+        [SendWX sendLinkContentWithSharingText:gameover.sharingText];
+    }
+    else{
+        UIActivityViewController *activityController =
+        [[UIActivityViewController alloc] initWithActivityItems:activityItems
+                                          applicationActivities:nil];
+        
+        [(UIViewController *)[gameover.view nextResponder] presentViewController:activityController
+                                                                        animated:YES completion:nil];
+    }
     
-    [(UIViewController *)[gameover.view nextResponder] presentViewController:activityController
-                                                                animated:YES completion:nil];
 }
 @end
