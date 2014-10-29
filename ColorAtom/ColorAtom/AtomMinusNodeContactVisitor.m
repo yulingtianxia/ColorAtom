@@ -20,9 +20,10 @@
     AtomPlusNode *anotherAtom = (AtomPlusNode*)anotherAtomBody.node;
     //处理碰撞后的结果
     //    NSLog(@"%@->%@",thisAtom.name,anotherAtom.name);
-    [((DisplayScreen *)[thisAtom.scene childNodeWithName:(NSString *)DisplayScreenName]) AtomMinusKilled];
+    
     thisAtom.fire.particleBirthRate = 0;
     [thisAtom changeColorWithDiffAtom:anotherAtom];
+    [((DisplayScreen *)[thisAtom.scene childNodeWithName:(NSString *)DisplayScreenName]) AtomMinusKilled];
     
 }
 
@@ -32,12 +33,15 @@
     AtomMinusNode *anotherAtom = (AtomMinusNode*)anotherAtomBody.node;
     //处理碰撞后的结果
     //    NSLog(@"%@->%@",thisAtom.name,anotherAtom.name);
-
+    if ([thisAtom.userData objectForKey:ATOMCOLOR] == [anotherAtom.userData objectForKey:ATOMCOLOR]) {
+        return;
+    }
     thisAtom.fire.particleBirthRate = 0;
+    
     [thisAtom changeColorWithSameAtom:anotherAtom];
 //    SKPhysicsJointFixed *fix = [SKPhysicsJointFixed jointWithBodyA:self.body bodyB:anotherAtomBody anchor:self.contact.contactPoint];
     SKPhysicsJointLimit *limit = [SKPhysicsJointLimit jointWithBodyA:self.body bodyB:anotherAtomBody anchorA:[thisAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]  anchorB:[anotherAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]];
-    [self.body.node.scene.physicsWorld addJoint:limit];
+//    [self.body.node.scene.physicsWorld addJoint:limit];
 }
 
 -(void) visitAtomSharpNode:(SKPhysicsBody*) anotherAtomBody{

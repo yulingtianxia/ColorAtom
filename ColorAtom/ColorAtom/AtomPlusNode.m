@@ -14,6 +14,8 @@
     if (self = [super initWithName:(NSString *)AtomPlusName ImageName:@"Atomplus"]) {
         self.physicsBody.categoryBitMask  = AtomPlusCategory;
         self.physicsBody.velocity = CGVectorMake(AtomPlusVx, AtomPlusVy);
+        self.physicsBody.charge = 1;
+        self.electric.strength = 1;
 //        self.fire.position = CGPointMake(0, 0);
 //        self.fire.emissionAngle = 180;
     }

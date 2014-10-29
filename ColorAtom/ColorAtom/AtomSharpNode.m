@@ -20,6 +20,8 @@
         self.physicsBody.categoryBitMask = AtomSharpCategory;
         self.physicsBody.contactTestBitMask = AtomPlusCategory|AtomMinusCategory|PlayFieldCategory|AtomSharpCategory;
         self.physicsBody.collisionBitMask = AtomSharpCategory|PlayFieldCategory;
+//        self.physicsBody.charge = 4;
+//        self.electric.strength = 1;
         self.physicsBody.linearDamping = 0.7;
         self.physicsBody.angularDamping = 0.8;
         self.physicsBody.velocity = CGVectorMake(AtomSharpVx, AtomSharpVy);

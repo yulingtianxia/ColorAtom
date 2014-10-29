@@ -15,6 +15,9 @@
     if (self = [super initWithName:(NSString*)AtomMinusName ImageName:@"Atomminus"]) {
         self.physicsBody.categoryBitMask = AtomMinusCategory;
         self.physicsBody.velocity = CGVectorMake(skRand(-200, 200), -skRand(400, 600));
+        self.physicsBody.charge = -1;
+        self.physicsBody.collisionBitMask = AtomSharpCategory|AtomPlusCategory|PlayFieldCategory;
+        self.electric.strength = -1;
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Fire" ofType:@"sks"];
         fire = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
         fire.particleColor = self.color;

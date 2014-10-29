@@ -87,6 +87,10 @@
     UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
     [[self view] addGestureRecognizer:swipeUp];
+    UISwipeGestureRecognizer *swipeUp2 = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+    swipeUp2.direction = UISwipeGestureRecognizerDirectionUp;
+    swipeUp2.numberOfTouchesRequired = 2;
+    [[self view] addGestureRecognizer:swipeUp2];
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
     [[self view] addGestureRecognizer:swipeDown];

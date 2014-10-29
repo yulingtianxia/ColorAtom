@@ -10,7 +10,7 @@
 #import "WormHole.h"
 
 @implementation AtomNode
-
+@synthesize electric;
 -(id)initWithName:(NSString *)name ImageName:(NSString *)imageName
 {
     if(self = [super initWithTexture:[SKTexture textureWithImageNamed:imageName] color:[SKColor colorWithRed:skRandf() green:skRandf() blue:skRandf() alpha:1] size:CGSizeMake(AtomRadius*2, AtomRadius*2)]){
@@ -20,6 +20,11 @@
         self.physicsBody.usesPreciseCollisionDetection = YES;
         self.physicsBody.collisionBitMask = AtomSharpCategory|AtomMinusCategory|AtomPlusCategory|PlayFieldCategory;
         self.physicsBody.contactTestBitMask = AtomPlusCategory|AtomMinusCategory|PlayFieldCategory|AtomSharpCategory;
+        self.physicsBody.affectedByGravity = NO;
+        electric = [SKFieldNode electricField];
+        electric.region = [[SKRegion infiniteRegion] regionByDifferenceFromRegion:[[SKRegion alloc] initWithRadius:AtomRadius]];
+        electric.position = CGPointZero;
+//        [self addChild:electric];
         self.physicsBody.linearDamping = 0.5;
         self.physicsBody.angularDamping = 0.8;
 //        The userData property is initially nil. You have to create a dictionary and assign it first
@@ -48,7 +53,6 @@
     [self.userData setObject:totalColor forKey:ATOMCOLOR];
     [atom.userData setObject:totalColor forKey:ATOMCOLOR];
     [self runAction:[SKAction colorizeWithColor:totalColor colorBlendFactor:1 duration:0.5]];
-        
     
 }
 

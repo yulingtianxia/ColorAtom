@@ -14,6 +14,8 @@
 @class WormHole;
 @interface AtomNode : SKSpriteNode
 
+@property SKFieldNode *electric;
+
 - (id)initWithName:(NSString *)name ImageName:(NSString *)imageName;
 -(void) changeColorWithSameAtom:(AtomNode *) atom;
 -(void) changeColorWithDiffAtom:(SKSpriteNode *) atom;
