@@ -3,6 +3,8 @@ ColorAtom	[![Build Status](https://travis-ci.org/yulingtianxia/ColorAtom.svg?bra
 
 关于正能量的小游戏
 
+现已上架AppStore：https://itunes.apple.com/us/app/coloratom/id918469696?l=zh&ls=1&mt=8  
+
 使用SpriteKit引擎  
 新版本加入了力场，请在iOS8下运行  
 Xcode6Beta3测试有异常，建议用Xcode6 GM版
