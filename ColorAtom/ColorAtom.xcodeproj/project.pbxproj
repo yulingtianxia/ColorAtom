@@ -19,6 +19,8 @@
 		A44506D119C3226300905DEF /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A44506D019C3226300905DEF /* GameKitHelper.m */; };
 		A454867019E81E9200AD0F5E /* Transformers Movie.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A454866C19E8170E00AD0F5E /* Transformers Movie.ttf */; };
 		A45A9F6B19F39DA20087C192 /* vortexShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A45A9F6A19F39DA20087C192 /* vortexShader.fsh */; };
+		A45EBB951A8747A6000DF33C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45EBB931A8747A6000DF33C /* Crashlytics.framework */; };
+		A45EBB961A8747A6000DF33C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45EBB941A8747A6000DF33C /* Fabric.framework */; };
 		A46E099418F90A6D00BCC91D /* AtomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099318F90A6D00BCC91D /* AtomNode.m */; };
 		A46E099718F9178D00BCC91D /* YXYDebugNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A46E099618F9178D00BCC91D /* YXYDebugNode.m */; };
 		A47F5504195523A200CEDD40 /* WormHolePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F5503195523A200CEDD40 /* WormHolePlayScene.m */; };
@@ -116,6 +118,8 @@
 		A44506D019C3226300905DEF /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
 		A454866C19E8170E00AD0F5E /* Transformers Movie.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Transformers Movie.ttf"; sourceTree = "<group>"; };
 		A45A9F6A19F39DA20087C192 /* vortexShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = vortexShader.fsh; sourceTree = "<group>"; };
+		A45EBB931A8747A6000DF33C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		A45EBB941A8747A6000DF33C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		A46E098F18F908F300BCC91D /* NodeCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCategories.h; sourceTree = "<group>"; };
 		A46E099018F9096A00BCC91D /* RandomHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomHelper.h; sourceTree = "<group>"; };
 		A46E099218F90A6D00BCC91D /* AtomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomNode.h; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4D32FFA19064D0F004B2CF3 /* Social.framework in Frameworks */,
+				A45EBB961A8747A6000DF33C /* Fabric.framework in Frameworks */,
+				A45EBB951A8747A6000DF33C /* Crashlytics.framework in Frameworks */,
 				A4E9E4E618F7D18E000ADEAE /* CoreGraphics.framework in Frameworks */,
 				A4E7595F19F7CA0300C08783 /* libWeChatSDK.a in Frameworks */,
 				A4E9E4E818F7D18E000ADEAE /* UIKit.framework in Frameworks */,
@@ -344,6 +350,8 @@
 		A4E9E4E218F7D18D000ADEAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A45EBB931A8747A6000DF33C /* Crashlytics.framework */,
+				A45EBB941A8747A6000DF33C /* Fabric.framework */,
 				A44506CC19C321C600905DEF /* GameKit.framework */,
 				A4D32FF919064D0F004B2CF3 /* Social.framework */,
 				A4E9E4E318F7D18D000ADEAE /* Foundation.framework */,
@@ -534,6 +542,7 @@
 				A4E9E4DD18F7D18D000ADEAE /* Frameworks */,
 				A4E9E4DE18F7D18D000ADEAE /* Resources */,
 				C66F83139E8A46EA965FB121 /* Copy Pods Resources */,
+				A45EBB921A874771000DF33C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -646,6 +655,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A45EBB921A874771000DF33C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 9f390390e312b5a6d8108a6d977e5b5425ef2da3 c3f24c2e2f19128e225aacae23e2fa2659ec714e7f411c46a14eca2577b9c550";
+		};
 		C66F83139E8A46EA965FB121 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -865,6 +887,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorAtom/ColorAtom-Prefix.pch";
 				INFOPLIST_FILE = "ColorAtom/ColorAtom-Info.plist";
@@ -888,6 +914,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorAtom/ColorAtom-Prefix.pch";
 				INFOPLIST_FILE = "ColorAtom/ColorAtom-Info.plist";
