@@ -11,7 +11,7 @@
 #import "SendWX.h"
 
 @implementation WeiboShareButton
--(id)init{
+-(instancetype)init{
     if (self = [super init]) {
         self.fontName = @"Transformers";
         self.text = NSLocalizedString(@"SHARE SCORE", @"");
@@ -30,7 +30,7 @@
         activityItems = @[gameover.sharingText];
     }
     
-    NSString * lang = (NSString *)[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0];
+    NSString * lang = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"][0];
     if ([lang isEqualToString:@"zh-Hans"]) {
         [SendWX sendLinkContentWithSharingText:gameover.sharingText];
     }

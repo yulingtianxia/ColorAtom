@@ -16,6 +16,6 @@
 @property (nonatomic) NSString *sharingText;
 @property (nonatomic) UIImage *sharingImage;
 @property (nonatomic) NSString *mode;
--(id)initWithSize:(CGSize)size score:(NSInteger) newscore mode:(NSString *)newmode;
+-(instancetype)initWithSize:(CGSize)size score:(NSInteger) newscore mode:(NSString *)newmode NS_DESIGNATED_INITIALIZER;
 - (UIImage*) imageFromNode:(SKNode*)node;
 @end

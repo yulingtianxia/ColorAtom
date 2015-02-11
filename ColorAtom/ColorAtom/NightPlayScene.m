@@ -9,7 +9,7 @@
 #import "NightPlayScene.h"
 #import "AtomMinusNode.h"
 @implementation NightPlayScene
--(id)initWithSize:(CGSize)size{
+-(instancetype)initWithSize:(CGSize)size{
     if (self = [super initWithSize:size]) {
         
     }

@@ -15,7 +15,7 @@
 @implementation WormHole
 @synthesize anotherWH;
 @synthesize wormHole;
-- (id)init{
+- (instancetype)init{
     if (self=[super init]) {
         self.texture = [SKTexture textureWithImageNamed:@"wormhole"];
         wormHole = [SKFieldNode radialGravityField];

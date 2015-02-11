@@ -10,7 +10,7 @@
 
 @implementation GameCenterButton
 
--(id)init{
+-(instancetype)init{
     if (self = [super initWithTexture:[SKTexture textureWithImageNamed:@"GameCenter"] color:[SKColor clearColor] size:CGSizeMake(40, 40)]) {
         self.userInteractionEnabled = YES;
     }

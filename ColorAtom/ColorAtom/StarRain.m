@@ -9,7 +9,7 @@
 #import "StarRain.h"
 
 @implementation StarRain
--(id)init{
+-(instancetype)init{
     if (self = [super init]) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"StarRain" ofType:@"sks"];
         self = [NSKeyedUnarchiver unarchiveObjectWithFile:path];

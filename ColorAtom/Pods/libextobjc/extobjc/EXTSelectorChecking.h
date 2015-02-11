@@ -48,5 +48,5 @@
     # SELPART
 
 @interface NSString (EXTCheckedSelectorAdditions)
-- (SEL)ext_toSelector;
+@property (NS_NONATOMIC_IOSONLY, readonly) SEL ext_toSelector;
 @end

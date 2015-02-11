@@ -21,7 +21,7 @@
 @synthesize sharingText;
 @synthesize sharingImage;
 @synthesize mode;
--(id)initWithSize:(CGSize)size score:(NSInteger) newscore mode:(NSString *)newmode{
+-(instancetype)initWithSize:(CGSize)size score:(NSInteger) newscore mode:(NSString *)newmode{
     if (self = [super initWithSize:size]) {
         score = newscore;
         mode = newmode;

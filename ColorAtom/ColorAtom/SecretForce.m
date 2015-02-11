@@ -9,7 +9,7 @@
 #import "SecretForce.h"
 
 @implementation SecretForce
-- (id)init{
+- (instancetype)init{
     if (self=[super init]) {
         self = (SecretForce *)[SKFieldNode noiseFieldWithSmoothness:0.5 animationSpeed:1];
     }

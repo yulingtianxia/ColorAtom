@@ -9,7 +9,7 @@
 #import "AudioButton.h"
 #import "YXYViewController.h"
 @implementation AudioButton
--(id)init{
+-(instancetype)init{
     if (self = [super init]) {
         self.size = CGSizeMake(40, 40);
         self.userInteractionEnabled = YES;

@@ -9,7 +9,7 @@
 #import "AtomPlusNode.h"
 
 @implementation AtomPlusNode
--(id)init
+-(instancetype)init
 {
     if (self = [super initWithName:(NSString *)AtomPlusName ImageName:@"Atomplus"]) {
         self.physicsBody.categoryBitMask  = AtomPlusCategory;

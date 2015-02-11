@@ -32,7 +32,7 @@
 @property(nonatomic, retain) NSMutableDictionary *achievementsDictionary;
 
 + (instancetype) sharedGameKitHelper;
--(UIViewController*) getRootViewController;
+@property (NS_NONATOMIC_IOSONLY, getter=getRootViewController, readonly, strong) UIViewController *rootViewController;
 -(void) authenticateLocalPlayer;
 -(void) submitScore:(int64_t)score identifier:(NSString*)category;
 - (void)findMatchWithViewController:(UIViewController *)viewController

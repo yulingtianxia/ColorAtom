@@ -11,7 +11,7 @@
 @implementation SecretPlayScene
 @synthesize secretForce;
 
--(id)initWithSize:(CGSize)size{
+-(instancetype)initWithSize:(CGSize)size{
     if (self = [super initWithSize:size]) {
         secretForce = [[SecretForce alloc] init];
         secretForce.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));

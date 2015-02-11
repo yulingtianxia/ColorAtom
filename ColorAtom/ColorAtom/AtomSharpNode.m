@@ -12,7 +12,7 @@
 #import "AtomPlusNode.h"
 @implementation AtomSharpNode
 @synthesize magic;
--(id)init{
+-(instancetype)init{
     if (self=[super initWithTexture:[SKTexture textureWithImageNamed:@"Atomsharp"] color:[UIColor whiteColor] size:CGSizeMake(AtomRadius*4, AtomRadius*4)]) {
         self.colorBlendFactor = 1.0;
         self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:AtomRadius*2];

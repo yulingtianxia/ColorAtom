@@ -44,7 +44,6 @@
 		A4E9E4F918F7D18E000ADEAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E9E4F718F7D18E000ADEAE /* Main.storyboard */; };
 		A4E9E4FC18F7D18E000ADEAE /* YXYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E9E4FB18F7D18E000ADEAE /* YXYViewController.m */; };
 		A4E9E4FF18F7D18E000ADEAE /* PlayFieldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E9E4FE18F7D18E000ADEAE /* PlayFieldScene.m */; };
-		A4E9E50118F7D18E000ADEAE /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E9E50018F7D18E000ADEAE /* Spaceship.png */; };
 		A4E9E50318F7D18E000ADEAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E9E50218F7D18E000ADEAE /* Images.xcassets */; };
 		A4E9E50A18F7D18E000ADEAE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E50918F7D18E000ADEAE /* XCTest.framework */; };
 		A4E9E50B18F7D18E000ADEAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E9E4E318F7D18D000ADEAE /* Foundation.framework */; };
@@ -164,7 +163,6 @@
 		A4E9E4FB18F7D18E000ADEAE /* YXYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXYViewController.m; sourceTree = "<group>"; };
 		A4E9E4FD18F7D18E000ADEAE /* PlayFieldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayFieldScene.h; sourceTree = "<group>"; };
 		A4E9E4FE18F7D18E000ADEAE /* PlayFieldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayFieldScene.m; sourceTree = "<group>"; };
-		A4E9E50018F7D18E000ADEAE /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		A4E9E50218F7D18E000ADEAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4E9E50818F7D18E000ADEAE /* ColorAtomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorAtomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E9E50918F7D18E000ADEAE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -381,7 +379,6 @@
 				A4E9E4F718F7D18E000ADEAE /* Main.storyboard */,
 				A4E9E4FA18F7D18E000ADEAE /* YXYViewController.h */,
 				A4E9E4FB18F7D18E000ADEAE /* YXYViewController.m */,
-				A4E9E50018F7D18E000ADEAE /* Spaceship.png */,
 				A4E9E50218F7D18E000ADEAE /* Images.xcassets */,
 				A4E9E4EC18F7D18E000ADEAE /* Supporting Files */,
 				A4FC862E19E2C78E006F784C /* Localizable.strings */,
@@ -628,7 +625,6 @@
 				A4ED505819016B0A00A37085 /* background-music-aac.caf in Resources */,
 				A4E9E4F018F7D18E000ADEAE /* InfoPlist.strings in Resources */,
 				A4E9E50318F7D18E000ADEAE /* Images.xcassets in Resources */,
-				A4E9E50118F7D18E000ADEAE /* Spaceship.png in Resources */,
 				A404E4E51907D98600528624 /* SharpMagic.sks in Resources */,
 				A4F699051908FDFD00FE911A /* BigColorFire.sks in Resources */,
 				A4EB2D6E19024CA000B28405 /* Spark.sks in Resources */,

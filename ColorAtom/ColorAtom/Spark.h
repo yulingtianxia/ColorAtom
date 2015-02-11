@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface Spark : SKEmitterNode
--(id)initWithPosition:(CGPoint) position;
+-(instancetype)initWithPosition:(CGPoint) position NS_DESIGNATED_INITIALIZER;
 @end

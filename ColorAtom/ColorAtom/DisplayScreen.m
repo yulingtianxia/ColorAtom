@@ -24,7 +24,7 @@
 @synthesize rankLabel;
 @synthesize atomIcon;
 @synthesize pauseLabel;
--(id)initWithAtomCount:(NSInteger) count{
+-(instancetype)initWithAtomCount:(NSInteger) count{
     if (self = [super init]) {
         self.name = (NSString *)DisplayScreenName;
         atomCount = count;
@@ -94,9 +94,9 @@
 
 -(void)gameCheck{
     if (atomCount<=0) {
-        NSString *bodyClassName = [NSString stringWithUTF8String:class_getName(self.scene.class)];
+        NSString *bodyClassName = @(class_getName(self.scene.class));
         NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-        NSString *modeString = [[standardDefaults objectForKey:@"mode"] objectForKey:bodyClassName];
+        NSString *modeString = [standardDefaults objectForKey:@"mode"][bodyClassName];
         if ([modeString isEqualToString: (NSString *)AgainstMode]) {
             MessageGameOver mg;
             mg.message.messageType = kMessageTypeGameOver;

@@ -16,7 +16,7 @@
 
 @property SKFieldNode *electric;
 
-- (id)initWithName:(NSString *)name ImageName:(NSString *)imageName;
+- (instancetype)initWithName:(NSString *)name ImageName:(NSString *)imageName NS_DESIGNATED_INITIALIZER;
 -(void) changeColorWithSameAtom:(AtomNode *) atom;
 -(void) changeColorWithDiffAtom:(SKSpriteNode *) atom;
 -(void) changeColorWithWormHole:(WormHole *)wormHole;

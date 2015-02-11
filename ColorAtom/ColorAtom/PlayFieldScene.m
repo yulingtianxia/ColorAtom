@@ -30,7 +30,7 @@
 @synthesize sharpCount;
 @synthesize updateScore;
 @synthesize sharpButton;
--(id)initWithSize:(CGSize)size {    
+-(instancetype)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         //添加debug信息

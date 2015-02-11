@@ -9,7 +9,7 @@
 #import "VisitablePhysicsBody.h"
 
 @implementation VisitablePhysicsBody
-- (id)initWithBody:(SKPhysicsBody *)body
+- (instancetype)initWithBody:(SKPhysicsBody *)body
 {
     self = [super init];
     if (self) {

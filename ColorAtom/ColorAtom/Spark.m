@@ -9,7 +9,7 @@
 #import "Spark.h"
 
 @implementation Spark
--(id)initWithPosition:(CGPoint) position{
+-(instancetype)initWithPosition:(CGPoint) position{
     if (self = [super init]) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Spark" ofType:@"sks"];
         self = [NSKeyedUnarchiver unarchiveObjectWithFile:path];

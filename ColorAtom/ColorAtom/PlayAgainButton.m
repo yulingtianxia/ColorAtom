@@ -15,7 +15,7 @@
 
 @implementation PlayAgainButton
 @synthesize modeString;
--(id)initWithMode:(NSString *)newmode{
+-(instancetype)initWithMode:(NSString *)newmode{
     if (self = [super init]) {
         self.fontName = @"Transformers";
         self.text = NSLocalizedString(@"PLAY AGAIN", @"");
@@ -30,7 +30,7 @@
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *mode = [standardDefaults objectForKey:@"mode"];
     for (NSString* key in mode.keyEnumerator) {
-        if ([[mode objectForKey:key] isEqualToString:modeString]) {
+        if ([mode[key] isEqualToString:modeString]) {
             Class class = NSClassFromString(key);
             if ([modeString isEqualToString: (NSString *)AgainstMode]) {
                 MessageReplayRequest request;

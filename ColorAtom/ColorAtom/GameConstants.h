@@ -21,14 +21,14 @@
 #define kget2KPointsAchievementID @"com.yulingtianxia.ColorAtom.get2000"
 #define kget4KPointsAchievementID @"com.yulingtianxia.ColorAtom.get4000"
 #define kget8KPointsAchievementID @"com.yulingtianxia.ColorAtom.get8000"
-typedef enum {
+typedef NS_ENUM(unsigned int, MessageType) {
     kMessageTypeGameBeginRequest = 0,
     kMessageTypeGameBeginResponse,
     kMessageTypePosition,
     kMessageTypeGameOver,
     kMessageTypeReplayRequest,
     kMessageTypeReplayResponse
-} MessageType;
+};
 typedef struct {
     MessageType messageType;
 } Message;

@@ -18,7 +18,7 @@
 @property (nonatomic) BOOL win;
 @property (nonatomic) PlayAgainButton *playAgain;
 
-- (id)initWithSize:(CGSize)size win:(BOOL)win;
+- (instancetype)initWithSize:(CGSize)size win:(BOOL)win NS_DESIGNATED_INITIALIZER;
 - (UIImage*) imageFromNode:(SKNode*)node;
 
 @end

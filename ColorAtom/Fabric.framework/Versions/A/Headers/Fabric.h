@@ -42,7 +42,7 @@
 /**
  *  Unavailable. Use `+sharedSDK` to retrieve the shared Fabric instance.
  */
-- (id)init __attribute__((unavailable("Use +sharedSDK to retrieve the shared Fabric instance.")));
+- (instancetype)init __attribute__((unavailable("Use +sharedSDK to retrieve the shared Fabric instance.")));
 
 /**
  *  Returns Fabrics's instance of the specified kit.

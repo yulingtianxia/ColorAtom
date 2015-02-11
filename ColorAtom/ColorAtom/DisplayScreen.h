@@ -22,7 +22,7 @@
 -(void)AtomPlusUsed:(NSInteger) num;
 -(void)setPosition;
 -(void)AtomMinusAttacked;
--(id)initWithAtomCount:(NSInteger) count;
+-(instancetype)initWithAtomCount:(NSInteger) count NS_DESIGNATED_INITIALIZER;
 -(void)pause;
 -(void)resume;
 @end

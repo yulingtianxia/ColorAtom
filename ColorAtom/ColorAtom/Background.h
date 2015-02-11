@@ -9,5 +9,5 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface Background : SKEmitterNode
--(id)initWithSize:(CGSize) size;
+-(instancetype)initWithSize:(CGSize) size NS_DESIGNATED_INITIALIZER;
 @end

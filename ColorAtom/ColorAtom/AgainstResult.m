@@ -21,7 +21,7 @@
 @synthesize sharingImage;
 @synthesize win;
 @synthesize playAgain;
-- (id)initWithSize:(CGSize)size  win:(BOOL)isWin{
+- (instancetype)initWithSize:(CGSize)size  win:(BOOL)isWin{
     if (self = [super initWithSize:size]) {
         [GameKitHelper sharedGameKitHelper].delegate = self;
         [GameKitHelper sharedGameKitHelper].opponentReady = NO;

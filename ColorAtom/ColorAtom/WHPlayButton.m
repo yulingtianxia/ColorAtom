@@ -9,7 +9,7 @@
 #import "WHPlayButton.h"
 #import "WormHolePlayScene.h"
 @implementation WHPlayButton
--(id)init{
+-(instancetype)init{
     if (self = [super init]) {
         self.fontName = @"Transformers";
         self.fontSize = 30;

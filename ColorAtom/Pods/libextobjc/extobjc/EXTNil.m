@@ -24,7 +24,7 @@ static id singleton = nil;
     return singleton;
 }
 
-- (id)init {
+- (instancetype)init {
     return self;
 }
 

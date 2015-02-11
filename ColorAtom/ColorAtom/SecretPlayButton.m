@@ -9,7 +9,7 @@
 #import "SecretPlayButton.h"
 #import "SecretPlayScene.h"
 @implementation SecretPlayButton
--(id)init{
+-(instancetype)init{
     if (self = [super init]) {
         self.fontName = @"Transformers";
         self.fontSize = 30;

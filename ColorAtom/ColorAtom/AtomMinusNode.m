@@ -10,7 +10,7 @@
 
 @implementation AtomMinusNode
 @synthesize fire;
--(id)init
+-(instancetype)init
 {
     if (self = [super initWithName:(NSString*)AtomMinusName ImageName:@"Atomminus"]) {
         self.physicsBody.categoryBitMask = AtomMinusCategory;

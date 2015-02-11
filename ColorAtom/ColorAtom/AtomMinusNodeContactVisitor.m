@@ -33,7 +33,7 @@
     AtomMinusNode *anotherAtom = (AtomMinusNode*)anotherAtomBody.node;
     //处理碰撞后的结果
     //    NSLog(@"%@->%@",thisAtom.name,anotherAtom.name);
-    if ([thisAtom.userData objectForKey:ATOMCOLOR] == [anotherAtom.userData objectForKey:ATOMCOLOR]) {
+    if ((thisAtom.userData)[ATOMCOLOR] == (anotherAtom.userData)[ATOMCOLOR]) {
         return;
     }
     thisAtom.fire.particleBirthRate = 0;

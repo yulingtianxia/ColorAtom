@@ -11,7 +11,7 @@
 
 @implementation AtomNode
 @synthesize electric;
--(id)initWithName:(NSString *)name ImageName:(NSString *)imageName
+-(instancetype)initWithName:(NSString *)name ImageName:(NSString *)imageName
 {
     if(self = [super initWithTexture:[SKTexture textureWithImageNamed:imageName] color:[SKColor colorWithRed:skRandf() green:skRandf() blue:skRandf() alpha:1] size:CGSizeMake(AtomRadius*2, AtomRadius*2)]){
         self.colorBlendFactor = 1.0;
@@ -42,16 +42,16 @@
     CGFloat red1,green1,blue1,alpha1;
     CGFloat red2,green2,blue2,alpha2;
     CGFloat redtotal,greentotal,bluetotal,alphatotal;
-    [[self.userData objectForKey:ATOMCOLOR] getRed:&red1 green:&green1 blue:&blue1 alpha:&alpha1];
-    [[atom.userData objectForKey:ATOMCOLOR] getRed:&red2 green:&green2 blue:&blue2 alpha:&alpha2];
+    [(self.userData)[ATOMCOLOR] getRed:&red1 green:&green1 blue:&blue1 alpha:&alpha1];
+    [(atom.userData)[ATOMCOLOR] getRed:&red2 green:&green2 blue:&blue2 alpha:&alpha2];
     redtotal = (red1+red2)/2;
     greentotal = (green1+green2)/2;
     bluetotal = (blue1+blue2)/2;
     alphatotal = (alpha1+alpha2)/2;
     
     UIColor *totalColor = [UIColor colorWithRed:redtotal green:greentotal blue:bluetotal alpha:alphatotal];
-    [self.userData setObject:totalColor forKey:ATOMCOLOR];
-    [atom.userData setObject:totalColor forKey:ATOMCOLOR];
+    (self.userData)[ATOMCOLOR] = totalColor;
+    (atom.userData)[ATOMCOLOR] = totalColor;
     [self runAction:[SKAction colorizeWithColor:totalColor colorBlendFactor:1 duration:0.5]];
     
 }

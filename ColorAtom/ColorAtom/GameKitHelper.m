@@ -92,18 +92,18 @@
          if (error == nil)
          {
              for (GKAchievement* achievement in achievements)
-                 [achievementsDictionary setObject: achievement forKey: achievement.identifier];
+                 achievementsDictionary[achievement.identifier] = achievement;
          }
      }];
 }
 
 - (GKAchievement*) getAchievementForIdentifier: (NSString*) identifier
 {
-    GKAchievement *achievement = [achievementsDictionary objectForKey:identifier];
+    GKAchievement *achievement = achievementsDictionary[identifier];
     if (achievement == nil)
     {
         achievement = [[GKAchievement alloc] initWithIdentifier:identifier];
-        [achievementsDictionary setObject:achievement forKey:achievement.identifier];
+        achievementsDictionary[achievement.identifier] = achievement;
     }
     return achievement;
 }
@@ -112,7 +112,7 @@
 {
     if (achievement)
     {
-        [self.achievementsDictionary setObject:achievement forKey:identifier];
+        (self.achievementsDictionary)[identifier] = achievement;
     }
 }
 

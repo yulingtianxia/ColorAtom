@@ -12,7 +12,7 @@
 @implementation WormHolePlayScene
 @synthesize wormHole_A;
 @synthesize wormHole_B;
--(id)initWithSize:(CGSize)size{
+-(instancetype)initWithSize:(CGSize)size{
     if (self = [super initWithSize:size]) {
         wormHole_A = [[WormHole alloc] init];
         wormHole_A.position = CGPointMake(CGRectGetMidX(self.frame),CGRectGetMidY(self.frame)+AtomRadius);

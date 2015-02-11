@@ -10,7 +10,7 @@
 #import "PlayFieldScene.h"
 
 @implementation SharpNodeButton
--(id)init{
+-(instancetype)init{
     if (self = [super initWithTexture:[SKTexture textureWithImageNamed:@"Atomsharp"] color:[UIColor whiteColor] size:CGSizeMake(40, 40)]) {
         self.userInteractionEnabled = YES;
     }

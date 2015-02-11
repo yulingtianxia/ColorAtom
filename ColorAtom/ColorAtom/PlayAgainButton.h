@@ -10,5 +10,5 @@
 
 @interface PlayAgainButton : SKLabelNode
 @property NSString *modeString;
--(id)initWithMode:(NSString *)newmode;
+-(instancetype)initWithMode:(NSString *)newmode NS_DESIGNATED_INITIALIZER;
 @end

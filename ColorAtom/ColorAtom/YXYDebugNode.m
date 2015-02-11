@@ -10,7 +10,7 @@
 
 @implementation YXYDebugNode
 @synthesize label;
--(id)init
+-(instancetype)init
 {
     if (self=[super init]) {
         label = [SKLabelNode node];

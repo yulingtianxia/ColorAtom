@@ -13,7 +13,7 @@
 @property (nonatomic,readonly, strong) SKPhysicsBody *body;
 @property (nonatomic, readonly, strong) SKPhysicsContact *contact;
 
-+ (id)contactVisitorWithBody:(SKPhysicsBody *)body forContact:(SKPhysicsContact *)contact;
++ (instancetype)contactVisitorWithBody:(SKPhysicsBody *)body forContact:(SKPhysicsContact *)contact;
 - (void)visit:(SKPhysicsBody *)body;
 
 @end

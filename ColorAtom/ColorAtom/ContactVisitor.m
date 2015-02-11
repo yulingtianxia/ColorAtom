@@ -17,7 +17,7 @@
 
 @implementation ContactVisitor
 
-+ (id)contactVisitorWithBody:(SKPhysicsBody *)body forContact:(SKPhysicsContact *)contact
++ (instancetype)contactVisitorWithBody:(SKPhysicsBody *)body forContact:(SKPhysicsContact *)contact
 {
     //第一次dispatch，通过node类别返回对应的实例
     if ((body.categoryBitMask&AtomPlusCategory)!=0) {
@@ -40,7 +40,7 @@
     }
 }
 
-- (id)initWithBody:(SKPhysicsBody *)body forContact:(SKPhysicsContact *)contact
+- (instancetype)initWithBody:(SKPhysicsBody *)body forContact:(SKPhysicsContact *)contact
 {
     self = [super init];
     if (self) {
@@ -54,7 +54,7 @@
 {
     //第二次dispatch，通过构造方法名来执行对应方法
     // 生成node的名字，比如"AtomNode"
-    NSString *bodyClassName = [NSString stringWithUTF8String:class_getName(body.node.class)];
+    NSString *bodyClassName = @(class_getName(body.node.class));
     
     // 生成方法名，比如"visitAtomBody"
     NSMutableString *contactSelectorString = [NSMutableString stringWithFormat:@"visit"];
