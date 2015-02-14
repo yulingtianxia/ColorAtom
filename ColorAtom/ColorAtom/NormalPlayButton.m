@@ -8,11 +8,12 @@
 
 #import "NormalPlayButton.h"
 #import "PlayFieldScene.h"
+#import "Define.h"
 
 @implementation NormalPlayButton
 -(instancetype)init{
     if (self = [super init]) {
-        self.fontName = @"Transformers";
+        self.fontName = FontString;
         self.fontSize = 30;
         self.text = NSLocalizedString(@"Normal Mode", @"");
         self.userInteractionEnabled = YES;

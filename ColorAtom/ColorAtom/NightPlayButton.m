@@ -8,10 +8,12 @@
 
 #import "NightPlayButton.h"
 #import "NightPlayScene.h"
+#import "Define.h"
+
 @implementation NightPlayButton
 -(instancetype)init{
     if (self = [super init]) {
-        self.fontName = @"Transformers";
+        self.fontName = FontString;
         self.fontSize = 30;
         self.text = NSLocalizedString(@"Night Mode", @"");
         self.userInteractionEnabled = YES;

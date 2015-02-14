@@ -35,7 +35,7 @@
 @property (NS_NONATOMIC_IOSONLY, getter=getRootViewController, readonly, strong) UIViewController *rootViewController;
 -(void) authenticateLocalPlayer;
 -(void) submitScore:(int64_t)score identifier:(NSString*)category;
-- (void)findMatchWithViewController:(UIViewController *)viewController
+- (BOOL)findMatchWithViewController:(UIViewController *)viewController
                            delegate:(id<GameKitHelperProtocol>)theDelegate;
 -(void)sendData:(NSData *)packet withCompleteBlock:(void(^)(void)) block;
 - (GKAchievement*) getAchievementForIdentifier: (NSString*) identifier;

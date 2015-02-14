@@ -31,13 +31,13 @@
         score = 0;
         sharp = 1;
         rank = 1;
-        atomCountLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
+        atomCountLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
         atomCountLabel.fontSize = 20;
-        scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
+        scoreLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
         scoreLabel.fontSize = 20;
-        rankLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
+        rankLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
         rankLabel.fontSize = 20;
-        pauseLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
+        pauseLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
         pauseLabel.fontSize = 40;
         pauseLabel.alpha = 0;
         atomCountLabel.text = [NSString stringWithFormat:@"%ld",(long)atomCount];

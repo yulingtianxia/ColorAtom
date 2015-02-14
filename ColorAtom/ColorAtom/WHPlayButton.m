@@ -8,10 +8,12 @@
 
 #import "WHPlayButton.h"
 #import "WormHolePlayScene.h"
+#import "Define.h"
+
 @implementation WHPlayButton
 -(instancetype)init{
     if (self = [super init]) {
-        self.fontName = @"Transformers";
+        self.fontName = FontString;
         self.fontSize = 30;
         self.text = NSLocalizedString(@"WormHole Mode", @"");
         self.userInteractionEnabled = YES;

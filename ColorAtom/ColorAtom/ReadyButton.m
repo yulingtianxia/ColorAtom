@@ -9,11 +9,12 @@
 #import "ReadyButton.h"
 #import "AgainstPlayScene.h"
 #import "GameConstants.h"
+#import "Define.h"
 
 @implementation ReadyButton
 -(instancetype)init{
     if (self = [super init]) {
-        self.fontName = @"Transformers";
+        self.fontName = FontString;
         self.fontSize = 40;
         self.text = NSLocalizedString(@"Get Ready", @"");
         self.userInteractionEnabled = YES;

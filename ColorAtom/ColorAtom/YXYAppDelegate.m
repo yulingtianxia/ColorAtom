@@ -17,7 +17,7 @@
     // Override point for customization after application launch.
     [WXApi registerApp:@"wx7559e631e2534fb2"];
     [Fabric with:@[CrashlyticsKit]];
-
+    
     return YES;
 }
 							

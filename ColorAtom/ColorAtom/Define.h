@@ -12,6 +12,8 @@
 #define WEIBO_APP_KEY  @"2357960990"
 #define WEIBO_APP_SECRET @"a3f965bb0d903cb4d8f1523c70e1ecb2"
 
+#define FontString NSLocalizedString(@"Transformers", @"")
+
 static CGFloat const ZERO  = 0.5;
 static CGFloat const AtomRadius = 25;
 
@@ -42,4 +44,5 @@ static NSString const *NightMode = @"NIGHT";
 static NSString const *SecretMode = @"SECRET";
 static NSString const *WormHoleMode = @"WORMHOLE";
 static NSString const *AgainstMode = @"AGAINST";
+
 #endif

@@ -59,7 +59,7 @@
         minus = [[AtomMinusNode alloc] init];
         minus.position = CGPointMake(self.size.width/2, self.size.height);
         minus.physicsBody.velocity = CGVectorMake(0, -200);
-//        logo = [[SKLabelNode alloc] initWithFontNamed:@"Transformers"];
+//        logo = [[SKLabelNode alloc] initWithFontNamed:FontString];
         logo = [[SKLabelNode alloc] initWithFontNamed:@"Transformers"];
         logo.fontSize = 50;
         logo.text = @"ColorAtom";

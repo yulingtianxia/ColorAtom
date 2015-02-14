@@ -184,17 +184,16 @@
      }];
 }
 
-- (void)findMatchWithViewController:(UIViewController *)viewController
+- (BOOL)findMatchWithViewController:(UIViewController *)viewController
                        delegate:(id<GameKitHelperProtocol>)theDelegate {
     
-    if (!_gameCenterFeaturesEnabled) return;
+    if (!_gameCenterFeaturesEnabled) return NO;
     
     matchStarted = NO;
     self.match = nil;
     self.presentingViewController = viewController;
     self.delegate= theDelegate;
-    [_presentingViewController dismissViewControllerAnimated:NO completion:^{
-    }];
+    [_presentingViewController dismissViewControllerAnimated:NO completion:nil];
 
     
     if (self.pendingInvite) {
@@ -217,7 +216,7 @@
         self.pendingInvite = nil;
         self.pendingPlayersToInvite = nil;
     }
-    
+    return YES;
 }
 
 -(void)sendData:(NSData *)packet withCompleteBlock:(void(^)(void)) block{

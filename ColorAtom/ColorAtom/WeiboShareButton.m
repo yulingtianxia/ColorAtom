@@ -9,11 +9,12 @@
 #import "WeiboShareButton.h"
 #import "GameOverScene.h"
 #import "SendWX.h"
+#import "Define.h"
 
 @implementation WeiboShareButton
 -(instancetype)init{
     if (self = [super init]) {
-        self.fontName = @"Transformers";
+        self.fontName = FontString;
         self.text = NSLocalizedString(@"SHARE SCORE", @"");
         self.fontSize = 20;
         self.userInteractionEnabled = YES;

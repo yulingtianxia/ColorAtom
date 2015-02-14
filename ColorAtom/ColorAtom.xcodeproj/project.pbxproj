@@ -17,7 +17,6 @@
 		A43C39431927144E0092B34D /* StarRain.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C39421927144E0092B34D /* StarRain.m */; };
 		A44506CD19C321C600905DEF /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44506CC19C321C600905DEF /* GameKit.framework */; };
 		A44506D119C3226300905DEF /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A44506D019C3226300905DEF /* GameKitHelper.m */; };
-		A454867019E81E9200AD0F5E /* Transformers Movie.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A454866C19E8170E00AD0F5E /* Transformers Movie.ttf */; };
 		A45A9F6B19F39DA20087C192 /* vortexShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A45A9F6A19F39DA20087C192 /* vortexShader.fsh */; };
 		A45EBB951A8747A6000DF33C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45EBB931A8747A6000DF33C /* Crashlytics.framework */; };
 		A45EBB961A8747A6000DF33C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45EBB941A8747A6000DF33C /* Fabric.framework */; };
@@ -26,6 +25,8 @@
 		A47F5504195523A200CEDD40 /* WormHolePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F5503195523A200CEDD40 /* WormHolePlayScene.m */; };
 		A47F55071955259600CEDD40 /* WormHole.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F55061955259600CEDD40 /* WormHole.m */; };
 		A47F550A1955353300CEDD40 /* WHPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F55091955353300CEDD40 /* WHPlayButton.m */; };
+		A47F72B31A8F37BB00E76E45 /* Transformers Movie.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A47F72AF1A8F1A4200E76E45 /* Transformers Movie.ttf */; };
+		A47F72B41A8F37BB00E76E45 /* NISC18030.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A47F72B21A8F36E200E76E45 /* NISC18030.ttf */; };
 		A48FDDD4190787F800772A22 /* AtomSharpNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDDD3190787F800772A22 /* AtomSharpNode.m */; };
 		A48FDDD719078A1400772A22 /* AtomSharpNodeContactVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FDDD619078A1400772A22 /* AtomSharpNodeContactVisitor.m */; };
 		A498947319E025DF00A7E598 /* AgainstResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A498947219E025DF00A7E598 /* AgainstResult.m */; };
@@ -101,21 +102,20 @@
 		A400FDB619C58729000FE0C0 /* GameConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConstants.h; sourceTree = "<group>"; };
 		A404E4E41907D98600528624 /* SharpMagic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SharpMagic.sks; sourceTree = "<group>"; };
 		A409789019E12553003A14AE /* ReadyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadyButton.h; sourceTree = "<group>"; };
-		A409789119E12553003A14AE /* ReadyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadyButton.m; sourceTree = "<group>"; };
+		A409789119E12553003A14AE /* ReadyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ReadyButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A413F1EB190BA0A400400EB7 /* sharp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sharp.mp3; sourceTree = "<group>"; };
 		A43099CE1951CC7E002B35D3 /* SecretPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretPlayScene.h; sourceTree = "<group>"; };
 		A43099CF1951CC7E002B35D3 /* SecretPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretPlayScene.m; sourceTree = "<group>"; };
 		A43099D11951CE03002B35D3 /* SecretForce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretForce.h; sourceTree = "<group>"; };
 		A43099D21951CE03002B35D3 /* SecretForce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretForce.m; sourceTree = "<group>"; };
 		A43099D41951D0F9002B35D3 /* SecretPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretPlayButton.h; sourceTree = "<group>"; };
-		A43099D51951D0F9002B35D3 /* SecretPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretPlayButton.m; sourceTree = "<group>"; };
+		A43099D51951D0F9002B35D3 /* SecretPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SecretPlayButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A43C393F192711470092B34D /* StarRain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarRain.sks; sourceTree = "<group>"; };
 		A43C39411927144E0092B34D /* StarRain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarRain.h; sourceTree = "<group>"; };
 		A43C39421927144E0092B34D /* StarRain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarRain.m; sourceTree = "<group>"; };
 		A44506CC19C321C600905DEF /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		A44506CF19C3226300905DEF /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
 		A44506D019C3226300905DEF /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
-		A454866C19E8170E00AD0F5E /* Transformers Movie.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Transformers Movie.ttf"; sourceTree = "<group>"; };
 		A45A9F6A19F39DA20087C192 /* vortexShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = vortexShader.fsh; sourceTree = "<group>"; };
 		A45EBB931A8747A6000DF33C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		A45EBB941A8747A6000DF33C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -130,13 +130,15 @@
 		A47F55051955259600CEDD40 /* WormHole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WormHole.h; sourceTree = "<group>"; };
 		A47F55061955259600CEDD40 /* WormHole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WormHole.m; sourceTree = "<group>"; };
 		A47F55081955353300CEDD40 /* WHPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHPlayButton.h; sourceTree = "<group>"; };
-		A47F55091955353300CEDD40 /* WHPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHPlayButton.m; sourceTree = "<group>"; };
+		A47F55091955353300CEDD40 /* WHPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = WHPlayButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		A47F72AF1A8F1A4200E76E45 /* Transformers Movie.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Transformers Movie.ttf"; sourceTree = "<group>"; };
+		A47F72B21A8F36E200E76E45 /* NISC18030.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NISC18030.ttf; sourceTree = "<group>"; };
 		A48FDDD2190787F800772A22 /* AtomSharpNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomSharpNode.h; sourceTree = "<group>"; };
 		A48FDDD3190787F800772A22 /* AtomSharpNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomSharpNode.m; sourceTree = "<group>"; };
 		A48FDDD519078A1400772A22 /* AtomSharpNodeContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomSharpNodeContactVisitor.h; sourceTree = "<group>"; };
 		A48FDDD619078A1400772A22 /* AtomSharpNodeContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomSharpNodeContactVisitor.m; sourceTree = "<group>"; };
 		A498947119E025DF00A7E598 /* AgainstResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgainstResult.h; sourceTree = "<group>"; };
-		A498947219E025DF00A7E598 /* AgainstResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgainstResult.m; sourceTree = "<group>"; };
+		A498947219E025DF00A7E598 /* AgainstResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AgainstResult.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A498C93D19E4DDAC003E9A19 /* WormHoleContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WormHoleContactVisitor.h; sourceTree = "<group>"; };
 		A498C93E19E4DDAC003E9A19 /* WormHoleContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WormHoleContactVisitor.m; sourceTree = "<group>"; };
 		A4D32FF919064D0F004B2CF3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -169,7 +171,7 @@
 		A4E9E51118F7D18E000ADEAE /* ColorAtomTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorAtomTests-Info.plist"; sourceTree = "<group>"; };
 		A4E9E51318F7D18E000ADEAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A4E9E51518F7D18E000ADEAE /* ColorAtomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorAtomTests.m; sourceTree = "<group>"; };
-		A4E9E52018F7E854000ADEAE /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		A4E9E52018F7E854000ADEAE /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Define.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		A4EB2D5E1902369700B28405 /* BackGround.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BackGround.sks; sourceTree = "<group>"; };
 		A4EB2D5F1902369700B28405 /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		A4EB2D621902377300B28405 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
@@ -181,7 +183,7 @@
 		A4EB2D6F19024DEA00B28405 /* Spark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spark.h; sourceTree = "<group>"; };
 		A4EB2D7019024DEA00B28405 /* Spark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spark.m; sourceTree = "<group>"; };
 		A4EB2D72190272EC00B28405 /* DisplayScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayScreen.h; sourceTree = "<group>"; };
-		A4EB2D73190272EC00B28405 /* DisplayScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayScreen.m; sourceTree = "<group>"; };
+		A4EB2D73190272EC00B28405 /* DisplayScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DisplayScreen.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A4ED50461900FAD500A37085 /* AtomPlusNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomPlusNode.h; sourceTree = "<group>"; };
 		A4ED50471900FAD500A37085 /* AtomPlusNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomPlusNode.m; sourceTree = "<group>"; };
 		A4ED50491900FFF200A37085 /* AtomMinusNodeContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomMinusNodeContactVisitor.h; sourceTree = "<group>"; };
@@ -191,7 +193,7 @@
 		A4ED504F1901548500A37085 /* PlayerArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerArea.h; sourceTree = "<group>"; };
 		A4ED50501901548500A37085 /* PlayerArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerArea.m; sourceTree = "<group>"; };
 		A4ED505219015E9200A37085 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
-		A4ED505319015E9200A37085 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
+		A4ED505319015E9200A37085 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GameOverScene.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A4ED505619016B0A00A37085 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		A4ED505719016B0A00A37085 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		A4EE478618FA627C003A0B74 /* ContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactVisitor.h; sourceTree = "<group>"; };
@@ -203,22 +205,22 @@
 		A4EE478F18FA70B6003A0B74 /* PlayFieldSceneContactVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayFieldSceneContactVisitor.h; sourceTree = "<group>"; };
 		A4EE479018FA70B6003A0B74 /* PlayFieldSceneContactVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayFieldSceneContactVisitor.m; sourceTree = "<group>"; };
 		A4F699011908FD7100FE911A /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
-		A4F699021908FD7100FE911A /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
+		A4F699021908FD7100FE911A /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MainScene.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A4F699041908FDFD00FE911A /* BigColorFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BigColorFire.sks; sourceTree = "<group>"; };
 		A4F6ECEA190CB11E0069DBC9 /* PlayAgainButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayAgainButton.h; sourceTree = "<group>"; };
-		A4F6ECEB190CB11E0069DBC9 /* PlayAgainButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayAgainButton.m; sourceTree = "<group>"; };
+		A4F6ECEB190CB11E0069DBC9 /* PlayAgainButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PlayAgainButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A4F6ECED190CB40F0069DBC9 /* WeiboShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboShareButton.h; sourceTree = "<group>"; };
-		A4F6ECEE190CB40F0069DBC9 /* WeiboShareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboShareButton.m; sourceTree = "<group>"; };
+		A4F6ECEE190CB40F0069DBC9 /* WeiboShareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = WeiboShareButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A4F6ECF0190CB6160069DBC9 /* MainSceneButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSceneButton.h; sourceTree = "<group>"; };
-		A4F6ECF1190CB6160069DBC9 /* MainSceneButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSceneButton.m; sourceTree = "<group>"; };
+		A4F6ECF1190CB6160069DBC9 /* MainSceneButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MainSceneButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A4F6ECF3190CB7DB0069DBC9 /* SharpNodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharpNodeButton.h; sourceTree = "<group>"; };
 		A4F6ECF4190CB7DB0069DBC9 /* SharpNodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharpNodeButton.m; sourceTree = "<group>"; };
 		A4F6ECF6190CBB250069DBC9 /* AudioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioButton.h; sourceTree = "<group>"; };
 		A4F6ECF7190CBB250069DBC9 /* AudioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioButton.m; sourceTree = "<group>"; };
 		A4F6ECF9190CBDAE0069DBC9 /* NormalPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalPlayButton.h; sourceTree = "<group>"; };
-		A4F6ECFA190CBDAE0069DBC9 /* NormalPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalPlayButton.m; sourceTree = "<group>"; };
+		A4F6ECFA190CBDAE0069DBC9 /* NormalPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NormalPlayButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A4F6ECFC190CBEEE0069DBC9 /* NightPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NightPlayButton.h; sourceTree = "<group>"; };
-		A4F6ECFD190CBEEE0069DBC9 /* NightPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NightPlayButton.m; sourceTree = "<group>"; };
+		A4F6ECFD190CBEEE0069DBC9 /* NightPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NightPlayButton.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A4F9474A19DFBC1F00384C81 /* AgainstPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgainstPlayScene.h; sourceTree = "<group>"; };
 		A4F9474B19DFBC1F00384C81 /* AgainstPlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgainstPlayScene.m; sourceTree = "<group>"; };
 		A4F9474D19DFC42000384C81 /* AgainstPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgainstPlayButton.h; sourceTree = "<group>"; };
@@ -276,8 +278,9 @@
 		A454866F19E81DB900AD0F5E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A47F72AF1A8F1A4200E76E45 /* Transformers Movie.ttf */,
+				A47F72B21A8F36E200E76E45 /* NISC18030.ttf */,
 				A45A9F6A19F39DA20087C192 /* vortexShader.fsh */,
-				A454866C19E8170E00AD0F5E /* Transformers Movie.ttf */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -619,7 +622,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A454867019E81E9200AD0F5E /* Transformers Movie.ttf in Resources */,
+				A47F72B31A8F37BB00E76E45 /* Transformers Movie.ttf in Resources */,
+				A47F72B41A8F37BB00E76E45 /* NISC18030.ttf in Resources */,
 				A4FC862C19E2C78E006F784C /* Localizable.strings in Resources */,
 				A4EB2D6C190241ED00B28405 /* Fire.sks in Resources */,
 				A4ED505819016B0A00A37085 /* background-music-aac.caf in Resources */,

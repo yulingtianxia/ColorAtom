@@ -32,12 +32,12 @@
         background.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:background];
 //        各种label
-        SKLabelNode *modeLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
-        SKLabelNode *gameover = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
-        SKLabelNode *newScoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
-        SKLabelNode *newScoreNumLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
-        SKLabelNode *highScoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
-        SKLabelNode *highScoreNumLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
+        SKLabelNode *modeLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
+        SKLabelNode *gameover = [SKLabelNode labelNodeWithFontNamed:FontString];
+        SKLabelNode *newScoreLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
+        SKLabelNode *newScoreNumLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
+        SKLabelNode *highScoreLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
+        SKLabelNode *highScoreNumLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
         PlayAgainButton *playAgain = [[PlayAgainButton alloc] initWithMode:mode];
         WeiboShareButton *weiboShare = [[WeiboShareButton alloc] init];
         MainSceneButton *mainScene = [[MainSceneButton alloc] init];

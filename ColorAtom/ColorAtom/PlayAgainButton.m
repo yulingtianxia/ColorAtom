@@ -17,7 +17,7 @@
 @synthesize modeString;
 -(instancetype)initWithMode:(NSString *)newmode{
     if (self = [super init]) {
-        self.fontName = @"Transformers";
+        self.fontName = FontString;
         self.text = NSLocalizedString(@"PLAY AGAIN", @"");
         self.fontSize = 20;
         self.fontColor = [SKColor whiteColor];

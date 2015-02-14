@@ -38,14 +38,14 @@
         background = [[Background alloc] initWithSize:size];
         background.position = CGPointMake(self.size.width/2, self.size.height/2);
         [self addChild:background];
-        SKLabelNode *modeLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
+        SKLabelNode *modeLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
         modeLabel.text = NSLocalizedString((NSString *)AgainstMode, @"") ;
         modeLabel.fontSize = 40;
         modeLabel.fontColor = [SKColor purpleColor];
         modeLabel.position = CGPointMake(self.size.width/2, 3*self.frame.size.height/4+modeLabel.frame.size.height);
         [self addChild:modeLabel];
         
-        SKLabelNode *winLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
+        SKLabelNode *winLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
         if (win) {
             winLabel.text = NSLocalizedString(@"WIN", @"");
         }
@@ -57,14 +57,14 @@
         winLabel.position = CGPointMake(self.size.width/2, 3*self.frame.size.height/4);
         [self addChild:winLabel];
         
-        SKLabelNode *playerLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
+        SKLabelNode *playerLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
         playerLabel.text = NSLocalizedString(@"Opponent Name:", @"");
         playerLabel.fontSize = 30;
         playerLabel.fontColor = [SKColor greenColor];
         playerLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(winLabel.frame)-playerLabel.frame.size.height);
         [self addChild:playerLabel];
         
-        SKLabelNode *nameLabel = [SKLabelNode labelNodeWithFontNamed:@"Transformers"];
+        SKLabelNode *nameLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
         NSString *playerName = opponentName;
         nameLabel.text = playerName;
         nameLabel.fontSize = 30;

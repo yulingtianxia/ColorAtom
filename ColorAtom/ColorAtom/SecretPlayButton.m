@@ -8,10 +8,12 @@
 
 #import "SecretPlayButton.h"
 #import "SecretPlayScene.h"
+#import "Define.h"
+
 @implementation SecretPlayButton
 -(instancetype)init{
     if (self = [super init]) {
-        self.fontName = @"Transformers";
+        self.fontName = FontString;
         self.fontSize = 30;
         self.text = NSLocalizedString(@"Secret Mode", @"");
         self.userInteractionEnabled = YES;

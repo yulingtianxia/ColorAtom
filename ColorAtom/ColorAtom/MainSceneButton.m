@@ -8,10 +8,12 @@
 
 #import "MainSceneButton.h"
 #import "MainScene.h"
+#import "Define.h"
+
 @implementation MainSceneButton
 -(instancetype)init{
     if (self = [super init]) {
-        self.fontName = @"Transformers";
+        self.fontName = FontString;
         self.text = NSLocalizedString(@"MAIN MENU", @"");
         self.fontSize = 20;
         self.userInteractionEnabled = YES;

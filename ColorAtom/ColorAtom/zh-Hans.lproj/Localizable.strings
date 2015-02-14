@@ -22,7 +22,7 @@
 "NEWSCORE" = "新的分数";
 "HIGHSCORE" = "最高得分";
 "Connection lost" = "失去连接";
-"OK" = "好的";
+"OK" = "好";
 "I just defeated %@ in ColorAtom!" = "我刚刚在ColorAtom中击败了%1$@";
 "I was defeated by %@ in ColorAtom!" = "我在ColorAtom中被%1$@击败";
 "WIN" = "胜利";
@@ -40,3 +40,6 @@
 "WORMHOLE" = "虫洞模式";
 "AGAINST" = "对战模式";
 "PAUSE" = "暂停";
+"Game Center Unavailable" = "Game Center 不可用";
+"Player is not signed in" = "玩家未登录";
+"Transformers" = "GB18030 Bitmap";
