@@ -119,7 +119,7 @@
 - (void) reportMultipleAchievements
 {
     
-    [GKAchievement reportAchievements:[self.achievementsDictionary allValues]  withCompletionHandler:^(NSError *error)
+    [GKAchievement reportAchievements:(self.achievementsDictionary).allValues  withCompletionHandler:^(NSError *error)
      {
          if (error != nil)
          {
@@ -147,7 +147,7 @@
 }
 
 -(void)presentViewController:(UIViewController*)vc {
-    UIViewController* rootVC = [self getRootViewController];
+    UIViewController* rootVC = self.rootViewController;
     [rootVC presentViewController:vc animated:YES
                        completion:nil];
 }
@@ -271,7 +271,7 @@
 // The match received data sent from the player.
 - (void)match:(GKMatch *)theMatch didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID {
 //    if (_match != theMatch) return;
-    Message *message = (Message *) [data bytes];
+    Message *message = (Message *) data.bytes;
     if (message->messageType == kMessageTypeGameBeginRequest) {
         _opponentReady = YES;
 //        NSLog(@"receive beginrequest");
@@ -344,7 +344,7 @@
 #pragma mark GKGameCenterControllerDelegate
 - (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
 {
-    [[self getRootViewController] dismissViewControllerAnimated:YES completion:nil];
+    [self.rootViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 

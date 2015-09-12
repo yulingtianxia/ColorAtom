@@ -14,8 +14,8 @@ typedef union { int i; } *empty_union_ptr_t;
 
 @implementation NSInvocation (EXTExtensions)
 - (BOOL)setArgumentsFromArgumentList:(va_list)args {
-    NSMethodSignature *signature = [self methodSignature];
-    NSUInteger count = [signature numberOfArguments];
+    NSMethodSignature *signature = self.methodSignature;
+    NSUInteger count = signature.numberOfArguments;
     for (NSUInteger i = 2;i < count;++i) {
         const char *type = [signature getArgumentTypeAtIndex:i];
         while (

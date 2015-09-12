@@ -143,7 +143,7 @@
 
 - (void)match:(GKMatch *)match didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID {
     //    NSLog(@"Received data");
-    Message *message = (Message *) [data bytes];
+    Message *message = (Message *) data.bytes;
     if (message->messageType == kMessageTypeReplayRequest) {
         NSString *title = NSLocalizedString(@"Play Again?", @"");
         NSString *message = NSLocalizedString(@"Your opponent wants to play with you again", @"");
@@ -180,7 +180,7 @@
         
     }
     else if (message->messageType == kMessageTypeReplayResponse) {
-        MessageReplayResponse *response = (MessageReplayResponse *)[data bytes];
+        MessageReplayResponse *response = (MessageReplayResponse *)data.bytes;
         if (!(*response).agree) {
             NSString *title = NSLocalizedString(@"Sorry", @"");
             NSString *message = NSLocalizedString(@"Your opponent has refused your request", @"");

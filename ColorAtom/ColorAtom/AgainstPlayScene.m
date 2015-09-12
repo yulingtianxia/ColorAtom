@@ -99,9 +99,9 @@
 
 - (void)match:(GKMatch *)match didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID {
 //    NSLog(@"Received data");
-    Message *message = (Message *) [data bytes];
+    Message *message = (Message *) data.bytes;
     if (message->messageType == kMessageTypePosition) {
-        MessagePosition* mp = (MessagePosition*)[data bytes];
+        MessagePosition* mp = (MessagePosition*)data.bytes;
         againstPosition = (*mp).position;
         [self createAtomMinus];
     }

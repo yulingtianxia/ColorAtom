@@ -86,19 +86,19 @@
 {
     UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
-    [[self view] addGestureRecognizer:swipeUp];
+    [self.view addGestureRecognizer:swipeUp];
     UISwipeGestureRecognizer *swipeUp2 = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     swipeUp2.direction = UISwipeGestureRecognizerDirectionUp;
     swipeUp2.numberOfTouchesRequired = 2;
-    [[self view] addGestureRecognizer:swipeUp2];
+    [self.view addGestureRecognizer:swipeUp2];
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
-    [[self view] addGestureRecognizer:swipeDown];
+    [self.view addGestureRecognizer:swipeDown];
 }
 
 -(void)didSimulatePhysics
 {
-    NSArray *children = [self children];
+    NSArray *children = self.children;
     for (int i=0; i<children.count; i++) {
         SKNode *node = (SKNode *)children[i];
         if ([node.name isEqualToString:(NSString*)AtomMinusName]&&node.position.y<3*AtomRadius) {
@@ -271,7 +271,7 @@
 }
 
 -(void) hideGame{
-    NSArray *children = [self children];
+    NSArray *children = self.children;
     for (int i=0; i<children.count; i++) {
         SKNode *node = (SKNode *)children[i];
         if (![node.name isEqualToString:(NSString*)DisplayScreenName]) {
@@ -281,7 +281,7 @@
 }
 
 -(void) showGame{
-    NSArray *children = [self children];
+    NSArray *children = self.children;
     for (int i=0; i<children.count; i++) {
         SKNode *node = (SKNode *)children[i];
         if (![node.name isEqualToString:(NSString*)DisplayScreenName]) {
