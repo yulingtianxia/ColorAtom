@@ -153,7 +153,6 @@
 		A4E9E4FD18F7D18E000ADEAE /* PlayFieldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayFieldScene.h; sourceTree = "<group>"; };
 		A4E9E4FE18F7D18E000ADEAE /* PlayFieldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayFieldScene.m; sourceTree = "<group>"; };
 		A4E9E50218F7D18E000ADEAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A4E9E50918F7D18E000ADEAE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A4E9E52018F7E854000ADEAE /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Define.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		A4EB2D5E1902369700B28405 /* BackGround.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BackGround.sks; sourceTree = "<group>"; };
 		A4EB2D5F1902369700B28405 /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
@@ -339,7 +338,6 @@
 				A4E9E4E518F7D18E000ADEAE /* CoreGraphics.framework */,
 				A4E9E4E718F7D18E000ADEAE /* UIKit.framework */,
 				A4E9E4E918F7D18E000ADEAE /* SpriteKit.framework */,
-				A4E9E50918F7D18E000ADEAE /* XCTest.framework */,
 				36300DDFEA43DF0F5405B3FF /* libPods-ColorAtom.a */,
 			);
 			name = Frameworks;
