@@ -64,7 +64,7 @@ static const ext_methodInjectionBehavior ext_methodInjectionOverwriteBehaviorMas
 /**
  * Describes the memory management policy of a property.
  */
-typedef NS_ENUM(unsigned int, ext_propertyMemoryManagementPolicy) {
+typedef enum {
     /**
      * The value is assigned.
      */
@@ -79,7 +79,7 @@ typedef NS_ENUM(unsigned int, ext_propertyMemoryManagementPolicy) {
      * The value is copied.
      */
     ext_propertyMemoryManagementPolicyCopy
-};
+} ext_propertyMemoryManagementPolicy;
 
 /**
  * Describes the attributes and type information of a property.

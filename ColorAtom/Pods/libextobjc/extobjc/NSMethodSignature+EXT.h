@@ -25,5 +25,5 @@
  *
  * @note The returned string is autoreleased.
  */
-@property (NS_NONATOMIC_IOSONLY, readonly) const char *typeEncoding;
+- (const char *)typeEncoding;
 @end

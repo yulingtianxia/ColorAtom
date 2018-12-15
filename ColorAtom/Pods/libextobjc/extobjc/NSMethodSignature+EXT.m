@@ -11,10 +11,10 @@
 
 @implementation NSMethodSignature (EXTExtensions)
 - (NSMethodSignature *)methodSignatureByInsertingType:(const char *)type atArgumentIndex:(NSUInteger)index {
-    NSUInteger argumentCount = self.numberOfArguments;
+    NSUInteger argumentCount = [self numberOfArguments];
     size_t typeLength = strlen(type);
 
-    size_t stringLength = strlen(self.methodReturnType);
+    size_t stringLength = strlen([self methodReturnType]);
     for (NSUInteger i = 0;i < argumentCount + 1;++i) {
         NSUInteger realIndex;
         if (i == index) {
@@ -60,9 +60,9 @@
 }
 
 - (const char *)typeEncoding {
-    NSUInteger argumentCount = self.numberOfArguments;
+    NSUInteger argumentCount = [self numberOfArguments];
 
-    size_t stringLength = strlen(self.methodReturnType);
+    size_t stringLength = strlen([self methodReturnType]);
     for (NSUInteger i = 0;i < argumentCount;++i) {
         const char *argType = [self getArgumentTypeAtIndex:i];
         stringLength += strlen(argType);

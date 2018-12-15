@@ -21,42 +21,33 @@
 
 @implementation PlayFieldScene
 
-@synthesize debugOverlay;
-@synthesize swipePosition;
-@synthesize playArea;
-@synthesize background;
-@synthesize displayScreen;
-@synthesize rank;
-@synthesize sharpCount;
-@synthesize updateScore;
-@synthesize sharpButton;
 -(instancetype)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         //添加debug信息
-        debugOverlay = [[YXYDebugNode alloc] init];
-        debugOverlay.position = CGPointMake(self.size.width/2, self.size.height/2);
-        [self addChild:debugOverlay];
+        self.debugOverlay = [[YXYDebugNode alloc] init];
+        self.debugOverlay.position = CGPointMake(self.size.width/2, self.size.height/2);
+        [self addChild:self.debugOverlay];
 //        添加记分显示屏
-        displayScreen = [[DisplayScreen alloc] initWithAtomCount:10];
-        [self addChild:displayScreen];
-        [displayScreen setPosition];
+        self.displayScreen = [[DisplayScreen alloc] initWithAtomCount:10];
+        [self addChild:self.displayScreen];
+        [self.displayScreen setPosition];
 //        添加玩家胜负区域
-        playArea = [[PlayerArea alloc] init];
-        [self addChild:playArea];
-        [playArea beginWork];
+        self.playArea = [[PlayerArea alloc] init];
+        [self addChild:self.playArea];
+        [self.playArea beginWork];
 //        添加游戏背景
-        background = [[Background alloc] initWithSize:size];
-        background.position = CGPointMake(self.size.width/2, self.size.height/2+AtomRadius);
+        self.background = [[Background alloc] initWithSize:size];
+        self.background.position = CGPointMake(self.size.width/2, self.size.height/2+AtomRadius);
         StarRain *starRain = [[StarRain alloc] init];
         starRain.position = CGPointMake(self.size.width/2, self.size.height);
-        [self addChild:background];
+        [self addChild:self.background];
         [self addChild:starRain];
 //        添加＃按钮
-        sharpButton = [[SharpNodeButton alloc]init];
-        sharpButton.position = CGPointMake(self.scene.size.width/2, AtomRadius);
-        sharpButton.zPosition = 100;
-        [self addChild:sharpButton];
+        self.sharpButton = [[SharpNodeButton alloc]init];
+        self.sharpButton.position = CGPointMake(self.scene.size.width/2, AtomRadius);
+        self.sharpButton.zPosition = 100;
+        [self addChild:self.sharpButton];
 //        游戏区域场景设置
         self.name = (NSString*)PlayFieldName;
         CGMutablePathRef path = CGPathCreateMutable();
@@ -67,12 +58,12 @@
         self.physicsBody = [SKPhysicsBody bodyWithEdgeChainFromPath:path];
         self.physicsBody.contactTestBitMask = 1;
         self.physicsBody.categoryBitMask = PlayFieldCategory;
-        self.backgroundColor = [SKColor clearColor];
+        self.self.backgroundColor = [SKColor clearColor];
         self.physicsWorld.gravity = CGVectorMake(0, 0);
         self.physicsWorld.contactDelegate = self;
-        updateScore = 500;
-        rank = 1;
-        sharpCount = 1;
+        self.updateScore = 500;
+        self.rank = 1;
+        self.sharpCount = 1;
         //添加暂停通知
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pause) name:UIApplicationWillResignActiveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pause) name:UIApplicationDidEnterBackgroundNotification object:nil];
@@ -103,7 +94,7 @@
         SKNode *node = (SKNode *)children[i];
         if ([node.name isEqualToString:(NSString*)AtomMinusName]&&node.position.y<3*AtomRadius) {
             [node removeFromParent];
-            [displayScreen AtomMinusAttacked];
+            [self.displayScreen AtomMinusAttacked];
             break;
         }
         else if ([node.name isEqualToString:(NSString*)AtomPlusName]&&node.position.y>self.size.height+AtomRadius) {
@@ -120,7 +111,7 @@
 //    [self enumerateChildNodesWithName:(NSString*)AtomMinusName usingBlock:^(SKNode *node, BOOL *stop) {
 //        if (node.position.y<3*AtomRadius) {
 //            [node removeFromParent];
-//            [displayScreen AtomMinusAttacked];
+//            [self.displayScreen AtomMinusAttacked];
 //            *stop=YES;
 //
 //        }
@@ -142,49 +133,49 @@
 //        }
 //    }];
     //add debug node
-    [self addChild:debugOverlay];
+    [self addChild:self.debugOverlay];
 
 }
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     
-    if (displayScreen.score>=updateScore) {
-        rank++;
-        sharpCount++;
-        updateScore+=500*rank;
-        displayScreen.rank = rank;
-        displayScreen.sharp = sharpCount;
-        sharpButton.alpha = 1;
-        [sharpButton runAction:[SKAction repeatAction:[SKAction sequence:@[[SKAction runBlock:^{
-            [sharpButton setScale:1.3];
+    if (self.displayScreen.score>=self.updateScore) {
+        self.rank++;
+        self.sharpCount++;
+        self.updateScore+=500*self.rank;
+        self.displayScreen.self.rank = self.rank;
+        self.displayScreen.sharp = self.sharpCount;
+        self.sharpButton.alpha = 1;
+        [self.sharpButton runAction:[SKAction repeatAction:[SKAction sequence:@[[SKAction runBlock:^{
+            [self.sharpButton setScale:1.3];
         }],
                                                                            [SKAction waitForDuration:0.1],
                                                                            [SKAction runBlock:^{
-            [sharpButton setScale:1];
+            [self.sharpButton setScale:1];
         }],
                                                                            [SKAction waitForDuration:0.1]]] count:3]];
     }
     
-//    debugOverlay.label.text = [NSString stringWithFormat:@"%ld",(long)rank];
+//    self.debugOverlay.label.text = [NSString stringWithFormat:@"%ld",(long)self.rank];
     //添加debug信息
-    [debugOverlay removeFromParent];
-//    [debugOverlay removeAllChildren];
+    [self.debugOverlay removeFromParent];
+//    [self.debugOverlay removeAllChildren];
 }
 
 #pragma mark FactoryMethods
 
 -(void)createAtomPlusAtPosition:(CGPoint) position
 {
-    if (displayScreen.atomCount>0) {
+    if (self.displayScreen.atomCount>0) {
         if (![self sendPosition:position]) {
             return;
         }
-        [displayScreen AtomPlusUsed:1];
+        [self.displayScreen AtomPlusUsed:1];
         AtomNode *plusAtom = [[AtomPlusNode alloc] init];
         plusAtom.position = CGPointMake(position.x,AtomRadius);
-        playArea.fillColor = plusAtom.color;
-        playArea.strokeColor = plusAtom.color;
+        self.playArea.fillColor = plusAtom.color;
+        self.playArea.strokeColor = plusAtom.color;
         [self addChild:plusAtom];
         NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
         if ([[standardDefaults stringForKey:@"audio"] isEqualToString:@"on"]) {
@@ -201,9 +192,9 @@
         
         [self addChild:minusAtom];
     }],
-                                                                       [SKAction waitForDuration:AtomMinusCreateInterval/rank withRange:0.5/rank]]]]];
+                                                                       [SKAction waitForDuration:AtomMinusCreateInterval/self.rank withRange:0.5/self.rank]]]]];
     [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[[SKAction runBlock:^{
-        for (int i=0; i<rank; i++) {
+        for (int i=0; i<self.rank; i++) {
             AtomNode *minusAtom = [[AtomMinusNode alloc] init];
             minusAtom.position = CGPointMake(skRand(AtomRadius, self.size.width-AtomRadius),self.size.height-AtomRadius);
             
@@ -211,7 +202,7 @@
         }
         
     }],
-                                                                       [SKAction waitForDuration:AtomMinusCreateInterval*rank*10]]]]];
+                                                                       [SKAction waitForDuration:AtomMinusCreateInterval*self.rank*10]]]]];
     
 }
 
@@ -219,13 +210,13 @@
     if (![self sendPosition:button.position]) {
         return;
     }
-    if (sharpCount>0) {
+    if (self.sharpCount>0) {
         AtomSharpNode *atomSharp = [[AtomSharpNode alloc] init];
-        atomSharp.position = CGPointMake(self.size.width/2, playArea.frame.size.height);
+        atomSharp.position = CGPointMake(self.size.width/2, self.playArea.frame.size.height);
         [self addChild:atomSharp];
-        sharpCount--;
-        displayScreen.sharp = sharpCount;
-        if (sharpCount>0) {
+        self.sharpCount--;
+        self.displayScreen.sharp = self.sharpCount;
+        if (self.sharpCount>0) {
             button.alpha = 1;
         }else{
             button.alpha = 0.5;
@@ -237,12 +228,12 @@
 
 -(void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer{
     if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
-        //        debugOverlay.label.text = @"Began";
+        //        self.debugOverlay.label.text = @"Began";
         [self resume];
         CGPoint touchLocation = [recognizer locationInView:recognizer.view];
         touchLocation = [self convertPointFromView:touchLocation];
-        swipePosition = touchLocation;
-        [self createAtomPlusAtPosition:swipePosition];
+        self.swipePosition = touchLocation;
+        [self createAtomPlusAtPosition:self.swipePosition];
     }
     else if (recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
         [self pause];
@@ -253,7 +244,7 @@
 
 -(void)pause{
     [self runAction:[SKAction runBlock:^{
-        [displayScreen pause];
+        [self.displayScreen pause];
     }] completion:^{
         self.view.paused = YES;
     }];
@@ -261,7 +252,7 @@
 
 -(void)resume{
     if (self.view.paused == YES) {
-        [displayScreen resume];
+        [self.displayScreen resume];
         self.view.paused = NO;
     }
 }

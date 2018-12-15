@@ -15,20 +15,22 @@
 #import "ReadyButton.h"
 #import "DisplayScreen.h"
 
-@interface AgainstPlayScene(){
-    CGPoint againstPosition;
-    ReadyButton *readyStatusLabel;
-}
+@interface AgainstPlayScene ()
+
+@property (nonatomic, assign) CGPoint againstPosition;
+@property (nonatomic, strong) ReadyButton *readyStatusLabel;
+
 @end
+
 @implementation AgainstPlayScene
 
 -(instancetype)initWithSize:(CGSize)size{
     if (self = [super initWithSize:size]) {
         _playerReady = NO;
-        _gameReady = NO;
-        readyStatusLabel = [[ReadyButton alloc] init];
-        readyStatusLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidX(self.frame));
-        [self addChild:readyStatusLabel];
+        self.gameReady = NO;
+        self.readyStatusLabel = [[ReadyButton alloc] init];
+        self.readyStatusLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidX(self.frame));
+        [self addChild:self.readyStatusLabel];
         //        添加记分显示屏
         [self.displayScreen removeFromParent];
         self.displayScreen = [[DisplayScreen alloc] initWithAtomCount:100];
@@ -40,19 +42,19 @@
 
 #pragma mark override method
 
--(void)createAtomMinus{
-    if (_gameReady) {
+- (void)createAtomMinus{
+    if (self.gameReady) {
         [self runAction:[SKAction runBlock:^{
-            AtomNode *Atom = [[AtomMinusNode alloc] init];
-            Atom.position = CGPointMake(againstPosition.x,self.size.height-AtomRadius);
-            [self addChild:Atom];
+            AtomNode *atom = [[AtomMinusNode alloc] init];
+            atom.position = CGPointMake(self.againstPosition.x,self.size.height-AtomRadius);
+            [self addChild:atom];
         }]];
     }
     
 }
 
--(BOOL)sendPosition:(CGPoint)position{
-    if (_gameReady) {
+- (BOOL)sendPosition:(CGPoint)position{
+    if (self.gameReady) {
         MessagePosition mp;
         mp.message.messageType = kMessageTypePosition;
         mp.position = position;
@@ -73,9 +75,9 @@
     
 }
 
-#pragma mark GCHelperDelegate
+#pragma mark GameKitHelperProtocol
 
--(void)inviteReceived{
+- (void)inviteReceived{
     [[GameKitHelper sharedGameKitHelper] findMatchWithViewController:[UIApplication sharedApplication].keyWindow.rootViewController delegate:self];
 }
 
@@ -97,12 +99,12 @@
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
-- (void)match:(GKMatch *)match didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID {
+- (void)match:(GKMatch *)match didReceiveData:(NSData *)data fromRemotePlayer:(GKPlayer *)playerID {
 //    NSLog(@"Received data");
     Message *message = (Message *) data.bytes;
     if (message->messageType == kMessageTypePosition) {
         MessagePosition* mp = (MessagePosition*)data.bytes;
-        againstPosition = (*mp).position;
+        self.againstPosition = (*mp).position;
         [self createAtomMinus];
     }
     else if (message->messageType == kMessageTypeGameOver) {
@@ -118,15 +120,15 @@
             response.message.messageType = kMessageTypeGameBeginResponse;
             NSData *packet = [NSData dataWithBytes:&response length:sizeof(MessageGameBeginResponse)];
             [[GameKitHelper sharedGameKitHelper] sendData:packet withCompleteBlock:^{
-                _gameReady = YES;
-                [readyStatusLabel removeFromParent];
+                self.gameReady = YES;
+                [self.readyStatusLabel removeFromParent];
             }];
         }
     }
     else if (message->messageType == kMessageTypeGameBeginResponse){
         if (self.playerReady) {
-            _gameReady = YES;
-            [readyStatusLabel removeFromParent];
+            self.gameReady = YES;
+            [self.readyStatusLabel removeFromParent];
         }
     }
     else if (message->messageType == kMessageTypeReplayRequest) {
@@ -141,7 +143,6 @@
             [self.scene.view presentScene:gameOverScene transition: reveal];
         }];
     }
-
 }
 
 @end

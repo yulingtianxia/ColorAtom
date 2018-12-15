@@ -24,7 +24,7 @@ static id singleton = nil;
     return singleton;
 }
 
-- (instancetype)init {
+- (id)init {
     return self;
 }
 
@@ -37,7 +37,7 @@ static id singleton = nil;
 #pragma mark Forwarding machinery
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
-    NSUInteger returnLength = anInvocation.methodSignature.methodReturnLength;
+    NSUInteger returnLength = [[anInvocation methodSignature] methodReturnLength];
     if (!returnLength) {
         // nothing to do
         return;

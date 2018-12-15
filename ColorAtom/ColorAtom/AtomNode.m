@@ -10,8 +10,8 @@
 #import "WormHole.h"
 
 @implementation AtomNode
-@synthesize electric;
--(instancetype)initWithName:(NSString *)name ImageName:(NSString *)imageName
+
+- (instancetype)initWithName:(NSString *)name ImageName:(NSString *)imageName
 {
     if(self = [super initWithTexture:[SKTexture textureWithImageNamed:imageName] color:[SKColor colorWithRed:skRandf() green:skRandf() blue:skRandf() alpha:1] size:CGSizeMake(AtomRadius*2, AtomRadius*2)]){
         self.colorBlendFactor = 1.0;
@@ -21,9 +21,9 @@
         self.physicsBody.collisionBitMask = AtomSharpCategory|AtomMinusCategory|AtomPlusCategory|PlayFieldCategory;
         self.physicsBody.contactTestBitMask = AtomPlusCategory|AtomMinusCategory|PlayFieldCategory|AtomSharpCategory;
         self.physicsBody.affectedByGravity = NO;
-        electric = [SKFieldNode electricField];
-        electric.region = [[SKRegion infiniteRegion] regionByDifferenceFromRegion:[[SKRegion alloc] initWithRadius:AtomRadius]];
-        electric.position = CGPointZero;
+        self.electric = [SKFieldNode electricField];
+        self.electric.region = [[SKRegion infiniteRegion] regionByDifferenceFromRegion:[[SKRegion alloc] initWithRadius:AtomRadius]];
+        self.electric.position = CGPointZero;
 //        [self addChild:electric];
         self.physicsBody.linearDamping = 0.5;
         self.physicsBody.angularDamping = 0.8;

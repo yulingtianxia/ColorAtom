@@ -9,20 +9,23 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface DisplayScreen : SKSpriteNode
-@property NSInteger atomCount;
-@property NSInteger score;
-@property NSInteger rank;
-@property NSInteger sharp;
-@property SKLabelNode *atomCountLabel;
-@property SKLabelNode *scoreLabel;
-@property SKLabelNode *rankLabel;
-@property SKSpriteNode *atomIcon;
-@property SKLabelNode *pauseLabel;
--(void)AtomMinusKilled;
--(void)AtomPlusUsed:(NSInteger) num;
--(void)setPosition;
--(void)AtomMinusAttacked;
--(instancetype)initWithAtomCount:(NSInteger) count NS_DESIGNATED_INITIALIZER;
--(void)pause;
--(void)resume;
+
+@property (nonatomic, assign) NSInteger atomCount;
+@property (nonatomic, assign) NSInteger score;
+@property (nonatomic, assign) NSInteger rank;
+@property (nonatomic, assign) NSInteger sharp;
+@property (nonatomic, strong) SKLabelNode *atomCountLabel;
+@property (nonatomic, strong) SKLabelNode *scoreLabel;
+@property (nonatomic, strong) SKLabelNode *rankLabel;
+@property (nonatomic, strong) SKSpriteNode *atomIcon;
+@property (nonatomic, strong) SKLabelNode *pauseLabel;
+
+- (void)AtomMinusKilled;
+- (void)AtomPlusUsed:(NSInteger) num;
+- (void)setPosition;
+- (void)AtomMinusAttacked;
+- (instancetype)initWithAtomCount:(NSInteger)count;
+- (void)pause;
+- (void)resume;
+
 @end

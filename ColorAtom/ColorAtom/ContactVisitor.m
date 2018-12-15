@@ -64,9 +64,8 @@
     SEL selector = NSSelectorFromString(contactSelectorString);
     //判断是否存在此方法
     if ([self respondsToSelector:selector]) {
-        [self performSelector:selector withObject:body];
+        ((void (*)(id, SEL, id))[self methodForSelector:selector])(self, selector, body);
     }
-    
 }
 
 @end

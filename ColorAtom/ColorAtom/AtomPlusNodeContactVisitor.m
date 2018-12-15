@@ -14,9 +14,7 @@
 
 @implementation AtomPlusNodeContactVisitor
 
-
-
--(void) visitAtomPlusNode:(SKPhysicsBody*) anotherAtomBody
+- (void)visitAtomPlusNode:(SKPhysicsBody*) anotherAtomBody
 {
     AtomPlusNode *thisAtom = (AtomPlusNode*)self.body.node;
     AtomPlusNode *anotherAtom = (AtomPlusNode*)anotherAtomBody.node;
@@ -30,7 +28,7 @@
     [self.body.node.scene.physicsWorld addJoint:limit];
 }
 
--(void) visitAtomMinusNode:(SKPhysicsBody*) anotherAtomBody
+- (void)visitAtomMinusNode:(SKPhysicsBody*) anotherAtomBody
 {
     AtomPlusNode *thisAtom = (AtomPlusNode*)self.body.node;
     AtomMinusNode *anotherAtom = (AtomMinusNode*)anotherAtomBody.node;
@@ -45,10 +43,10 @@
     
 }
 
--(void) visitPlayFieldScene:(SKPhysicsBody*) playfieldBody
+- (void)visitPlayFieldScene:(SKPhysicsBody*) playfieldBody
 {
-    AtomPlusNode *atom = (AtomPlusNode*)self.body.node;
-    PlayFieldScene *playfield = (PlayFieldScene*) playfieldBody.node;
+//    AtomPlusNode *atom = (AtomPlusNode*)self.body.node;
+//    PlayFieldScene *playfield = (PlayFieldScene*) playfieldBody.node;
 //    NSLog(@"%@->%@",atom.name,playfield.name);
 //    atom.fire.particleBirthRate = 0;
 }

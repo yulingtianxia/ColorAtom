@@ -27,7 +27,7 @@
     
 }
 
--(void) visitAtomMinusNode:(SKPhysicsBody*) anotherAtomBody
+-(void)visitAtomMinusNode:(SKPhysicsBody*) anotherAtomBody
 {
     AtomMinusNode *thisAtom = (AtomMinusNode*)self.body.node;
     AtomMinusNode *anotherAtom = (AtomMinusNode*)anotherAtomBody.node;
@@ -40,7 +40,7 @@
     
     [thisAtom changeColorWithSameAtom:anotherAtom];
 //    SKPhysicsJointFixed *fix = [SKPhysicsJointFixed jointWithBodyA:self.body bodyB:anotherAtomBody anchor:self.contact.contactPoint];
-    SKPhysicsJointLimit *limit = [SKPhysicsJointLimit jointWithBodyA:self.body bodyB:anotherAtomBody anchorA:[thisAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]  anchorB:[anotherAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]];
+//    SKPhysicsJointLimit *limit = [SKPhysicsJointLimit jointWithBodyA:self.body bodyB:anotherAtomBody anchorA:[thisAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]  anchorB:[anotherAtom convertPoint:self.contact.contactPoint fromNode:thisAtom.scene]];
 //    [self.body.node.scene.physicsWorld addJoint:limit];
 }
 
@@ -56,7 +56,7 @@
 -(void) visitPlayFieldScene:(SKPhysicsBody*) playfieldBody
 {
     AtomMinusNode *atom = (AtomMinusNode*)self.body.node;
-    PlayFieldScene *playfield = (PlayFieldScene*) playfieldBody.node;
+//    PlayFieldScene *playfield = (PlayFieldScene*) playfieldBody.node;
 //    NSLog(@"%@->%@",atom.name,playfield.name);
     atom.fire.particleBirthRate = 0;
 }

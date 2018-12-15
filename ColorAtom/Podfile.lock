@@ -1,17 +1,17 @@
 PODS:
   - libextobjc (0.4):
-    - libextobjc/EXTADT
-    - libextobjc/EXTConcreteProtocol
-    - libextobjc/EXTKeyPathCoding
-    - libextobjc/EXTNil
-    - libextobjc/EXTSafeCategory
-    - libextobjc/EXTScope
-    - libextobjc/EXTSelectorChecking
-    - libextobjc/EXTSynthesize
-    - libextobjc/NSInvocation+EXT
-    - libextobjc/NSMethodSignature+EXT
-    - libextobjc/RuntimeExtensions
-    - libextobjc/UmbrellaHeader
+    - libextobjc/EXTADT (= 0.4)
+    - libextobjc/EXTConcreteProtocol (= 0.4)
+    - libextobjc/EXTKeyPathCoding (= 0.4)
+    - libextobjc/EXTNil (= 0.4)
+    - libextobjc/EXTSafeCategory (= 0.4)
+    - libextobjc/EXTScope (= 0.4)
+    - libextobjc/EXTSelectorChecking (= 0.4)
+    - libextobjc/EXTSynthesize (= 0.4)
+    - "libextobjc/NSInvocation+EXT (= 0.4)"
+    - "libextobjc/NSMethodSignature+EXT (= 0.4)"
+    - libextobjc/RuntimeExtensions (= 0.4)
+    - libextobjc/UmbrellaHeader (= 0.4)
   - libextobjc/EXTADT (0.4):
     - libextobjc/RuntimeExtensions
   - libextobjc/EXTConcreteProtocol (0.4):
@@ -28,9 +28,9 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/EXTSynthesize (0.4):
     - libextobjc/RuntimeExtensions
-  - libextobjc/NSInvocation+EXT (0.4):
+  - "libextobjc/NSInvocation+EXT (0.4)":
     - libextobjc/RuntimeExtensions
-  - libextobjc/NSMethodSignature+EXT (0.4):
+  - "libextobjc/NSMethodSignature+EXT (0.4)":
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4)
   - libextobjc/UmbrellaHeader (0.4)
@@ -38,7 +38,13 @@ PODS:
 DEPENDENCIES:
   - libextobjc
 
-SPEC CHECKSUMS:
-  libextobjc: ba42e4111f433273a886cd54f0ddaddb7f62f82f
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - libextobjc
 
-COCOAPODS: 0.33.1
+SPEC CHECKSUMS:
+  libextobjc: f2802d4262f6885570df9799747409ceb1de602c
+
+PODFILE CHECKSUM: b60ffe34ebe842d1eed484e25fb5bc9028158e14
+
+COCOAPODS: 1.6.0.beta.2

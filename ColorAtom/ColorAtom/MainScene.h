@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+
 @class AtomPlusNode;
 @class AtomMinusNode;
 @class Background;
@@ -22,17 +23,18 @@
 @class GameCenterButton;
 
 @interface MainScene : SKScene <SKPhysicsContactDelegate>
-@property SKEmitterNode *fire;
-@property Background *background;
-@property AtomPlusNode *plus;
-@property AtomMinusNode *minus;
-@property AudioButton *audio;
-@property SKLabelNode *logo;
-@property NormalPlayButton *normalPlay;
-@property NightPlayButton *nightPlay;
-@property SecretPlayButton *secretPlay;
-@property WHPlayButton *bhPlay;
-@property AgainstPlayButton *againstPlay;
-@property GameCenterButton *gameCenter;
+
+@property (nonatomic, strong) SKEmitterNode *fire;
+@property (nonatomic, strong) Background *background;
+@property (nonatomic, strong) AtomPlusNode *plus;
+@property (nonatomic, strong) AtomMinusNode *minus;
+@property (nonatomic, strong) AudioButton *audio;
+@property (nonatomic, strong) SKLabelNode *logo;
+@property (nonatomic, strong) NormalPlayButton *normalPlay;
+@property (nonatomic, strong) NightPlayButton *nightPlay;
+@property (nonatomic, strong) SecretPlayButton *secretPlay;
+@property (nonatomic, strong) WHPlayButton *bhPlay;
+@property (nonatomic, strong) AgainstPlayButton *againstPlay;
+@property (nonatomic, strong) GameCenterButton *gameCenter;
 
 @end

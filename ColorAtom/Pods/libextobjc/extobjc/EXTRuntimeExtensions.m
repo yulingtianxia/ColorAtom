@@ -1020,7 +1020,7 @@ NSString *ext_stringFromTypedBytes (const void *bytes, const char *encoding) {
         }
 
         default:
-            return [NSValue valueWithBytes:bytes objCType:encoding].description;
+            return [[NSValue valueWithBytes:bytes objCType:encoding] description];
     }
 }
 

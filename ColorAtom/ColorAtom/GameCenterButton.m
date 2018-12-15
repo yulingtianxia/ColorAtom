@@ -10,14 +10,14 @@
 
 @implementation GameCenterButton
 
--(instancetype)init{
+- (instancetype)init{
     if (self = [super initWithTexture:[SKTexture textureWithImageNamed:@"GameCenter"] color:[SKColor clearColor] size:CGSizeMake(40, 40)]) {
         self.userInteractionEnabled = YES;
     }
     return self;
 }
 
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     [[GameKitHelper sharedGameKitHelper] showLeaderboard];
 }
 

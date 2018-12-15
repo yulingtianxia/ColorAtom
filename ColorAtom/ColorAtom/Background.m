@@ -10,7 +10,7 @@
 #import "GameKitHelper.h"
 @implementation Background
 
--(instancetype)initWithSize:(CGSize) size{
+- (instancetype)initWithSize:(CGSize) size{
     if (self = [super init]) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"BackGround" ofType:@"sks"];
         self = [NSKeyedUnarchiver unarchiveObjectWithFile:path];

@@ -14,8 +14,8 @@
 @implementation AtomSharpNodeContactVisitor
 -(void) visitAtomPlusNode:(SKPhysicsBody *) atomBody
 {
-    AtomSharpNode * sharpNode = (AtomSharpNode*)self.body.node;
-    AtomNode * atom = (AtomNode*)atomBody.node;
+//    AtomSharpNode * sharpNode = (AtomSharpNode*)self.body.node;
+//    AtomNode * atom = (AtomNode*)atomBody.node;
     //球撞Sharp后Sharp的反馈
     //        NSLog(@"%@->%@",playfield.name,atom.name);
     
@@ -24,7 +24,7 @@
 -(void) visitAtomMinusNode:(SKPhysicsBody *) atomBody
 {
     AtomSharpNode * sharpNode = (AtomSharpNode*)self.body.node;
-    AtomNode * atom = (AtomNode*)atomBody.node;
+//    AtomNode * atom = (AtomNode*)atomBody.node;
     //球撞Sharp后Sharp的反馈
     //    NSLog(@"%@->%@",playfield.name,atom.name);
     [sharpNode runAction:[SKAction runBlock:^{

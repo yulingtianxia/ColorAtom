@@ -15,6 +15,7 @@
 
 @implementation PlayAgainButton
 @synthesize modeString;
+
 -(instancetype)initWithMode:(NSString *)newmode{
     if (self = [super init]) {
         self.fontName = FontString;
@@ -26,7 +27,8 @@
     }
     return self;
 }
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *mode = [standardDefaults objectForKey:@"mode"];
     for (NSString* key in mode.keyEnumerator) {

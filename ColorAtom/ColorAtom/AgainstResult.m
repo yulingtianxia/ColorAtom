@@ -16,28 +16,24 @@
 #import "AgainstPlayScene.h"
 
 @implementation AgainstResult
-@synthesize background;
-@synthesize sharingText;
-@synthesize sharingImage;
-@synthesize win;
-@synthesize playAgain;
-- (instancetype)initWithSize:(CGSize)size  win:(BOOL)isWin{
+
+- (instancetype)initWithSize:(CGSize)size win:(BOOL)isWin{
     if (self = [super initWithSize:size]) {
         [GameKitHelper sharedGameKitHelper].delegate = self;
         [GameKitHelper sharedGameKitHelper].opponentReady = NO;
         NSString *opponentName = ((GKPlayer *)[GameKitHelper sharedGameKitHelper].match.players[0]).displayName;
-        win = isWin;
-        if (win) {
-            sharingText = [NSString localizedStringWithFormat:NSLocalizedString(@"I just defeated %@ in ColorAtom!", @""),opponentName];
+        self.win = isWin;
+        if (self.win) {
+            self.sharingText = [NSString localizedStringWithFormat:NSLocalizedString(@"I just defeated %@ in ColorAtom!", @""),opponentName];
         }
         else{
-            sharingText = [NSString localizedStringWithFormat:NSLocalizedString(@"I was defeated by %@ in ColorAtom!", @""),opponentName];
+            self.sharingText = [NSString localizedStringWithFormat:NSLocalizedString(@"I was defeated by %@ in ColorAtom!", @""),opponentName];
         }
         self.backgroundColor = [SKColor clearColor];
 //        背景效果
-        background = [[Background alloc] initWithSize:size];
-        background.position = CGPointMake(self.size.width/2, self.size.height/2);
-        [self addChild:background];
+        self.background = [[Background alloc] initWithSize:size];
+        self.background.position = CGPointMake(self.size.width/2, self.size.height/2);
+        [self addChild:self.background];
         SKLabelNode *modeLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
         modeLabel.text = NSLocalizedString((NSString *)AgainstMode, @"") ;
         modeLabel.fontSize = 40;
@@ -46,7 +42,7 @@
         [self addChild:modeLabel];
         
         SKLabelNode *winLabel = [SKLabelNode labelNodeWithFontNamed:FontString];
-        if (win) {
+        if (self.win) {
             winLabel.text = NSLocalizedString(@"WIN", @"");
         }
         else{
@@ -72,12 +68,12 @@
         nameLabel.position = CGPointMake(self.size.width/2, CGRectGetMinY(playerLabel.frame)-nameLabel.frame.size.height);
         [self addChild:nameLabel];
         
-        playAgain = [[PlayAgainButton alloc] initWithMode:(NSString *)AgainstMode];
-        playAgain.position = CGPointMake(self.size.width/2, self.size.height/3);
-        [self addChild:playAgain];
+        self.playAgain = [[PlayAgainButton alloc] initWithMode:(NSString *)AgainstMode];
+        self.playAgain.position = CGPointMake(self.size.width/2, self.size.height/3);
+        [self addChild:self.playAgain];
         
         WeiboShareButton *weiboShare = [[WeiboShareButton alloc] init];
-        weiboShare.position = CGPointMake(self.size.width/2, CGRectGetMinY(playAgain.frame)-2*playAgain.frame.size.height);
+        weiboShare.position = CGPointMake(self.size.width/2, CGRectGetMinY(self.playAgain.frame)-2*self.playAgain.frame.size.height);
         [self addChild:weiboShare];
         
         MainSceneButton *mainScene = [[MainSceneButton alloc] init];
@@ -92,7 +88,7 @@
 
 
 #pragma mark MyMethod
-- (UIImage*) imageWithView:(UIView *)view
+- (UIImage*)imageWithView:(UIView *)view
 {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
     
@@ -120,10 +116,6 @@
 
 #pragma mark GCHelperDelegate
 
--(void)inviteReceived{
-    
-}
-
 - (void)matchStarted {
 //    NSLog(@"Match started");
 }
@@ -134,14 +126,14 @@
     NSString *message = NSLocalizedString(@"Connection lost", @"");
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *ok = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        playAgain.alpha = 0.2;
-        [playAgain setUserInteractionEnabled:FALSE];
+        self.playAgain.alpha = 0.2;
+        [self.playAgain setUserInteractionEnabled:FALSE];
     }];
     [alert addAction:ok];
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
-- (void)match:(GKMatch *)match didReceiveData:(NSData *)data fromPlayer:(NSString *)playerID {
+- (void)match:(GKMatch *)match didReceiveData:(NSData *)data fromRemotePlayer:(GKPlayer *)playerID {
     //    NSLog(@"Received data");
     Message *message = (Message *) data.bytes;
     if (message->messageType == kMessageTypeReplayRequest) {
@@ -186,8 +178,8 @@
             NSString *message = NSLocalizedString(@"Your opponent has refused your request", @"");
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *ok = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                playAgain.alpha = 0.2;
-                [playAgain setUserInteractionEnabled:FALSE];
+                self.playAgain.alpha = 0.2;
+                [self.playAgain setUserInteractionEnabled:FALSE];
             }];
             [alert addAction:ok];
             [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];

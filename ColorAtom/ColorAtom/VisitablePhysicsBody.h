@@ -11,7 +11,7 @@
 @interface VisitablePhysicsBody : NSObject
 @property (nonatomic, readonly, strong) SKPhysicsBody *body;
 
-- (instancetype) initWithBody:(SKPhysicsBody *)body NS_DESIGNATED_INITIALIZER;
-- (void) acceptVisitor:(ContactVisitor *)visitor;
+- (instancetype)initWithBody:(SKPhysicsBody *)body;
+- (void)acceptVisitor:(ContactVisitor *)visitor;
 
 @end

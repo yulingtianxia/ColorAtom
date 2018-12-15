@@ -12,8 +12,8 @@
 @implementation PlayFieldSceneContactVisitor
 -(void) visitAtomPlusNode:(SKPhysicsBody *) atomBody
 {
-    PlayFieldScene * playfield = (PlayFieldScene*)self.body.node;
-    AtomNode * atom = (AtomNode*)atomBody.node;
+//    PlayFieldScene * playfield = (PlayFieldScene*)self.body.node;
+//    AtomNode * atom = (AtomNode*)atomBody.node;
     //球撞边界后边界的反馈
 //        NSLog(@"%@->%@",playfield.name,atom.name);
     
@@ -21,8 +21,8 @@
 
 -(void) visitAtomMinusNode:(SKPhysicsBody *) atomBody
 {
-    PlayFieldScene * playfield = (PlayFieldScene*)self.body.node;
-    AtomNode * atom = (AtomNode*)atomBody.node;
+//    PlayFieldScene * playfield = (PlayFieldScene*)self.body.node;
+//    AtomNode * atom = (AtomNode*)atomBody.node;
     //球撞边界后边界的反馈
 //    NSLog(@"%@->%@",playfield.name,atom.name);
     
